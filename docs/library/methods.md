@@ -8,6 +8,8 @@ tags:
 
 ## Logit / decoding
 
+- [Same Attention, Different Truths](../papers/same-attention-different-truths.md) — LLCC + HARM + VEED 的分型检测与缓解。
+- [VISOR](../papers/visor.md) — 属性 logit signal 分解与机制路由修复。
 - [M3ID](../papers/m3id.md) — visual prompt amplification。
 - [Self-Introspective Decoding](../papers/self-introspective-decoding.md) — least-important token contrastive branch。
 - [Curing Semantic Drift](../papers/curing-semantic-drift.md) — external visual referee 与 dynamic logits calibration。
@@ -15,9 +17,14 @@ tags:
 
 ## Head / path intervention
 
+- [Role-Break](../papers/role-break-attention-heads.md) — faithful head role residual 与轻量线性 detector。
 - [Modular Attribution & Intervention](../papers/modular-attribution-intervention.md) — hallucination head attribution 与 AD-HH/TF-HH。
 - [Vision-aware Head Divergence](../papers/vision-aware-head-divergence.md) — VHD 诊断与 VHR 增强。
 - [Intervene-All-Paths](../papers/intervene-all-paths.md) — 多因果路径联合干预。
+
+## Representation editing
+
+- [Beyond Global Editing](../papers/beyond-global-editing.md) — cluster-specific HalluSpaces 与 per-instance adaptive projection。
 
 ## Baseline 选择建议
 
@@ -27,4 +34,3 @@ tags:
 | Head | Vanilla + random-head + VHD/VHR + AllPath | 验证头集合与干预方向的因果性 |
 | Dynamic | static intervention + risk-gated intervention | 检查收益是否来自避免全程过强干预 |
 | System | internal detector + external grounding reranker | 比较内部机制信号与外部视觉先验 |
-

@@ -232,6 +232,34 @@
   line-height: 1.65;
 }
 
+.paper-figure {
+  margin: 1.35rem 0 1.65rem;
+  padding: 0.75rem;
+  border: 1px solid var(--atlas-border);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
+
+.paper-figure a {
+  display: block;
+}
+
+.paper-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 0.45rem;
+}
+
+.paper-figure figcaption {
+  margin-top: 0.7rem;
+  color: var(--atlas-muted);
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
 .evidence-high,
 .evidence-medium,
 .evidence-low {

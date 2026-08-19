@@ -17,9 +17,12 @@ tags:
 - 单一全局 steering vector 是否混合了事实性与任务语义？
 - rank-one、low-rank 与实例级子空间编辑的效用—保真权衡如何？
 
-## 当前状态
+## 关键阅读
 
-现有附件中的 IR Edit、Dynamic Multimodal Activation Steering 等论文已进入[待读队列](../library/reading-queue.md)，尚未转换成经核对的 Deep Paper Note。
+- [Beyond Global Editing](../papers/beyond-global-editing.md)：将差分聚类为多个低秩 HalluSpaces，再用测试样本的 mask response 动态混合 projector。
+- [VISOR](../papers/visor.md)：用逐层视觉 margin SNR 定位材质属性信号在 decoder 晚层的坍塌。
+
+IR Edit、Dynamic Multimodal Activation Steering 等其他论文仍在[待读队列](../library/reading-queue.md)，尚未转换成经核对的 Deep Paper Note。
 
 ## 建议输出
 
