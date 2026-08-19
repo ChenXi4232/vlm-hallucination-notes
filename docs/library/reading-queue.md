@@ -6,7 +6,7 @@ tags:
 
 # 待读与待整理来源
 
-以下来源已提供，但尚未自动转写成“已核对 Paper Card”。PDF 文件不直接提交到公开仓库，避免体积、版权和版本混乱。
+以下来源已提供，但尚未转写成结构完整并通过来源核对的 Deep Paper Note。PDF 文件不直接提交到公开仓库，避免体积、版权和版本混乱。
 
 | 来源 | 计划类型 | 目标方向 | 状态 |
 |---|---|---|---|
@@ -15,8 +15,8 @@ tags:
 | Mitigating Object Hallucination via Image-Grounded Guidance | 方法 | External grounding / logit | 待整理 |
 | Dynamic Multimodal Activation Steering | 方法 | Activation steering | 待整理 |
 | LLM Unlearning Should Be Form-Independent | 相邻工作 | Form-independent intervention | 相关性待判断 |
-| Cracking the Code … VHD | 方法 | Attention head | 已有知识卡，原 PDF 待复核 |
-| Intervene-All-Paths | 方法 | Causal paths | 已有知识卡，原 PDF 待复核 |
+| Cracking the Code … VHD | 方法 | Attention head | 已迁移为 Deep Paper Note |
+| Intervene-All-Paths | 方法 | Causal paths | 已迁移为 Deep Paper Note |
 
 ## 进入论文库的条件
 
@@ -26,4 +26,3 @@ tags:
 - [ ] 记录实验漏洞和审稿风险；
 - [ ] 给出 token/head/logit 反事实启发；
 - [ ] 标注资料仍缺失的部分。
-

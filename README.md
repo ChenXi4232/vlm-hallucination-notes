@@ -42,7 +42,7 @@ mkdocs serve
 
 ## 发布边界
 
-- Public：Paper Cards、Survey、Benchmark/Dataset、Method Taxonomy、整理后的 Reading Notes、Published Research。
+- Public：Deep Paper Notes、Survey、Benchmark/Dataset、Method Taxonomy、整理后的 Reading Notes、Published Research。
 - Private：未成熟 idea、实验日志、Codex tasks、内部结果、失败实验和未发表 hypothesis。
 - 不要把私密文件放在本仓库的“未导航目录”；公开仓库中的所有已提交文件都可能被读取。
 - CI 会运行 `scripts/check_public_boundary.py`，拦截常见私有目录、模型权重、原始日志和大型文件。

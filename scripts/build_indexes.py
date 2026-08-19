@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build deterministic Markdown indexes from Paper Card front matter."""
+"""Build deterministic Markdown indexes from Deep Paper Note front matter."""
 
 from __future__ import annotations
 
@@ -42,7 +42,7 @@ def main() -> None:
         key=lambda item: (-int(item["year"]), str(item["title"]).lower()),
     )
     if not cards:
-        raise SystemExit("No Paper Cards found")
+        raise SystemExit("No Paper Notes found")
 
     directions = Counter(str(card["direction"]) for card in cards)
     resources = Counter(str(card["resource_type"]) for card in cards)
@@ -54,15 +54,15 @@ def main() -> None:
     lines = [
         "---",
         "title: 论文总索引",
-        "description: 由 Paper Card front matter 自动生成",
+        "description: 由 Deep Paper Note front matter 自动生成",
         "---",
         "",
         "# 论文总索引",
         "",
-        "此页由 `scripts/build_indexes.py` 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。",
+        "此页由 `scripts/build_indexes.py` 根据 Deep Paper Note front matter 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。",
         "",
         '<div class="stat-grid">',
-        f'<div class="stat-card"><strong>{len(cards)}</strong><span>Paper Cards</span></div>',
+        f'<div class="stat-card"><strong>{len(cards)}</strong><span>Deep Paper Notes</span></div>',
         f'<div class="stat-card"><strong>{len(directions)}</strong><span>研究方向</span></div>',
         f'<div class="stat-card"><strong>{len(venues)}</strong><span>来源类型</span></div>',
         f'<div class="stat-card"><strong>{sum(card["status"] == "已精读" for card in cards)}</strong><span>已精读</span></div>',
@@ -90,9 +90,8 @@ def main() -> None:
     lines.append("")
 
     (PAPERS / "index.md").write_text("\n".join(lines), encoding="utf-8")
-    print(f"Generated index for {len(cards)} Paper Cards")
+    print(f"Generated index for {len(cards)} Deep Paper Notes")
 
 
 if __name__ == "__main__":
     main()
-

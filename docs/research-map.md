@@ -7,7 +7,7 @@ tags:
 
 # VLM Hallucination 研究版图
 
-单一树状文件夹无法表达一篇论文的多个角色。本库采用“页面导航 + Paper Card 元数据 + tags”三层结构，使同一工作可同时被归入研究方向、资源类型和论文来源。
+单一树状文件夹无法表达一篇论文的多个角色。本库采用“页面导航 + Deep Paper Note 元数据 + tags”三层结构，使同一工作可同时被归入研究方向、资源类型和论文来源。
 
 ## 四个分类轴
 
@@ -57,4 +57,3 @@ flowchart TD
     1. [OPERA](papers/opera.md)
     2. [M3ID](papers/m3id.md)
     3. [Self-Introspective Decoding](papers/self-introspective-decoding.md)
-

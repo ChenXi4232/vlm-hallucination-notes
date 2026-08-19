@@ -1,14 +1,14 @@
 ---
 title: 论文总索引
-description: 由 Paper Card front matter 自动生成
+description: 由 Deep Paper Note front matter 自动生成
 ---
 
 # 论文总索引
 
-此页由 `scripts/build_indexes.py` 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。
+此页由 `scripts/build_indexes.py` 根据 Deep Paper Note front matter 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。
 
 <div class="stat-grid">
-<div class="stat-card"><strong>7</strong><span>Paper Cards</span></div>
+<div class="stat-card"><strong>7</strong><span>Deep Paper Notes</span></div>
 <div class="stat-card"><strong>3</strong><span>研究方向</span></div>
 <div class="stat-card"><strong>5</strong><span>来源类型</span></div>
 <div class="stat-card"><strong>7</strong><span>已精读</span></div>

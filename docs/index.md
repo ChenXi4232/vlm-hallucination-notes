@@ -15,12 +15,12 @@ hide:
 <div class="kb-actions">
   <a class="kb-button primary" href="papers/">浏览论文库 →</a>
   <a class="kb-button" href="research-map/">查看研究版图</a>
-  <a class="kb-button" href="guides/paper-card/">新建 Paper Card</a>
+  <a class="kb-button" href="guides/paper-card/">新建 Deep Paper Note</a>
 </div>
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>7</strong><span>已接入 Paper Cards</span></div>
+  <div class="stat-card"><strong>7</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
   <div class="stat-card"><strong>9</strong><span>待整理来源</span></div>

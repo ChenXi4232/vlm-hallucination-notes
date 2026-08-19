@@ -9,7 +9,7 @@ description: 双仓库内容分流与发布前检查规则
 
 | 内容 | Public Notes | Private Lab |
 |---|:---:|:---:|
-| Paper Card 与公开来源 | ✓ | 可引用 ID |
+| Deep Paper Note 与公开来源 | ✓ | 可引用 ID |
 | Survey / Method Taxonomy | ✓ | 草稿先留私有 |
 | Benchmark / Dataset 说明 | ✓ | 私有划分与标注可留存 |
 | 清洗后的实验发现 | 发布后可选 | ✓ |
