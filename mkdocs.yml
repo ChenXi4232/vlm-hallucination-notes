@@ -1,0 +1,137 @@
+site_name: VLM Hallucination Research Atlas
+site_description: 面向 VLM/LVLM 幻觉解释、检测与缓解的机制导向型论文知识库
+site_author: ChenXi4232
+site_url: https://chenxi4232.github.io/vlm-hallucination-notes/
+
+repo_name: ChenXi4232/vlm-hallucination-notes
+repo_url: https://github.com/ChenXi4232/vlm-hallucination-notes
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  icon:
+    logo: material/eye-outline
+    repo: fontawesome/brands/github
+    edit: material/pencil
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: 切换至深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至浅色模式
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.code.copy
+    - content.tabs.link
+
+nav:
+  - 首页: index.md
+  - 研究版图: research-map.md
+  - 论文库:
+      - 总索引: papers/index.md
+      - M3ID: papers/m3id.md
+      - Curing Semantic Drift: papers/curing-semantic-drift.md
+      - Self-Introspective Decoding: papers/self-introspective-decoding.md
+      - OPERA: papers/opera.md
+      - Modular Attribution & Intervention: papers/modular-attribution-intervention.md
+      - Vision-aware Head Divergence: papers/vision-aware-head-divergence.md
+      - Intervene-All-Paths: papers/intervene-all-paths.md
+  - 研究方向:
+      - 总览: directions/index.md
+      - Token / Logit: directions/token-logit.md
+      - Attention Head / Path: directions/attention-heads.md
+      - Representation / Activation: directions/representation.md
+      - Long-form / Semantic Drift: directions/long-form.md
+      - Evaluation / Recall Trade-off: directions/evaluation.md
+  - 资源类型:
+      - 总览: library/index.md
+      - 方法论文: library/methods.md
+      - 综述: library/surveys.md
+      - Benchmark 与 Metric: library/benchmarks.md
+      - Dataset: library/datasets.md
+      - 待读队列: library/reading-queue.md
+  - 论文来源:
+      - 总览: venues/index.md
+      - CVPR / ICCV / ECCV: venues/vision.md
+      - ACL / EMNLP: venues/nlp.md
+      - ICLR / ICML / NeurIPS: venues/ml.md
+      - arXiv / OpenReview: venues/preprints.md
+  - 标签: tags.md
+  - 模板与维护:
+      - Paper Card 模板: guides/paper-card.md
+      - 实验笔记模板: guides/experiment-note.md
+      - 内容工作流: about/workflow.md
+      - 网站设计: about/site-design.md
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
+  - assets/javascripts/mermaid.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ChenXi4232/vlm-hallucination-notes
+      name: GitHub repository
+  generator: false
+
+copyright: Copyright &copy; 2026 ChenXi4232 · Research notes may contain unverified interpretations; consult the original papers.
