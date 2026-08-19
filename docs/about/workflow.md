@@ -41,3 +41,13 @@ stateDiagram-v2
 - 外部 CLIP/detector 的结论不冒充模型内部机制。
 - mitigation 必须同时报告 recall 与生成退化。
 - 新论文至少给出一个可执行 follow-up experiment。
+
+## 从私有实验到公开知识
+
+1. 私有仓库用 `EXP-<TRACK>-NNN` 记录实验，保留命令、日志、原始结果和未成熟解释。
+2. 只有完成复核、去除敏感信息并明确证据边界后，才在本仓库编写公开摘要。
+3. 公开页面只保留稳定实验 ID，不链接私有仓库路径，不复制服务器地址、日志或未发表方法细节。
+4. 发布前执行 `python scripts/check_public_boundary.py` 和 `mkdocs build --strict`。
+5. 推送 `main` 后由 GitHub Actions 自动发布。
+
+详细规则见[公开 / 私有发布边界](publishing-boundary.md)。

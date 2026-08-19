@@ -49,7 +49,7 @@ theme:
 nav:
   - 首页: index.md
   - 研究版图: research-map.md
-  - 论文库:
+  - Paper Cards:
       - 总索引: papers/index.md
       - M3ID: papers/m3id.md
       - Curing Semantic Drift: papers/curing-semantic-drift.md
@@ -58,6 +58,19 @@ nav:
       - Modular Attribution & Intervention: papers/modular-attribution-intervention.md
       - Vision-aware Head Divergence: papers/vision-aware-head-divergence.md
       - Intervene-All-Paths: papers/intervene-all-paths.md
+  - Method Taxonomy:
+      - 方法分类总览: method-taxonomy/index.md
+      - Token / Logit: directions/token-logit.md
+      - Attention Head / Path: directions/attention-heads.md
+      - Representation / Activation: directions/representation.md
+      - Long-form / Semantic Drift: directions/long-form.md
+  - Surveys: surveys/index.md
+  - Benchmarks / Datasets:
+      - 总览: benchmarks/index.md
+      - Benchmark 与 Metric: library/benchmarks.md
+      - Dataset: library/datasets.md
+  - Reading Notes: reading-notes/index.md
+  - Published Research: published-research/index.md
   - 研究方向:
       - 总览: directions/index.md
       - Token / Logit: directions/token-logit.md
@@ -83,6 +96,7 @@ nav:
       - Paper Card 模板: guides/paper-card.md
       - 实验笔记模板: guides/experiment-note.md
       - 内容工作流: about/workflow.md
+      - 公开 / 私有边界: about/publishing-boundary.md
       - 网站设计: about/site-design.md
 
 plugins:
