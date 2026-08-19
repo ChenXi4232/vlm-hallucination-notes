@@ -64,34 +64,36 @@ nav:
       - Attention Head / Path: directions/attention-heads.md
       - Representation / Activation: directions/representation.md
       - Long-form / Semantic Drift: directions/long-form.md
-  - Surveys: surveys/index.md
-  - Benchmarks / Datasets:
-      - 总览: benchmarks/index.md
-      - Benchmark 与 Metric: library/benchmarks.md
-      - Dataset: library/datasets.md
-  - Reading Notes: reading-notes/index.md
-  - Published Research: published-research/index.md
-  - 研究方向:
-      - 总览: directions/index.md
-      - Token / Logit: directions/token-logit.md
-      - Attention Head / Path: directions/attention-heads.md
-      - Representation / Activation: directions/representation.md
-      - Long-form / Semantic Drift: directions/long-form.md
-      - Evaluation / Recall Trade-off: directions/evaluation.md
-  - 资源类型:
-      - 总览: library/index.md
-      - 方法论文: library/methods.md
-      - 综述: library/surveys.md
-      - Benchmark 与 Metric: library/benchmarks.md
-      - Dataset: library/datasets.md
-      - 待读队列: library/reading-queue.md
-  - 论文来源:
-      - 总览: venues/index.md
-      - CVPR / ICCV / ECCV: venues/vision.md
-      - ACL / EMNLP: venues/nlp.md
-      - ICLR / ICML / NeurIPS: venues/ml.md
-      - arXiv / OpenReview: venues/preprints.md
-  - 标签: tags.md
+  - 资源库:
+      - Surveys: surveys/index.md
+      - Benchmarks / Datasets:
+          - 总览: benchmarks/index.md
+          - Benchmark 与 Metric: library/benchmarks.md
+          - Dataset: library/datasets.md
+      - Reading Notes: reading-notes/index.md
+      - Published Research: published-research/index.md
+  - 研究索引:
+      - 研究方向:
+          - 总览: directions/index.md
+          - Token / Logit: directions/token-logit.md
+          - Attention Head / Path: directions/attention-heads.md
+          - Representation / Activation: directions/representation.md
+          - Long-form / Semantic Drift: directions/long-form.md
+          - Evaluation / Recall Trade-off: directions/evaluation.md
+      - 资源类型:
+          - 总览: library/index.md
+          - 方法论文: library/methods.md
+          - 综述: library/surveys.md
+          - Benchmark 与 Metric: library/benchmarks.md
+          - Dataset: library/datasets.md
+          - 待读队列: library/reading-queue.md
+      - 论文来源:
+          - 总览: venues/index.md
+          - CVPR / ICCV / ECCV: venues/vision.md
+          - ACL / EMNLP: venues/nlp.md
+          - ICLR / ICML / NeurIPS: venues/ml.md
+          - arXiv / OpenReview: venues/preprints.md
+      - 标签: tags.md
   - 模板与维护:
       - 深度论文笔记模板: guides/paper-card.md
       - 实验笔记模板: guides/experiment-note.md
