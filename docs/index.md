@@ -20,7 +20,7 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>7</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>11</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
   <div class="stat-card"><strong>9</strong><span>待整理来源</span></div>
@@ -68,9 +68,10 @@ flowchart LR
 
 ## 最近接入
 
+- [Same Attention, Different Truths](papers/same-attention-different-truths.md)：用高注意视觉区域的 Logit-Lens 语义一致性检测并分型缓解对象幻觉。
+- [VISOR](papers/visor.md)：把属性判断分解为视觉增量与 null-image prior，按 margin/SNR 路由修复。
+- [Beyond Global Editing](papers/beyond-global-editing.md)：用逐样本动态混合的低秩子空间替代单一 global HalluSpace。
+- [Role-Break](papers/role-break-attention-heads.md)：以每个 head 偏离自身 faithful role 的结构化模式检测幻觉。
 - [Intervene-All-Paths](papers/intervene-all-paths.md)：跨对齐格式的多路径 head intervention。
-- [Vision-aware Head Divergence](papers/vision-aware-head-divergence.md)：用有图/无图 head output divergence 定位视觉敏感头。
-- [Self-Introspective Decoding](papers/self-introspective-decoding.md)：利用低重要度视觉 token 构造上下文相关对比分支。
-- [M3ID](papers/m3id.md)：放大有图与无图分布差异，抵抗 language prior dominance。
 
 <p class="source-warning">知识卡包含个人研究解读。标记为“待核对”的条目不可作为最终论文写作中的事实依据，引用前应回查论文原文与公开代码。</p>

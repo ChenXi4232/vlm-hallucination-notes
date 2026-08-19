@@ -51,6 +51,10 @@ nav:
   - 研究版图: research-map.md
   - Paper Notes:
       - 总索引: papers/index.md
+      - Same Attention, Different Truths: papers/same-attention-different-truths.md
+      - VISOR: papers/visor.md
+      - Beyond Global Editing: papers/beyond-global-editing.md
+      - Role-Break: papers/role-break-attention-heads.md
       - M3ID: papers/m3id.md
       - Curing Semantic Drift: papers/curing-semantic-drift.md
       - Self-Introspective Decoding: papers/self-introspective-decoding.md

@@ -16,6 +16,8 @@ tags:
 
 ## 关键阅读
 
+- [Role-Break](../papers/role-break-attention-heads.md)：将每个 head 相对自身 faithful source-allocation baseline 的偏离作为统一检测特征。
+- [Same Attention, Different Truths](../papers/same-attention-different-truths.md)：说明 attention quantity 本身不能区分 grounded 与 hallucinated object，需要读取高注意区域语义。
 - [Modular Attribution & Intervention](../papers/modular-attribution-intervention.md)：组件消融与 hallucination heads。
 - [Vision-aware Head Divergence](../papers/vision-aware-head-divergence.md)：有图/无图 head-output divergence。
 - [Intervene-All-Paths](../papers/intervene-all-paths.md)：I2I、I2T、T2T 路径的联合识别与干预。
@@ -28,4 +30,3 @@ tags:
 3. 只在 hallucination onset 前的局部窗口干预。
 4. 在原图、空图和对象删除图之间做 head-output activation patching。
 5. 同时画 CHAIRi–Recall、CHAIRs–length 和 hallucination–repetition 曲线。
-

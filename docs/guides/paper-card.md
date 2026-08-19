@@ -37,9 +37,13 @@ training: Training-free
 status: 已精读
 source_status: 原文、补充材料与官方代码已核对
 review_state: automated
+arxiv_version: v1
+last_verified: 2026-08-19
 paper_url: https://...
 openreview_url: https://...
 code_url: https://...
+overview_figure: ../assets/images/papers/<paper-slug>-overview.png
+overview_figure_source: Figure N in the paper's official arXiv source package
 tags:
   - Object hallucination
   - Attention head
@@ -48,6 +52,8 @@ tags:
 ```
 
 `review_state` 建议使用 `automated`、`user-reviewed` 或 `user-approved`；不要把 AI 精读自动标记为已人工复核。
+
+`arxiv_version` 与 `last_verified` 用来冻结本次精读所依据的版本和核对日期；若不存在公开评审或官方代码，不要制造空链接，在正文“来源边界”中写明检索日期与“未发现”。
 
 ## 页面开头
 
@@ -60,6 +66,21 @@ tags:
 
 <div class="paper-tldr"><strong>一句话总结</strong><p>用一到两句交代研究矛盾、关键机制、方法和最重要结论。</p></div>
 ```
+
+## 官方方法概览图
+
+优先从论文官方 PDF 或 arXiv LaTeX source package 提取 pipeline / framework / method overview；不要使用博客重绘图替代论文原图。图片放在 `docs/assets/images/papers/`，并用下列结构记录图号、出处、版本与用途：
+
+```html
+<figure class="paper-figure">
+  <a href="../../assets/images/papers/<paper-slug>-overview.png" target="_blank" rel="noopener">
+    <img src="../../assets/images/papers/<paper-slug>-overview.png" alt="论文方法总览：简述图中流程">
+  </a>
+  <figcaption>官方方法总览（论文 Figure N）。图片提取自 <a href="https://arxiv.org/abs/...">arXiv v1</a> 的官方 LaTeX source package；点击查看原图。</figcaption>
+</figure>
+```
+
+正文必须解释图中的输入、关键中间量、分支条件、干预位置与输出，不能只贴图。若论文没有方法图，明确写“官方版本未提供方法总览图”，再用 Mermaid 给出**本站等价抽象**，避免让读者误认作作者原图。
 
 ## 1. 论文速览
 
@@ -125,7 +146,7 @@ tags:
 
 ### 4.2 主结果
 
-只摘录支持核心论断的关键表格，并注明表号、指标方向与设置；不确定数字不要填写。
+只摘录支持核心论断的关键表格，并注明表号、指标方向、模型、数据集、对照方法与设置；不确定数字不要填写。至少保留一个可追溯的定量结果表，并检查正文数字与表格是否一致。
 
 ### 4.3 Ablation 与机制证据
 
@@ -184,4 +205,10 @@ tags:
 
 ## 11. 检索标签与来源边界
 
-列出 requires training、inference-only、detector、external evaluator、interpretability、mitigation、baseline suitability。最后明确哪些内容来自原文，哪些是作者公开材料，哪些是个人分析，哪些仍待核对。
+列出 requires training、inference-only、detector、external evaluator、interpretability、mitigation、baseline suitability。最后明确哪些内容来自原文，哪些是作者公开材料，哪些是个人分析，哪些仍待核对，并逐项登记：
+
+- 核对的 arXiv / proceedings 版本与日期；
+- 官方代码仓库与 commit（若尚未发布则写“截至日期未发现”）；
+- OpenReview / 公开评审状态（不要把无搜索结果写成“没有评审”，应写“截至日期未发现公开页面”）；
+- 方法图的原始文件、论文图号和提取来源；
+- 数字冲突、正文—表格不一致或版本缺口。

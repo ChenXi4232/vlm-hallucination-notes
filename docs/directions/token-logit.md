@@ -20,6 +20,8 @@ $$
 
 ## 关键阅读
 
+- [Same Attention, Different Truths](../papers/same-attention-different-truths.md)：对高注意视觉区域做 Logit-Lens 一致性检查，并按 mask 反事实分型。
+- [VISOR](../papers/visor.md)：用 real/null-image logit margin 分解属性判断，区分方向、margin 与 SNR。
 - [M3ID](../papers/m3id.md)：有图/无图分布差异与 mutual-information decoding。
 - [Self-Introspective Decoding](../papers/self-introspective-decoding.md)：基于 least-important visual tokens 的对比分支。
 - [Curing Semantic Drift](../papers/curing-semantic-drift.md)：top-k candidates 的视觉重排与 selection failure。
@@ -36,3 +38,4 @@ $$
 !!! warning "解释边界"
     较大的 real-vs-blank logit gap 说明“输入条件改变了输出分布”，但不保证改变来自正确视觉证据；视觉编码器也可能稳定地读错属性或对象。
 
+SADT 与 VISOR 都进一步说明：视觉依赖的**方向与语义质量**比绝对强度更重要。前者检查所注意区域能否读出目标对象，后者直接展示强视觉增量也可能把属性推向错误答案。
