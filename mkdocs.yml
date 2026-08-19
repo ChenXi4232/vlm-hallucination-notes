@@ -140,8 +140,6 @@ extra_css:
 extra_javascript:
   - assets/javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
-  - assets/javascripts/mermaid.js
 
 extra:
   social:
