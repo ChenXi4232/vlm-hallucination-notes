@@ -8,7 +8,7 @@ tags:
 
 ## 新增论文
 
-1. 从 [Paper Card 模板](../guides/paper-card.md) 创建 Markdown。
+1. 从 [深度论文笔记模板](../guides/paper-card.md) 创建 Markdown。
 2. 在 front matter 填写 `title/year/venue/resource_type/direction/status/tags`。
 3. 资料不足时写“待核对”，不要补猜测。
 4. 执行 `python scripts/build_indexes.py` 自动更新论文总索引。

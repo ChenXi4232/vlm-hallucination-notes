@@ -1,70 +1,162 @@
 ---
 title: Cracking the Code of Hallucination in LVLMs with Vision-aware Head Divergence
-description: 以有图和无图条件下的 head-output divergence 识别 vision-aware heads 并进行强化
-authors:
-  - Jinghan He
-  - Kuan Zhu
-  - Haiyun Guo
-  - Junfeng Fang
-  - Zhenglin Hua
-  - Yuheng Jia
-  - Ming Tang
-  - Tat-Seng Chua
-  - Jinqiao Wang
+description: 比较有图与无图条件下单 head 输出，动态识别 vision-aware heads 并逐层强化
+authors: [Jinghan He, Kuan Zhu, Haiyun Guo, Junfeng Fang, Zhenglin Hua, Yuheng Jia, Ming Tang, Tat-Seng Chua, Jinqiao Wang]
 venue: ACL
 year: 2025
 resource_type: 方法论文
 direction: Attention Head / Path
-hallucination_type:
-  - Object hallucination
-method_level:
-  - Head-level
+secondary_directions: [Representation / Activation, Evaluation / Visual Dependence]
+hallucination_type: [Object hallucination]
+method_level: [Head-level]
 training: Training-free
 status: 已精读
-source_status: ACL Anthology 与代码元数据已核对；知识卡解读待持续复核
+source_status: ACL Anthology 原文与官方代码元数据已核对
+review_state: automated
 paper_url: https://aclanthology.org/2025.acl-long.175/
 code_url: https://github.com/jinghan1he/VHR
-tags:
-  - Object hallucination
-  - Vision-aware head
-  - Head divergence
-  - Training-free
-  - CHAIR
-  - POPE
+tags: [Object hallucination, Vision-aware head, Head divergence, Training-free, CHAIR, POPE]
 ---
 
-# Cracking the Code of Hallucination in LVLMs with Vision-aware Head Divergence：知识库条目
+# Vision-aware Head Divergence（VHD / VHR）
 
-<div class="paper-meta"><span>ACL 2025 Long</span><span>方法论文</span><span>Head-level</span><span>Training-free</span><span>已精读</span></div>
+<div class="paper-meta"><span>ACL 2025 Long</span><span>Head-level</span><span>Training-free</span><span>已精读</span></div>
 
-[ACL Anthology](https://aclanthology.org/2025.acl-long.175/){ .kb-button } [官方代码](https://github.com/jinghan1he/VHR){ .kb-button }
+[ACL Anthology](https://aclanthology.org/2025.acl-long.175/){ .kb-button .primary } [官方代码](https://github.com/jinghan1he/VHR){ .kb-button }
 
-## 核心问题
+<div class="paper-tldr"><strong>一句话总结</strong><p>VHD 直接测量每个 attention head 在有图与无图输入下的输出差异，并以 top-k VHD 聚合成 token-level visual dependence；VHR 在每个样本、每个生成步逐层选择高 VHD heads 并放大其输出。</p></div>
 
-本文关注 LVLM 在图像描述与视觉问答中生成与图像不一致内容的问题，尤其是 object hallucination。论文的核心问题不是简单判断模型是否“看图”，而是进一步追问：在 Transformer 内部，是否存在一部分 attention heads 负责视觉信息注入？当这些 heads 的作用不足时，模型是否更容易被语言先验主导并产生幻觉？因此，该工作将 hallucination 从输出层错误推进到 head-level visual dependence 的机制分析。
+## 1. 论文速览
 
-## 方法一句话概括
+| 维度 | 内容 |
+|---|---|
+| 研究对象 | Object hallucination 与生成 token 的视觉依赖 |
+| 核心归因 | 只有少量 heads 对视觉条件敏感；hallucinated words 往往对应较低 T-VHD |
+| 方法类型 | Training-free analysis metric + dynamic head reinforcement |
+| 干预位置 | 单 head output，经 output projection 前后的实现需按代码确认 |
+| 外部依赖 | 无 detector/外部 evaluator 参与核心方法；需有图/无图双分支 |
+| 主要评测 | CHAIR、POPE、LLaVA-Bench-in-the-Wild |
+| 最适合角色 | Head-level visual-dependence metric 与动态 intervention baseline |
 
-论文提出 Vision-aware Head Divergence（VHD），通过比较同一 head 在有图像输入与无图像输入条件下的输出差异来识别 vision-aware heads，并进一步提出 Vision-aware Head Reinforcement（VHR），在推理时放大这些 heads 的输出以增强视觉 grounding、降低 hallucination。
+## 2. 研究背景与核心假设
 
-## benchmark / metric
+Attention weight 只能说明“query 把多少权重分给 image tokens”，不能说明 value 内容与最终 residual contribution 是否因图像而改变。VHD 因此比较 head **output**，将“视觉敏感性”定义为同一 head 对视觉条件移除的响应。
 
-实验主要使用 CHAIR、POPE 和 LLaVA-Bench-in-the-Wild。CHAIR 用于评估 caption 中提到的物体是否出现在图像标注中，适合衡量 object hallucination；POPE 将物体存在性转化为 yes/no 问答，包含 random、popular、adversarial 设置；LLaVA-Bench 结合 GPT-4o 评价回答的 accuracy、detailedness 和 naturalness。模型包括 InstructBLIP-7B、LLaVA-1.5-7B 和 LLaVA-NeXT-7B，baseline 包括 Greedy、Beam、DoLa、VCD、OPERA、CODE 和 EAH。整体结果显示 VHR 在 CHAIR 上提升明显，在 POPE 上提升较小但较稳定。
+| 假设 | 证据 | 强度 | Confound |
+|---|---|---|---|
+| Vision awareness 稀疏分布于 heads | 全层 VHD 热图 | <span class="evidence-medium">反事实测量</span> | 无图输入是 OOD；距离受 output norm 影响 |
+| 低 T-VHD 与 hallucination 相关 | 500 COCO 图上的 object token 分组与显著性检验 | <span class="evidence-medium">统计关联</span> | token 类型与生成位置可能混淆 |
+| 强化高 VHD heads 可减幻觉 | VHR 多模型、多 benchmark | <span class="evidence-high">动态干预</span> | 强化也改变 residual scale 与生成风格 |
 
-## 与我研究的关系
+## 3. 方法详解
 
-本文与我的 token-level / head-level / logit-level 反事实研究高度相关。VHD 本质上是 head-output 层面的“真实图像 vs 无图像”差异度量，可作为我当前 VR、PD、RBC 等 logits-level 视觉依赖指标的中间层 counterpart。若某 token 的 logits gap 低且 T-VHD 也低，说明该 token 更可能由语言先验驱动；若 logits gap 高但仍 hallucinate，则可能表示模型确实使用了视觉信号，但视觉-语言对齐或证据选择出现错误。该文还提醒我，attention weight 本身可能不足以解释视觉依赖，head output divergence 更接近可干预的机制变量。
+### 3.1 VHD
 
-## 是否适合作为 baseline
+对于层 (l)、head (i)、生成 token (y_t)，论文定义：
 
-适合作为高优先级 analysis baseline 和中高优先级 mitigation baseline。优点是无需训练、不依赖 object detector 或外部 LLM，且与 head-level intervention 直接相关；缺点是需要修改模型 forward 或 hook 每个 attention head 的输出，对不同 LVLM 架构适配成本较高。若后续实验使用 LLaVA-1.5，VHD/T-VHD 很适合作为视觉依赖指标对照；VHR 则可作为 head-level 干预方法，与 M3ID、SID、OPERA、DLC 等 decoding-level 方法形成横向比较。
+\[
+\operatorname{VHD}_{l,i}=d\Bigl(A_{l,i}(y_t\mid y_{<t},x_V,x_T),
+A_{l,i}(y_t\mid y_{<t},x_T)\Bigr),
+\]
 
-## 未来可做的 follow-up experiment
+其中 (A_{l,i}) 表示该 head 的输出，(x_V) 是视觉输入，(x_T) 是文本 prompt，(d) 是输出差异度量。高值表示该 head 在移除图像后明显变化，即对视觉条件敏感。
 
-1. 比较 VR 与 T-VHD 的 token-level 相关性：在 COCO caption 中记录每个 token 的真实图像 vs 空白图像 logits gap、T-VHD 和 hallucination 标签，检验 hallucinated object tokens 是否同时表现为低 logits visual dependence 与低 head-level visual dependence。
+### 3.2 Token-VHD
 
-2. 做 high-VHD head suppression / reinforcement：对 VHD 排名前列的 heads 分别设置 alpha 小于 1 与大于 1，观察 CHAIR、POPE、object logits 和输出长度变化，以验证 vision-aware heads 是否具有因果作用。
+为避免大量视觉不敏感 heads 稀释信号，论文只聚合每层/全模型中最大的 (k) 个 head divergence：
 
-3. 分析 hallucination onset 前的视觉依赖轨迹：选取产生幻觉的长 caption，比较 hallucinated token 前若干步与正确 object token 前若干步的 T-VHD、VR、entropy 和 top-k logits，判断幻觉是否伴随视觉依赖提前塌缩。
+\[
+\operatorname{T\mbox{-}VHD}_t=\frac{1}{k}\sum_{(l,i)\in \operatorname{TopK}}\operatorname{VHD}_{l,i,t}.
+\]
 
-4. 检验 VHR 是否真正提升视觉依赖：比较 baseline 与 VHR 下 correct object token 和 hallucinated object token 的 logits gap。如果 CHAIR 降低但 VR/T-VHD 未提升，则可能说明 VHR 只是改变生成风格或长度，而非真正增强视觉 grounding。
+这使 T-VHD 成为当前 token step 的 visual sensitivity proxy。它仍不是 correctness metric：错误视觉信号也可产生高 T-VHD。
+
+### 3.3 VHR
+
+```mermaid
+flowchart TD
+    A["有图/无图双分支"] --> B["逐层计算 VHD"]
+    B --> C["去除异常 surge"]
+    C --> D["选择高于层内中位数的 heads"]
+    D --> E["放大所选 head outputs"]
+    E --> F["进入下一层并重新选择"]
+```
+
+论文采用 layer-by-layer select-then-reinforce，而不是先一次性选择所有层：前层被强化后会改变后层表示，重新计算能保持选择与当前 residual state 一致。还会过滤超过层内均值加标准差的异常 VHD surge，避免数值异常被误当作视觉能力。
+
+## 4. 实验设计与关键结果
+
+| 项目 | 内容 |
+|---|---|
+| Models | InstructBLIP-7B、LLaVA-1.5-7B、LLaVA-NeXT-7B |
+| CHAIR | COCO 随机 500 图；CHAIRs/CHAIRi、长度；主结果为 5 个随机 split 平均 |
+| POPE | popular/random/adversarial F1 平均 |
+| Open-ended quality | LLaVA-Bench-in-the-Wild，GPT-4o 评价 accuracy/detailedness/naturalness |
+| Baselines | Greedy、Beam、DoLa、VCD、OPERA、CODE、EAH |
+| Ablations | static heads、异常值过滤、reinforced layers、scale factor |
+
+论文报告 LLaVA-1.5 上最高可将 CHAIRs/CHAIRi 分别降低 16.36/4.61 个点，并显示强化层数增加先改善幻觉、过度强化后损害生成质量。这个拐点非常重要：VHD 不是“越强越好”，视觉敏感 head 也承担正常语言/语义功能。
+
+## 5. 亮点与贡献
+
+- 从 attention mass 前进到 head output counterfactual，更接近可干预变量。
+- 指标和干预都按 sample/token 动态变化，避免静态通用 head set 的强假设。
+- 提供多 split 平均、层数/强度 ablation 和 static-head 对照。
+- 直接连接分析指标（T-VHD）与方法（VHR），易于检验 metric-action consistency。
+
+## 6. 局限、指标漏洞与审稿风险
+
+1. **无图分支 confound**：文本格式与视觉占位符如何处理会影响 divergence。
+2. **Norm confound**：欧氏输出差异可能偏爱高 norm heads；需 cosine、relative norm 与 whitened distance 对照。
+3. **视觉敏感≠视觉正确**：高 VHD 可能来自错误区域或视觉噪声。
+4. **残差缩放副作用**：放大 head output 同时改变 residual norm；需 norm-matched intervention。
+5. **Recall 与生成质量**：论文已观察过度强化伤害质量，复现必须画 Pareto curve。
+
+## 7. 与我的研究关系
+
+VHD 是 token-level logits VR 的 head-level counterpart。可建立三层链条：
+
+\[
+\Delta h^{head}_{real-blank}
+\rightarrow
+\Delta r^{layer}_{real-blank}
+\rightarrow
+\Delta l^{token}_{real-blank}.
+\]
+
+若 head divergence 高但 logit VR 低，说明视觉变化被后续层抵消；若二者都高但 token hallucinate，问题更可能是 visual-semantic misalignment；若都低，则支持 prior dominance。
+
+**Baseline 适合度：High。** 优先复现 T-VHD 作为 analysis baseline，再评估 VHR。需要 hook head outputs 和双分支 forward，但不需训练或 detector。
+
+## 8. 可执行的后续实验
+
+| 实验 | RQ | Comparison | Outputs | Expected | Failure | Cost |
+|---|---|---|---|---|---|---|
+| E1 多距离 VHD | 结果是否被 norm 支配？ | L2/cosine/relative/whitened | AUROC、head overlap | 相对距离更稳 | 各指标差异大 | Low |
+| E2 Causal chain | VHD 是否写入目标 logits？ | head patch + logit lens | Δresidual、Δlogit | 仅部分高 VHD heads有效 | 后层抵消 | Medium |
+| E3 Hall onset | T-VHD 是否提前下降？ | hallucination 前 5 步 | lead time、AUPRC | onset 前出现下降 | 仅目标 token 当步变化 | Low |
+| E4 Norm-matched VHR | 收益来自方向还是 scale？ | VHR vs random/norm-matched | CHAIR/Recall/quality | 定向 VHR 更优 | 纯 scale 效应 | Medium |
+
+## 9. 复现清单
+
+- [ ] 明确 head output 是 (AV) 还是经 (W_O) 后切片
+- [ ] 固定无图/空白分支与位置编码
+- [ ] 报告 VHD distance、top-k、过滤规则、强化层与 α
+- [ ] 同时报 CHAIR、Recall、length、质量与显存/速度
+- [ ] 使用随机 head、static head、norm-matched 对照
+
+## 10. 综合评分
+
+| 维度 | 评分 | 理由 |
+|---|---:|---|
+| 新颖性 | 4/5 | head-output 双分支差异与动态强化结合 |
+| 机制证据 | 4/5 | 统计检验 + 干预；仍有 norm/OOD confound |
+| 实验完整性 | 4/5 | 多模型、多 split、关键 ablation |
+| 可复现性 | 4/5 | 有代码；需要模型内部 hook |
+| 与当前研究相关性 | 5/5 | 正是 head-level real/blank counterfactual |
+
+## 11. 来源边界
+
+`requires training: no` · `inference-only: yes` · `object detector: no` · `external LLM evaluator: quality evaluation only` · `interpretability: high` · `baseline suitability: high`
+
+公式、500 图与 5 split 设置、主要变化值和算法细节依据 ACL 论文；因果链、norm-matched 对照和与 VR 的连接属于后续研究设计。

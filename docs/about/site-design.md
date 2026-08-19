@@ -13,7 +13,7 @@ tags:
 
 | 能力 | 对研究知识库的价值 |
 |---|---|
-| Markdown 原生 | Paper Card 可直接在 GitHub、编辑器和本地脚本中复用 |
+| Markdown 原生 | Deep Paper Note 可直接在 GitHub、编辑器和本地脚本中复用 |
 | 全文搜索 | 检索论文标题、方法、benchmark、局限与实验启发 |
 | 多级导航与 tags | 同一论文同时属于方向、资源类型和会议来源 |
 | 数学公式与代码 | 保存推导、伪代码、hook 与实验配置 |
@@ -32,4 +32,3 @@ tags:
 ## 静态站点的边界
 
 GitHub Pages 不提供运行时数据库，因此“网站内表单直接写回论文”不作为核心流程。编辑入口会跳转到 GitHub 文件编辑页；版本历史、review 和回滚由 Git 管理。这比浏览器 localStorage 更适合长期研究资产。
-

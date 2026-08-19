@@ -19,9 +19,8 @@ tags:
 
 ## 当前状态
 
-现有附件中的 IR Edit、Dynamic Multimodal Activation Steering 等论文已进入[待读队列](../library/reading-queue.md)，尚未把 PDF 自动转换成经核对的 Paper Card。
+现有附件中的 IR Edit、Dynamic Multimodal Activation Steering 等论文已进入[待读队列](../library/reading-queue.md)，尚未转换成经核对的 Deep Paper Note。
 
 ## 建议输出
 
 每次 representation intervention 至少保存：layer、token position、direction norm、projection coefficient、pre/post logits、KL divergence、recall 与文本退化指标。
-

@@ -1,32 +1,44 @@
 ---
-title: Paper Card 模板
-description: 面向 VLM hallucination 论文的可复现知识卡模板
+title: 深度论文笔记模板
+description: 面向 VLM hallucination 论文的结构化精读、证据审计与实验转化模板
 tags:
   - Template
+  - Paper Note
 ---
 
-# Paper Card 模板
+# 深度论文笔记模板
 
-复制本页源码到 `docs/papers/<paper-slug>.md`，并替换以下 front matter：
+本模板将原来的简略 Paper Card 升级为 **Deep Paper Note**。Front matter 负责检索与自动索引，正文负责还原方法、审计证据并转化为可执行研究设计。模板适用于方法论文；Survey、Benchmark 和 Dataset 可删去不适用的小节，但不得省略来源边界与局限。
+
+!!! note "写作原则"
+    先给读者结论，再解释方法；把论文声称、论文证据与个人推断分开；没有原文依据的数字、公式或因果结论一律标记为“待核对”。
+
+## Front matter
+
+复制本页源码到 `docs/papers/<paper-slug>.md`，替换以下字段：
 
 ```yaml
 ---
 title: 完整论文标题
-description: 一句话说明研究问题与方法
+description: 一句话说明研究矛盾与核心方法
 authors:
   - Author One
 venue: CVPR
 year: 2026
 resource_type: 方法论文
 direction: Attention Head / Path
+secondary_directions:
+  - Token / Logit
 hallucination_type:
   - Object hallucination
 method_level:
   - Head-level
 training: Training-free
-status: 待读
-source_status: 待核对
+status: 已精读
+source_status: 原文、补充材料与官方代码已核对
+review_state: automated
 paper_url: https://...
+openreview_url: https://...
 code_url: https://...
 tags:
   - Object hallucination
@@ -35,67 +47,141 @@ tags:
 ---
 ```
 
-## 1. Basic Information
+`review_state` 建议使用 `automated`、`user-reviewed` 或 `user-approved`；不要把 AI 精读自动标记为已人工复核。
 
-- **Title**：
-- **Authors**：
-- **Venue / Year**：
-- **Paper / Code / Dataset**：
-- **Main task**：
-- **Model family**：
+## 页面开头
 
-## 2. Problem Definition
+```markdown
+# 论文标题
 
-说明 hallucination 类型、输入输出形式、任务设置，以及它与视觉依赖研究的关系。
+<div class="paper-meta"><span>CVPR 2026</span><span>方法论文</span><span>Head-level</span><span>Training-free</span></div>
 
-## 3. Core Hypothesis
+[论文原文](...){ .kb-button .primary } [OpenReview](...){ .kb-button } [官方代码](...){ .kb-button }
 
-- 论文认为 hallucination 的直接原因是什么？
-- 属于视觉编码、跨模态对齐、语言先验、解码选择、数据还是评测问题？
-- 论文提供的是相关性证据还是因果证据？
+<div class="paper-tldr"><strong>一句话总结</strong><p>用一到两句交代研究矛盾、关键机制、方法和最重要结论。</p></div>
+```
 
-## 4. Method Summary
+## 1. 论文速览
 
-按输入 → 中间模块 → 输出描述方法，并回答：
+| 维度 | 内容 |
+|---|---|
+| 研究对象 | hallucination 类型与任务形式 |
+| 核心归因 | visual encoding / alignment / language prior / decoding / evaluation |
+| 方法类型 | training-time / inference-time / evaluation-only |
+| 干预位置 | token / head / residual / logit / decoding path |
+| 外部依赖 | detector、CLIP、LLM evaluator、human annotation |
+| 主要评测 | dataset、benchmark、metric |
+| 最适合角色 | baseline / related work / mechanism inspiration |
 
-- 是否需要训练？
-- 是否需要 detector、external model 或 human annotation？
-- 干预发生在哪个 layer/head/token/decoding step？
-- 需要缓存哪些激活或 logits？
+## 2. 研究背景与核心矛盾
 
-## 5. Evaluation Details
+### 2.1 研究的 hallucination
+
+说明输入、输出、标签粒度和 benchmark 实际测量的错误，不要把 object hallucination 的结论直接外推到 attribute、relation 或 reasoning hallucination。
+
+### 2.2 现有方法的缺口
+
+说明论文针对的真实缺口，以及它是否只是换了一个 proxy 或 benchmark。
+
+### 2.3 核心假设与证据强度
+
+| 假设 | 论文证据 | 证据类型 | 仍可能的混淆因素 |
+|---|---|---|---|
+| H1 | | correlation / intervention / counterfactual | |
+
+明确区分：相关性观察、组件消融、反事实干预和可跨模型复现的因果证据。
+
+## 3. 方法详解
+
+### 3.1 整体流程
+
+优先给出简洁 Mermaid 流程图，随后按输入 → 中间量 → 决策/干预 → 输出解释。
+
+### 3.2 关键量与公式
+
+每个公式必须解释所有符号、张量维度、计算位置和直观意义。若为便于比较而写成统一形式，应标注“等价抽象”而非冒充论文原式。
+
+### 3.3 实现细节
+
+说明 layer/head/token selection、超参数、额外 forward、KV cache、beam search、外部模型以及时间/显存开销。
+
+### 3.4 方法究竟改变了什么
+
+说明它改变的是视觉依赖、语言先验、候选排序、生成长度还是回答倾向，并列出需要额外实验才能排除的替代解释。
+
+## 4. 实验设计与关键结果
+
+### 4.1 设置
 
 | 项目 | 内容 |
 |---|---|
-| Dataset | |
-| Benchmark | |
-| Metric | |
-| Baseline | |
-| Model | |
-| Ablation | |
-| Main result | |
-| Multi-seed / CI | |
+| Models | |
+| Datasets / splits | |
+| Benchmarks | |
+| Metrics | |
+| Baselines | |
+| Ablations | |
+| Statistical evidence | seed、CI、显著性检验 |
 
-## 6. Strengths
+### 4.2 主结果
 
-总结新颖性、实验扎实程度、机制价值和复现成本。
+只摘录支持核心论断的关键表格，并注明表号、指标方向与设置；不确定数字不要填写。
 
-## 7. Weaknesses and Risks
+### 4.3 Ablation 与机制证据
 
-检查指标漏洞、prompt bias、language-prior confound、annotation noise、外部 evaluator 依赖、error accumulation 与审稿风险。
+检查随机 head/token 对照、强度扫描、跨数据迁移、输出长度、coverage/recall 和通用能力。
 
-## 8. Relevance to My Research
+### 4.4 结果应该如何解读
 
-- 对 token/head/logit 反事实实验有什么启发？
-- 能否支持 real image vs blank/counterfactual image？
-- 作为 baseline、related work 或 motivation 的价值？
-- 能否改造成低算力实验？
+分别写“论文能够支持什么”和“论文不能据此证明什么”。
 
-## 9. Possible Follow-up Experiments
+## 5. 亮点与贡献
 
-每个实验填写：research question、model、data、intervention、recorded outputs、expected result、failure case、compute cost。
+从问题重构、方法新颖性、证据质量、可复现性和机制价值分析，不重复摘要。
 
-## 10. Comparison Tags
+## 6. 局限、指标漏洞与审稿风险
 
-统一填写 training、detector、external evaluator、benchmark、interpretability、mitigation、baseline suitability 与 research relevance。
+至少检查：proxy validity、prompt bias、language-prior confound、annotation noise、external evaluator、length/recall trade-off、error accumulation、跨模型迁移和计算成本。
 
+## 7. 与我的研究关系
+
+### 7.1 可直接借鉴
+
+连接 real vs blank/counterfactual image、token-level logits、head output、residual stream、logit lens、VR/PD/RBC/POT 等当前实验。
+
+### 7.2 Baseline 决策
+
+给出 high / medium / low，并解释复现成本、对比公平性和最小实现。
+
+### 7.3 与已有路线的差异
+
+说明该方法是直接证据、互补 proxy，还是可能与当前路线发生循环定义。
+
+## 8. 可执行的后续实验
+
+| 实验 | Research question | Model / data | Intervention / comparison | Recorded outputs | Expected observation | Failure case | Cost |
+|---|---|---|---|---|---|---|---|
+| E1 | | | | | | | Low |
+
+## 9. 复现清单
+
+- [ ] 原文与补充材料版本已记录
+- [ ] 官方代码与 commit 已记录
+- [ ] prompt、split、seed 与 generation config 已记录
+- [ ] 主要指标可由公开脚本复算
+- [ ] 同时记录输出长度、coverage / recall 与通用能力
+- [ ] 外部 evaluator 的版本和 prompt 已冻结
+
+## 10. 综合评分
+
+| 维度 | 评分（1–5） | 理由 |
+|---|---:|---|
+| 新颖性 | | |
+| 机制证据 | | |
+| 实验完整性 | | |
+| 可复现性 | | |
+| 与当前研究相关性 | | |
+
+## 11. 检索标签与来源边界
+
+列出 requires training、inference-only、detector、external evaluator、interpretability、mitigation、baseline suitability。最后明确哪些内容来自原文，哪些是作者公开材料，哪些是个人分析，哪些仍待核对。

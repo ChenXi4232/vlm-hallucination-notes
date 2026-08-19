@@ -49,7 +49,7 @@ theme:
 nav:
   - 首页: index.md
   - 研究版图: research-map.md
-  - Paper Cards:
+  - Paper Notes:
       - 总索引: papers/index.md
       - M3ID: papers/m3id.md
       - Curing Semantic Drift: papers/curing-semantic-drift.md
@@ -93,7 +93,7 @@ nav:
       - arXiv / OpenReview: venues/preprints.md
   - 标签: tags.md
   - 模板与维护:
-      - Paper Card 模板: guides/paper-card.md
+      - 深度论文笔记模板: guides/paper-card.md
       - 实验笔记模板: guides/experiment-note.md
       - 内容工作流: about/workflow.md
       - 公开 / 私有边界: about/publishing-boundary.md
