@@ -94,6 +94,8 @@ DLC 直接改变候选排序，但其信号来自外部 encoder。它证明“�
 
 ## 4. 实验设计与结果审计
 
+### 4.1 设置
+
 | 项目 | 内容 |
 |---|---|
 | Models | LLaVA-1.5、InstructBLIP、MiniGPT-4；以 7B 为主并含部分 13B |
@@ -104,7 +106,25 @@ DLC 直接改变候选排序，但其信号来自外部 encoder。它证明“�
 | Baselines | Nucleus、VCD、ICD、SID、OPERA |
 | 关键 ablation | alignment backbone、历史窗口、校准组件、生成长度 |
 
+### 4.2 主结果
+
+| 设置 / 指标（方向） | Baseline | DLC | 变化 / 解读 | 来源 |
+|---|---:|---:|---|---|
+| LLaVA-1.5，COCO，GPT-4o Correctness ↑ | Nucleus 5.34 | **7.73** | +2.39；Detailedness 6.18→6.87 | Table 3 |
+| LLaVA-1.5，LLaVA-Bench，GPT-4o Correctness ↑ | Nucleus 4.71 | **8.42** | +3.71；OOD 场景仍提升 | Table 3 |
+| LLaVA-1.5，CHAIRs / CHAIRi ↓ | Vanilla 56.6 / 18.2 | **35.8 / 10.5**（k=50） | 同时推理 3.64→5.35 s/sample | Table 4 |
+| LLaVA-1.5，CHAIRs / CHAIRi ↓ | OPERA 53.7 / 15.0 | **35.8 / 10.5**（k=50） | DLC 更低；显存 17,868 MB vs 20,854 MB | Table 4 |
+
 最有意义的结论是 DLC 在长生成设置中优势更明显，与 semantic drift 叙事一致。但应额外报告每张图生成对象数、Recall、caption length 和 CLIP evaluator 与标签的独立一致性；否则可能是“偏向更常见、更视觉相关但不够具体”的输出。
+
+### 4.3 消融与分析实验
+
+| 实验 | 对照 / 唯一变量 | 关键结果 | 能支持什么 | 仍不能证明什么 | 来源 |
+|---|---|---|---|---|---|
+| 核心组件 | Full vs 去掉 adaptive factor、CCTA、ITA 或 RVA | 三模型的 GPT-4o correctness/detailedness 均出现退化 | 四部分都对最终选择有贡献 | 图中条形差异未给 CI，不能给出独立因果份额 | Figure 5 |
+| 候选池大小 | k=10/30/50/100/200 | CHAIRs 41.2→38.2→**35.8**→36.6→39.8；时间 4.84→9.09 s | k=30–50 是质量—成本折中，扩大候选池非单调受益 | 不能排除该最优区间依赖模型和词表分布 | Table 4 |
+| 视觉 backbone | CLIP-336、FG-CLIP、SigLIP | 各 backbone 上均比各自 baseline 提升 | 方法不绑定单个 CLIP 实现 | 仍依赖外部视觉模型及其类别先验 | Table 2 / Table 7 / Figure 4 |
+| MME 分项 | Perception vs Cognition | 感知项整体改善，Code Reasoning / Numerical Calculation 有小幅回落 | 显示视觉约束与纯符号能力存在边界 | 不能据此判定性能下降的具体内部机制 | Figure 4 |
 
 ## 5. 亮点与贡献
 

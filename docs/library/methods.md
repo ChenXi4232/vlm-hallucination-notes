@@ -6,10 +6,11 @@ tags:
 
 # 方法论文
 
-本页是已通过 Deep Paper Note 校验的方法目录；方法细节、结果与局限只在对应论文页维护。当前共 15 篇，全部带有可追溯的方法概览图。
+本页是已通过 Deep Paper Note 校验的方法目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 16 篇，全部带有可追溯的方法概览图与实验登记。
 
 ## Logit / decoding
 
+- [Attention-Guided Switching (AGS)](../papers/attention-guided-switching.md) — 以视觉—文本注意力比在显式逻辑与潜在感知之间动态路由。
 - [Same Attention, Different Truths](../papers/same-attention-different-truths.md) — LLCC + HARM + VEED 的分型检测与缓解。
 - [VISOR](../papers/visor.md) — 属性 logit signal 分解与机制路由修复。
 - [M3ID](../papers/m3id.md) — visual prompt amplification。

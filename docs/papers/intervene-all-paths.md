@@ -93,6 +93,8 @@ flowchart TD
 
 ## 4. 实验设计与结果审计
 
+### 4.1 设置
+
 | 项目 | 内容 |
 |---|---|
 | Models | LLaVA-1.5-7B 为主，并扩展 Qwen-VL-Chat 等架构 |
@@ -103,7 +105,26 @@ flowchart TD
 | Baselines | Vanilla、VCD、ICD、PAI、AD-HH 等 |
 | Ablations | T2T only、I2T only、不同 path mask、head 数与 scale |
 
+### 4.2 主结果
+
+| 设置 / 指标（方向） | Vanilla | AllPath | 变化 / 解读 | 来源 |
+|---|---:|---:|---|---|
+| LLaVA-1.5-7B，POPE-COCO random F1 ↑ | 83.7 | **86.0** | +2.3 pt | Table 1 |
+| LLaVA-1.5-7B，POPE-COCO adversarial F1 ↑ | 80.0 | **82.1** | +2.1 pt | Table 1 |
+| LLaVA-1.5-7B，MCQ-POPE random Macro-F1 ↑ | 72.9 | **80.5** | +7.6 pt | Table 1 |
+| LLaVA-1.5-7B，CHAIRs / CHAIRi ↓ | 52.2 / 14.6 | **26.6 / 7.2** | 幻觉率约减半 | Table 1 |
+| LLaVA-1.5-7B，MME hallucination subset ↑ | 540.0±39.69 | **600.0±8.66** | 使用 POPE 选出的 heads，3 次测试 | Table 2 |
+
 论文报告 AllPath 在三类核心 benchmark 上均取得最优或稳定提升，且强调部分 baseline 会通过缩短 CHAIR 生成（例如 Qwen-VL-Chat 上 PAI 长度明显下降）换取表面指标。该点与当前 recall-preserving 研究高度相关。
+
+### 4.3 消融与分析实验
+
+| 实验 | 对照 / 唯一变量 | 关键结果 | 能支持什么 | 仍不能证明什么 | 来源 |
+|---|---|---|---|---|---|
+| T2T / I2T 路径 | 仅 T2T、仅 I2T、二者都用 | random POPE Acc：85.1→86.2（仅 I2T）/86.4（仅 T2T）/**87.2**（两者） | 两类 heads 有互补增益 | head scaling 仍是相关选择后的干预，不等于路径完备因果分解 | Table 3 |
+| 输出→图像路径 knockout | w/o mask vs 完全 mask | POPE Acc 仅降约 1–2 pt；CHAIRs 52.2→62.4、CHAIRi 14.6→32.4 | 判别式与开放生成依赖的路径不同 | mask 是强 OOD 操作，效应大小不等于自然运行中的贡献 | Figure 5 |
+| 格式相关性 | POPE random/GQA vs MCQ/CHAIR head rank | 同格式相关约 0.8247/0.8358；MCQ 仅 0.1233 | T2T head selection 与输出格式强相关 | 不排除 prompt token 与答案长度共同驱动 | Figure 3 |
+| 超参数稳健性 | ξ、ζ、γ+、γ− 扫描 | random Acc 在 85.6–88.3；默认 87.2，均高于 85.1 baseline | 方法在论文扫描区间内不依赖精确单点 | 仍未提供独立 validation protocol 与多 seed CI | Table 3 |
 
 ## 5. 亮点与贡献
 

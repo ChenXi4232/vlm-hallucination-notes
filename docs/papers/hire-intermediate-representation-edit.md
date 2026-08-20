@@ -92,7 +92,11 @@ h^{aug}_{tl}=h_{tl}+\alpha\Delta_{tl};
 
 ## 4. 实验设计与关键结果
 
+### 4.1 设置
+
 Editor 在 MSCOCO 2,000 样本上训练 5 epochs，Router 在 8,000 样本上训练 100 epochs；两者使用 SGD、初始学习率 \(10^{-2}\)，实验使用 4 张 3090。评测覆盖 CHAIR 的 500 张 COCO 图像、POPE 的 9,000 个二值问答，以及同时含生成式和判别式任务的 AMBER。
+
+### 4.2 主结果
 
 | 设置 | Baseline | HIRE | 读法 |
 |---|---:|---:|---|
@@ -101,7 +105,13 @@ Editor 在 MSCOCO 2,000 样本上训练 5 epochs，Router 在 8,000 样本上训
 | LLaVA-1.5，POPE all | Acc 82.04 / F1 80.42 | **87.27 / 87.23** | 同时降低 yes/no 偏差风险需看三 split |
 | InstructBLIP，POPE all | 79.14 / 79.31 | **85.27 / 85.42** | 相对 Octopus 仍有提升 |
 
+以上结果来自论文 Table 1–3；CHAIR 的 512-token 设置、POPE 三 split 聚合口径与 AMBER 总分需要分别解释，不能混作同一 hallucination 定义。
+
 效率表中 LLaVA 长描述 baseline 为 10.23 TFLOPs，HIRE 为 11.81，明显低于表中约 20 TFLOPs 的双分支方法；但短描述与 InstructBLIP 上仍有额外开销。结果支持“低于双分支”，不应写成“零开销”。AMBER 总分相对 baseline 分别提高 7.54 与 6.38。论文还报告 α 曲线、编辑层选择、训练数据量和五个随机种子的稳定性，这些对复现比单个 SOTA 数字更重要。
+
+### 4.3 消融与分析实验
+
+论文分别移除 Editor、Router，扫描编辑强度 α、插入层和训练数据量。Editor-only 能降低部分 hallucination，但对所有 token 无条件编辑会损害正常生成；加入 Router 后只在高风险位置触发，CHAIR/POPE 与计算量的折中更好，这支持“方向学习”和“是否触发”是两个独立组件。层扫描显示中间层优于过早或过晚编辑，符合 representation 尚可改变且接近语义形成的位置假设；α 过大则性能回落，说明 learned direction 并非纯事实轴。五 seed 稳定性比单次主表更可信，但训练/测试都以 COCO 风格数据为主，尚不能排除域特定 Router。
 
 ## 5. 亮点与贡献
 

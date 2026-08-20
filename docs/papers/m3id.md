@@ -149,7 +149,25 @@ M3ID 每步需要条件与无条件两套 logits。若不能复用 cache，解�
 | 关键控制 | 输出长度、对象覆盖率、不同 decoding strength |
 | Statistical evidence | 具体 split、seed 与显著性需按 CVF 正文/补充材料复核 |
 
-### 4.2 指标真正衡量什么
+### 4.2 主结果
+
+| 设置 / 指标（方向） | Baseline | M3ID | 变化 / 解读 | 来源 |
+|---|---:|---:|---|---|
+| LLaVA-7B，COCO，CHAIRi / CHAIRs ↓ | 8.1 / 17.5 | **5.9 / 13.8** | Cover 53.3→55.1，没有以少提对象换取收益 | Table 1 |
+| LLaVA-13B，COCO，CHAIRi / CHAIRs ↓ | 7.4 / 18.5 | **5.5 / 13.2** | Cover 55.2→54.0，出现轻微覆盖损失 | Table 1 |
+| LLaVA-7B，POPE All Accuracy ↑ | 64.9 | **70.3** | Yes ratio 84.0%→72.9% | Table 2 |
+| LLaVA-13B，POPE All Accuracy ↑ | 63.8 | **77.5** | Yes ratio 83.7%→61.8% | Table 2 |
+| LLaVA-13B，POPE All Accuracy ↑ | 63.8 | **79.2**（M3ID+DPO） | 训练版进一步提升，但不再是 training-free | Table 2 |
+
+### 4.3 消融与分析实验
+
+| 实验 | 对照 / 唯一变量 | 关键结果 | 能支持什么 | 仍不能证明什么 | 来源 |
+|---|---|---|---|---|---|
+| 两个校准项 | context pressure only、conditioning dilution only、Full | LLaVA-7B POPE Acc 65.5 / 77.5 / **77.5**；CHAIRs 16.7 / 14.1 / **13.6** | dilution amplification 是主要来源，context-pressure threshold 对长生成有增量 | POPE 短答案上的同分不能证明 threshold 无用 | Table 4 |
+| 强度敏感性 | forgetting factor λ、threshold α | 过强配置可令 Cover 从约 55 降到 45.5，并使 CHAIR 回升 | 显示“反语言先验”有明确过补偿区 | 没给自动 per-sample 校准策略 | Table 3 / Figure 4 |
+| 长度/覆盖审计 | CHAIR 与 Cover 联合报告 | 7B Cover 反而 +1.8；13B −1.2 | 主结果不完全由短 caption 解释 | Cover 只覆盖 COCO objects，不代表语言质量 | Table 1 |
+
+#### 指标真正衡量什么
 
 | 指标 | 解释 | 主要漏洞 |
 |---|---|---|
@@ -158,7 +176,7 @@ M3ID 每步需要条件与无条件两套 logits。若不能复用 cache，解�
 | Cover | 覆盖标注对象的程度 | 标注不全；不能代表描述质量全部维度 |
 | POPE | 二元 object existence QA | Yes/No bias、否定理解、prompt format confound |
 
-### 4.3 结果应如何解读
+### 4.4 结果应如何解读
 
 论文结果支持“分布对比可作为有效 decoding control”。它尚不能证明所有 hallucination 都源自低视觉依赖，也不能证明无图分支精确等于 language prior。若 CHAIR 改善但 Cover、Recall、长度下降，就可能是保守化而非 grounding 真正增强。
 

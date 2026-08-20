@@ -97,6 +97,8 @@ flowchart TD
 
 ## 4. 实验设计与关键结果
 
+### 4.1 设置
+
 | 项目 | 内容 |
 |---|---|
 | Models | InstructBLIP-7B、LLaVA-1.5-7B、LLaVA-NeXT-7B |
@@ -106,7 +108,26 @@ flowchart TD
 | Baselines | Greedy、Beam、DoLa、VCD、OPERA、CODE、EAH |
 | Ablations | static heads、异常值过滤、reinforced layers、scale factor |
 
+### 4.2 主结果
+
+| 设置 / 指标（方向） | Greedy | VHR | 变化 / 解读 | 来源 |
+|---|---:|---:|---|---|
+| InstructBLIP，CHAIRs / CHAIRi ↓ | 45.32±2.24 / 12.98±0.76 | **37.76±2.76 / 9.75±0.98** | 5 个随机 split；长度 91.06→106.49 | Table 1 |
+| LLaVA-1.5，CHAIRs / CHAIRi ↓ | 49.68±1.47 / 14.32±0.78 | **33.32±1.31 / 9.71±0.45** | CHAIRs −16.36 pt；长度近似保持 | Table 1 |
+| LLaVA-NeXT，CHAIRs / CHAIRi ↓ | 29.08±2.09 / 8.08±0.74 | **24.96±2.09 / 6.80±0.59** | 强 baseline 上仍改善 | Table 1 |
+| LLaVA-1.5，POPE 三 split 平均 F1 ↑ | 84.98 | **85.47** | 增益较小 | Table 2 |
+| LLaVA-1.5，LLaVA-Bench Accuracy ↑ | 6.017 | **6.333** | Detailedness 6.100→6.217；Naturalness 7.400→7.333 | Table 3 |
+
 论文报告 LLaVA-1.5 上最高可将 CHAIRs/CHAIRi 分别降低 16.36/4.61 个点，并显示强化层数增加先改善幻觉、过度强化后损害生成质量。这个拐点非常重要：VHD 不是“越强越好”，视觉敏感 head 也承担正常语言/语义功能。
+
+### 4.3 消融与分析实验
+
+| 实验 | 对照 / 唯一变量 | 关键结果 | 能支持什么 | 仍不能证明什么 | 来源 |
+|---|---|---|---|---|---|
+| 动态 head selection | adaptive VHR vs fixed VHR | LLaVA CHAIRs/CHAIRi：**33.32/9.71** vs 44.72/13.81 | 逐样本选择是主要收益来源 | fixed set 来自单样本，未必是最强静态 baseline | Table 4 |
+| 异常值过滤 | VHR vs outlier VHR | LLaVA 33.32/9.71 vs 36.88/10.36；InstructBLIP CHAIRi 9.75 vs 10.18 | 过滤极端但非正向视觉敏感 heads 有价值 | heuristic threshold 未给充分校准 | Table 4 |
+| 强化层数 | 最后若干层数量扫描 | 随层数增加先降 hallucination，在约 14 个末层附近最优，继续增强损害质量 | 干预存在层范围与强度拐点 | 图中未给所有点的可转录 CI | Figure 5 |
+| 输出质量 | CHAIR Len 与 LLaVA-Bench 三维评分 | LLaVA 长度 83.06→81.33；accuracy 提升、naturalness 略降 | 排除大幅缩短文本的简单解释 | 仍缺 object recall 和人工错误类型分析 | Table 1 / Table 3 |
 
 ## 5. 亮点与贡献
 

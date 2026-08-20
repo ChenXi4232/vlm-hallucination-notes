@@ -94,7 +94,11 @@ SGRS 负责当前 token 的入口检查，LocoRE 负责下一步继续记住最�
 
 ## 4. 实验设计与关键结果
 
+### 4.1 设置
+
 论文在 LLaVA-1.5、Qwen2-VL 与 InternVL 的多个尺寸上验证，并覆盖 hallucination 与通用能力。LLaVA-1.5-7B 主表中：
+
+### 4.2 主结果
 
 | 方法 | POPE F1 / Acc ↑ | CHAIR C_S / C_I ↓ | Recall ↑ | MME Total ↑ |
 |---|---:|---:|---:|---:|
@@ -102,9 +106,15 @@ SGRS 负责当前 token 的入口检查，LocoRE 负责下一步继续记住最�
 | LocoRE | 86.9 / 87.3 | 38.4 / 11.2 | 75.4 | 656.66 |
 | SGRS + LocoRE | **87.0 / 87.5** | **35.6 / 8.2** | 75.4 | **668.33** |
 
+以上为论文 Table 1–3 汇总的同模型结果；POPE、CHAIR 与 MME 使用不同数据与指标，不能把列间差异当作同一效应量。
+
 组合相对 LocoRE 继续降低 C_I，支持候选过滤具有增量作用；Recall 基本不变，至少在表中没有明显“少说对象”的退化。与不同论文的 referenced numbers 比较仍应谨慎：prompt、长度、采样、模型 patch 和数据版本可能不同。
 
 通用 benchmark 的价值是检查 attention 强化是否破坏问答与推理，不过这些测试无法完全排除 output repetition、过度保守或错误自洽。最关键的补充应是逐 token detection AUROC/lead time、平均候选 backward 次数、tokens/s 与显存峰值。
+
+### 4.3 消融与分析实验
+
+组件消融比较 LocoRE、SGRS 与二者联合：LocoRE 单独在 LLaVA-1.5-7B 上为 CHAIR 38.4/11.2，加入 SGRS 后降至 35.6/8.2，而 Recall 均为 75.4，支持 saliency-guided candidate filtering 对局部记忆强化有增量且未在该表中牺牲覆盖。论文还扫描 saliency threshold、候选数量、局部历史窗口和干预层；收益在中等强度达到最好，过多候选/过长窗口会带来额外 backward 成本与语言退化。原文没有给逐 token detector 的标准 AUROC/lead-time 主表，因此当前证据更直接支持端到端 decoding，而不是“saliency 是独立可靠检测器”。
 
 ## 5. 亮点与贡献
 

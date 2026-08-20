@@ -146,7 +146,9 @@ Finding 3 中原始 signed per-head pattern 在四个分析组合上 AUC 0.904�
 | Protocol | 80/20 image-disjoint，3 seeds；部分 Finding 使用 5 seeds |
 | Statistics | 72 paired observations 的 one-sided Wilcoxon；supplement 含 per-seed std 与 polarity controls |
 
-### 4.2 主检测结果
+### 4.2 主结果
+
+以下汇总论文 Table 1–2 与 supplement 的跨模型检测主结果：
 
 论文在 24 个 (model, benchmark) 组合中 21 个最好，其余 3 个接近最强 baseline。六模型平均：
 
@@ -160,7 +162,7 @@ Finding 3 中原始 signed per-head pattern 在四个分析组合上 AUC 0.904�
 
 对 VIB-Probe 的 72 对比较中，Role-Break 赢 64 对，平均 AUROC +1.39 pp，Wilcoxon \(p=1.0\times10^{-10}\)；对其他 baselines 的 p 也低于 \(10^{-9}\)。统计单位是 6 模型×4 benchmark×3 seeds，POPE 先做 subset 平均。
 
-### 4.3 Ablation
+### 4.3 消融与分析实验
 
 四源 full configuration 的宏平均 AUROC 为 POPE 96.5、AMBER 97.4、M-Hal 84.4、COCO 94.6。单一 source 最强通常是 image 或 text，但最多落后 full 约 9 点；front/mid 50% layers 已恢复多数信号，full depth 最优。1/2-layer MLP 没有稳定胜过 linear probe，支持“信号线性可读”，也削弱了仅靠 probe capacity 获胜的解释。
 

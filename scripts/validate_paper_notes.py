@@ -46,6 +46,12 @@ REQUIRED_SECTIONS = [
     "来源边界",
 ]
 
+EXPERIMENT_HEADINGS = [
+    "### 4.1 设置",
+    "### 4.2 主结果",
+    "### 4.3 消融与分析实验",
+]
+
 
 def front_matter(text: str, path: Path) -> dict:
     match = re.match(r"^---\n(.*?)\n---\n", text, flags=re.S)
@@ -72,6 +78,28 @@ def main() -> None:
         missing_sections = [name for name in REQUIRED_SECTIONS if name not in text]
         if missing_sections:
             errors.append(f"{path.name}: missing sections {', '.join(missing_sections)}")
+        missing_experiment_headings = [heading for heading in EXPERIMENT_HEADINGS if heading not in text]
+        if missing_experiment_headings:
+            errors.append(
+                f"{path.name}: missing experiment registry headings "
+                + ", ".join(missing_experiment_headings)
+            )
+        main_result = re.search(
+            r"### 4\.2 主结果\s*(.*?)(?=\n### 4\.[3-9]|\n## 5\.)",
+            text,
+            flags=re.S,
+        )
+        if not main_result or "|---" not in main_result.group(1):
+            errors.append(f"{path.name}: main results must contain a traceable Markdown table")
+        elif not re.search(r"Table|Figure|表\s*\d|图\s*\d", main_result.group(1), flags=re.I):
+            errors.append(f"{path.name}: main results table must cite an original table or figure")
+        analysis = re.search(
+            r"### 4\.3 消融与分析实验\s*(.*?)(?=\n### 4\.[4-9]|\n## 5\.)",
+            text,
+            flags=re.S,
+        )
+        if not analysis or len(analysis.group(1).strip()) < 120:
+            errors.append(f"{path.name}: ablation/analysis registry is missing or too short")
         if "paper-tldr" not in text:
             errors.append(f"{path.name}: missing one-line summary block")
         if "paper-figure" not in text or "官方方法概览图" not in text:

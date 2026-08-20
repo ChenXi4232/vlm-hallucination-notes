@@ -86,7 +86,11 @@ x^{l+1}=x^l+\operatorname{Concat}_h[\operatorname{Attn}^{l,h}(x^l)
 
 ## 4. 实验设计与关键结果
 
+### 4.1 设置
+
 主实验在 LLaVA-1.5-7B 与 Qwen-VL-7B 上，温度 0、top_p=1，使用 48GB RTX 4090。\(\alpha,\beta\) 从 0.5 到 10 网格搜索，K 在 32–1024 搜索。覆盖判别式 MME/POPE 与开放生成 CHAIR。
+
+### 4.2 主结果
 
 | 设置 | Regular | DMAS | 结论 |
 |---|---:|---:|---|
@@ -95,6 +99,10 @@ x^{l+1}=x^l+\operatorname{Concat}_h[\operatorname{Attn}^{l,h}(x^l)
 | LLaVA-1.5 CHAIR C_S / C_I | 51.0 / 15.2 | **30.8 / 11.4** | C_S 大幅下降 |
 | Qwen-VL POPE MSCOCO Acc/F1 | 83.71 / 81.70 | **87.63 / 87.65** | 主表最佳 |
 | LLaVA-1.5 POPE MSCOCO Acc/F1 | 81.38 / 79.65 | 86.81 / 86.79 | 略低于表中 ICT |
+
+以上数值来自论文主结果 Table 1–3；不同 benchmark 的列不可横向合并为单一“平均提升”。
+
+### 4.3 消融与分析实验
 
 消融中仅 truthfulness vector（w/o visual vector）在 CHAIR 为 34.2/11.7；仅 visual vector 为 42.4/13.2；两者结合 30.8/11.4，支持互补性。动态检索优于把全部 truthfulness vectors 合成固定向量；ScienceQA 与 ViQuAE 也提升，但这类知识/学科问答提升幅度很大，需要检查 prompt、评测脚本与是否引入数据语义重叠。
 

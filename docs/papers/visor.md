@@ -132,7 +132,9 @@ color 与部分 state 的视觉信号方向总体正确，但 margin 偏小，de
 | 对照 | VCD、ICD、null variants；annotation-noise filtering；shared vs per-word LoRA |
 | 统计 | 多处给 p 值；LoRA 迁移使用 stratified CMH；通用能力用 MME hallucination subset |
 
-### 4.2 可追溯结果
+### 4.2 主结果
+
+以下数值来自论文 Table 2–6；不同 operator 的适用条件按属性族分别登记：
 
 | 论文结果 | Baseline | VISOR | 解读 |
 |---|---:|---:|---|
@@ -145,11 +147,20 @@ color 与部分 state 的视觉信号方向总体正确，但 margin 偏小，de
 
 Calib 对 Qwen/InternVL material 为 0 pp，符合“不能靠 threshold 修复低 SNR”的预测。LLaVA material 虽从 25.8% 降至 18.6%，但 FNR 增加 7.1 pp，表现为阈值 trade-off 而非表示修复。Adapt 后 Qwen 六个单词的 MME hallucination subset accuracy 保持在 baseline 90.8% 的 ±1.25 pp 内，六 adapter 差异检验 (p=0.62)；不过这只是一个通用能力子集。
 
-### 4.3 Annotation noise 审计
+### 4.3 消融与分析实验
+
+| 实验 | 对照 / 唯一变量 | 关键结果 | 能支持什么 | 仍不能证明什么 | 来源 |
+|---|---|---|---|---|---|
+| Operator routing | Calib、Abstain、Adapt 按 margin/SNR 选择 | color 上 Calib 大幅降 FPR；material 上 Calib 常为 0 pp，而 per-word Adapt 有效 | 不同属性失败不是同一种 logit pathology | 路由阈值仍依赖结构化验证集 | Table 2–4 |
+| Null prior 对照 | full margin vs null-only classifier | null-only 预测力弱于视觉增量，冲突样本错误更随视觉项 | 属性误判不能简单归因于 language prior | null image 仍是 OOD 输入，非纯语言因果量 | Figure 3 / Table 1 |
+| Layer-wise SNR | 逐层视觉增量的 signal/noise | material 风险在后层低 SNR 更明显 | 给 Adapt 层位选择提供机制依据 | SNR 与错误是相关而非 intervention | Figure 5 |
+| Shared vs per-word LoRA | 一个共享 adapter vs 每属性词 adapter | 六词 Qwen FPR 38.1→23.9，跨模型同向；通用子集变化在 ±1.25 pt | 局部 operator 可修复词特异表示 | 不保证开放属性词表迁移 | Table 5–6 |
+
+### 4.4 Annotation noise 审计
 
 论文区分 observed FPR 与人工过滤后的 true FPR。例如 `metallic` 的视觉外观标注噪声使 observed FPR 很高，过滤后从 45.5% 降至 4.5%；另一些 B2 词过滤后几乎不变，才更像真正表示失败。这一步很重要：属性标签容易漏标或与可见外观不一致，若不先清理，任何“视觉模型看错”都可能只是 benchmark 错。
 
-### 4.4 能支持与不能支持的结论
+### 4.5 能支持与不能支持的结论
 
 结果能支持：负属性查询的逐样本错误更随视觉增量变化；不同属性族需要不同 operator；late-layer SNR 是 material 风险强指标。不能支持：开放生成的所有属性幻觉都由视觉信号导致；null-image margin 是纯语言因果效应；每词 LoRA 能扩展到开放词表；FPR 降低在无 abstention/FNR 成本时依然成立。
 
