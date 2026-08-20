@@ -19,6 +19,7 @@ tags:
 
 ## 关键阅读
 
+- [MESA](../papers/mesa-mitigating-entangled-steering.md)：显式分离 hallucination steering 与内容语义，减少全局方向带来的能力损失。
 - [Beyond Global Editing](../papers/beyond-global-editing.md)：将差分聚类为多个低秩 HalluSpaces，再用测试样本的 mask response 动态混合 projector。
 - [HIRE](../papers/hire-intermediate-representation-edit.md)：用 learned Editor 生成 token-specific direction，再由 Router 选择性触发。
 - [DMAS](../papers/dynamic-multimodal-activation-steering.md)：语义检索 truthfulness vector 与逐图 visual-perception vector 的 head-level 注入。

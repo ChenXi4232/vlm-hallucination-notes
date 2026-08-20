@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>16</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>20</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>16 / 16</strong><span>方法图 + 实验登记</span></div>
+  <div class="stat-card"><strong>20 / 20</strong><span>方法图 + 实验登记</span></div>
 </div>
 
 ## 研究入口
@@ -68,6 +68,10 @@ flowchart LR
 
 ## 最近接入
 
+- [MESA](papers/mesa-mitigating-entangled-steering.md)：以语义解耦约束缓解 steering direction 中的任务内容纠缠，并审计幻觉—通用能力权衡。
+- [Risk-aware Selective Prompting](papers/risk-aware-selective-prompting.md)：用校准后的风险估计只为高风险样本追加视觉描述提示。
+- [Attention-Space Contrastive Guidance](papers/attention-space-contrastive-guidance.md)：直接在注意力空间构造对比分支，以较低额外开销修正生成分布。
+- [CausalLens](papers/causallens.md)：用敏感度定位关键 heads，再执行多头因果干预以增强视觉 grounding。
 - [Attention-Guided Switching](papers/attention-guided-switching.md)：用视觉—文本注意力比在 latent perception 与 explicit logic 间动态切换，并联合审计 accuracy、generation steps 与 POPE。
 - [HIRE](papers/hire-intermediate-representation-edit.md)：用 Editor 学习 token-specific 表示方向，并由 Router 选择性触发。
 - [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)：用 attention×gradient saliency 筛选候选并强化局部输出记忆。

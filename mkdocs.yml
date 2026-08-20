@@ -51,22 +51,30 @@ nav:
   - 研究版图: research-map.md
   - Paper Notes:
       - 总索引: papers/index.md
-      - Attention-Guided Switching: papers/attention-guided-switching.md
-      - Same Attention, Different Truths: papers/same-attention-different-truths.md
-      - VISOR: papers/visor.md
-      - Beyond Global Editing: papers/beyond-global-editing.md
-      - Role-Break: papers/role-break-attention-heads.md
-      - HIRE: papers/hire-intermediate-representation-edit.md
-      - Saliency Drops: papers/hallucination-begins-where-saliency-drops.md
-      - MARINE: papers/marine-image-grounded-guidance.md
-      - DMAS: papers/dynamic-multimodal-activation-steering.md
-      - M3ID: papers/m3id.md
-      - Curing Semantic Drift: papers/curing-semantic-drift.md
-      - Self-Introspective Decoding: papers/self-introspective-decoding.md
-      - OPERA: papers/opera.md
-      - Modular Attribution & Intervention: papers/modular-attribution-intervention.md
-      - Vision-aware Head Divergence: papers/vision-aware-head-divergence.md
-      - Intervene-All-Paths: papers/intervene-all-paths.md
+      - Token / Logit 反事实与解码:
+          - Risk-aware Selective Prompting: papers/risk-aware-selective-prompting.md
+          - Attention-Guided Switching: papers/attention-guided-switching.md
+          - Same Attention, Different Truths: papers/same-attention-different-truths.md
+          - VISOR: papers/visor.md
+          - MARINE: papers/marine-image-grounded-guidance.md
+          - M3ID: papers/m3id.md
+          - Self-Introspective Decoding: papers/self-introspective-decoding.md
+      - Attention Head / Causal Path:
+          - Attention-Space Contrastive Guidance: papers/attention-space-contrastive-guidance.md
+          - CausalLens: papers/causallens.md
+          - Role-Break: papers/role-break-attention-heads.md
+          - Saliency Drops: papers/hallucination-begins-where-saliency-drops.md
+          - Modular Attribution & Intervention: papers/modular-attribution-intervention.md
+          - Vision-aware Head Divergence: papers/vision-aware-head-divergence.md
+          - Intervene-All-Paths: papers/intervene-all-paths.md
+          - OPERA: papers/opera.md
+      - Representation / Activation Editing:
+          - MESA: papers/mesa-mitigating-entangled-steering.md
+          - Beyond Global Editing: papers/beyond-global-editing.md
+          - HIRE: papers/hire-intermediate-representation-edit.md
+          - DMAS: papers/dynamic-multimodal-activation-steering.md
+      - Long-form / Semantic Drift:
+          - Curing Semantic Drift: papers/curing-semantic-drift.md
   - Method Taxonomy:
       - 方法分类总览: method-taxonomy/index.md
       - Token / Logit: directions/token-logit.md

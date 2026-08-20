@@ -16,6 +16,8 @@ tags:
 
 ## 关键阅读
 
+- [Attention-Space Contrastive Guidance](../papers/attention-space-contrastive-guidance.md)：在注意力分布空间生成退化对比分支，以轻量 guidance 校正解码。
+- [CausalLens](../papers/causallens.md)：以梯度敏感度筛选关键 heads，并执行多头因果干预。
 - [Role-Break](../papers/role-break-attention-heads.md)：将每个 head 相对自身 faithful source-allocation baseline 的偏离作为统一检测特征。
 - [Same Attention, Different Truths](../papers/same-attention-different-truths.md)：说明 attention quantity 本身不能区分 grounded 与 hallucinated object，需要读取高注意区域语义。
 - [Modular Attribution & Intervention](../papers/modular-attribution-intervention.md)：组件消融与 hallucination heads。

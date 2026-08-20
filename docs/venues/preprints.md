@@ -7,6 +7,8 @@ tags:
 
 # arXiv / OpenReview
 
+- [MESA](../papers/mesa-mitigating-entangled-steering.md) — arXiv 2026 v1，解耦式 activation steering。
+- [Risk-aware Selective Prompting](../papers/risk-aware-selective-prompting.md) — arXiv 2026 v1，风险门控的选择性视觉 prompting。
 - [VISOR](../papers/visor.md) — arXiv 2026 v1，属性幻觉机制诊断与路由修复。
 - [Beyond Global Editing](../papers/beyond-global-editing.md) — arXiv 2026 v1，逐样本低秩表征编辑；当前版本存在叙述冲突。
 - [Role-Break](../papers/role-break-attention-heads.md) — arXiv 2026 v1，head-level 线性检测。

@@ -42,19 +42,22 @@ flowchart TD
 
 === "从 Logit 入门"
 
-    1. [VISOR](papers/visor.md)
-    2. [Same Attention, Different Truths](papers/same-attention-different-truths.md)
-    3. [M3ID](papers/m3id.md)
-    4. [Self-Introspective Decoding](papers/self-introspective-decoding.md)
-    5. [MARINE](papers/marine-image-grounded-guidance.md)
+    1. [Risk-aware Selective Prompting](papers/risk-aware-selective-prompting.md)
+    2. [VISOR](papers/visor.md)
+    3. [Same Attention, Different Truths](papers/same-attention-different-truths.md)
+    4. [M3ID](papers/m3id.md)
+    5. [Self-Introspective Decoding](papers/self-introspective-decoding.md)
+    6. [MARINE](papers/marine-image-grounded-guidance.md)
 
 === "从 Head 机制入门"
 
-    1. [Role-Break](papers/role-break-attention-heads.md)
-    2. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
-    3. [Vision-aware Head Divergence](papers/vision-aware-head-divergence.md)
-    4. [Intervene-All-Paths](papers/intervene-all-paths.md)
-    5. [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)
+    1. [Attention-Space Contrastive Guidance](papers/attention-space-contrastive-guidance.md)
+    2. [CausalLens](papers/causallens.md)
+    3. [Role-Break](papers/role-break-attention-heads.md)
+    4. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
+    5. [Vision-aware Head Divergence](papers/vision-aware-head-divergence.md)
+    6. [Intervene-All-Paths](papers/intervene-all-paths.md)
+    7. [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)
 
 === "从解码干预入门"
 
@@ -65,8 +68,9 @@ flowchart TD
 
 === "从表征编辑入门"
 
-    1. [Beyond Global Editing](papers/beyond-global-editing.md)
-    2. [HIRE](papers/hire-intermediate-representation-edit.md)
-    3. [DMAS](papers/dynamic-multimodal-activation-steering.md)
-    4. [VISOR](papers/visor.md)
-    5. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
+    1. [MESA](papers/mesa-mitigating-entangled-steering.md)
+    2. [Beyond Global Editing](papers/beyond-global-editing.md)
+    3. [HIRE](papers/hire-intermediate-representation-edit.md)
+    4. [DMAS](papers/dynamic-multimodal-activation-steering.md)
+    5. [VISOR](papers/visor.md)
+    6. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)

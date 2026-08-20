@@ -8,19 +8,23 @@ description: 由 Deep Paper Note front matter 自动生成
 此页由 `scripts/build_indexes.py` 根据 Deep Paper Note front matter 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。
 
 <div class="stat-grid">
-<div class="stat-card"><strong>16</strong><span>Deep Paper Notes</span></div>
+<div class="stat-card"><strong>20</strong><span>Deep Paper Notes</span></div>
 <div class="stat-card"><strong>4</strong><span>研究方向</span></div>
-<div class="stat-card"><strong>7</strong><span>来源类型</span></div>
-<div class="stat-card"><strong>16</strong><span>已精读</span></div>
+<div class="stat-card"><strong>8</strong><span>来源类型</span></div>
+<div class="stat-card"><strong>20</strong><span>已精读</span></div>
 </div>
 
 | 论文 | 年份 / 来源 | 研究方向 | 资源类型 | 状态 |
 |---|---:|---|---|---|
+| [Attention-Space Contrastive Guidance for Efficient Hallucination Mitigation in LVLMs](attention-space-contrastive-guidance.md) | 2026 · CVPR Findings | Attention Head / Path | 方法论文 | 已精读 |
 | [Balancing Efficiency and Efficacy: Training-Free Attention-Guided Switching Between Explicit and Latent Thoughts for MLLMs](attention-guided-switching.md) | 2026 · ACM MM | Token / Logit | 方法论文 | 已精读 |
 | [Beyond Global Editing: Per-Instance Disentangled Subspaces for Training-Free Hallucination Mitigation in LVLMs](beyond-global-editing.md) | 2026 · arXiv | Representation / Activation | 方法论文 | 已精读 |
+| [CausalLens: Sensitivity-Guided Multi-Head Causal Intervention for Hallucination Mitigation in Large Vision-Language Models](causallens.md) | 2026 · CVPR | Attention Head / Path | 方法论文 | 已精读 |
 | [Dynamic Multimodal Activation Steering for Hallucination Mitigation in Large Vision-Language Models](dynamic-multimodal-activation-steering.md) | 2026 · arXiv | Representation / Activation | 方法论文 | 已精读 |
 | [Hallucination Begins Where Saliency Drops](hallucination-begins-where-saliency-drops.md) | 2026 · arXiv | Attention Head / Path | 方法论文 | 已精读 |
 | [Hallucination-aware Intermediate Representation Edit in Large Vision-Language Models](hire-intermediate-representation-edit.md) | 2026 · arXiv | Representation / Activation | 方法论文 | 已精读 |
+| [Mitigating Entangled Steering in Large Vision-Language Models for Hallucination Reduction](mesa-mitigating-entangled-steering.md) | 2026 · arXiv | Representation / Activation | 方法论文 | 已精读 |
+| [Risk-aware Selective Prompting for Hallucination Mitigation in Large Vision-Language Models](risk-aware-selective-prompting.md) | 2026 · arXiv | Token / Logit | 方法论文 | 已精读 |
 | [Role-Break in Attention Heads: Understanding and Detecting Hallucinations in VLMs](role-break-attention-heads.md) | 2026 · arXiv | Attention Head / Path | 方法论文 | 已精读 |
 | [Same Attention, Different Truths: Put Logit-Lens over Visual Attention to Detect and Mitigate LVLM Object Hallucination](same-attention-different-truths.md) | 2026 · CVPR | Token / Logit | 方法论文 | 已精读 |
 | [When Visual Signals Mislead: A Mechanistic Study of Attribute Hallucination in Vision-Language Models](visor.md) | 2026 · arXiv | Token / Logit | 方法论文 | 已精读 |
@@ -37,6 +41,8 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Attention Head / Path
 
+- [Attention-Space Contrastive Guidance for Efficient Hallucination Mitigation in LVLMs](attention-space-contrastive-guidance.md)
+- [CausalLens: Sensitivity-Guided Multi-Head Causal Intervention for Hallucination Mitigation in Large Vision-Language Models](causallens.md)
 - [Hallucination Begins Where Saliency Drops](hallucination-begins-where-saliency-drops.md)
 - [Role-Break in Attention Heads: Understanding and Detecting Hallucinations in VLMs](role-break-attention-heads.md)
 - [Cracking the Code of Hallucination in LVLMs with Vision-aware Head Divergence](vision-aware-head-divergence.md)
@@ -53,10 +59,12 @@ description: 由 Deep Paper Note front matter 自动生成
 - [Beyond Global Editing: Per-Instance Disentangled Subspaces for Training-Free Hallucination Mitigation in LVLMs](beyond-global-editing.md)
 - [Dynamic Multimodal Activation Steering for Hallucination Mitigation in Large Vision-Language Models](dynamic-multimodal-activation-steering.md)
 - [Hallucination-aware Intermediate Representation Edit in Large Vision-Language Models](hire-intermediate-representation-edit.md)
+- [Mitigating Entangled Steering in Large Vision-Language Models for Hallucination Reduction](mesa-mitigating-entangled-steering.md)
 
 ### Token / Logit
 
 - [Balancing Efficiency and Efficacy: Training-Free Attention-Guided Switching Between Explicit and Latent Thoughts for MLLMs](attention-guided-switching.md)
+- [Risk-aware Selective Prompting for Hallucination Mitigation in Large Vision-Language Models](risk-aware-selective-prompting.md)
 - [Same Attention, Different Truths: Put Logit-Lens over Visual Attention to Detect and Mitigate LVLM Object Hallucination](same-attention-different-truths.md)
 - [When Visual Signals Mislead: A Mechanistic Study of Attribute Hallucination in Vision-Language Models](visor.md)
 - [Mitigating Object Hallucination in Large Vision-Language Models via Image-Grounded Guidance](marine-image-grounded-guidance.md)
@@ -67,12 +75,13 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### 资源类型
 
-- **方法论文**：16
+- **方法论文**：20
 
 ### 论文来源
 
-- **arXiv**：8
-- **CVPR**：3
+- **arXiv**：10
+- **CVPR**：4
+- **CVPR Findings**：1
 - **ACM MM**：1
 - **ACL**：1
 - **NeurIPS**：1

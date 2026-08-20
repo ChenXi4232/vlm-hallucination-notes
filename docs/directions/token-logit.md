@@ -20,6 +20,7 @@ $$
 
 ## 关键阅读
 
+- [Risk-aware Selective Prompting](../papers/risk-aware-selective-prompting.md)：用层级隐藏状态估计输入风险，只对高风险样本追加视觉描述提示。
 - [Same Attention, Different Truths](../papers/same-attention-different-truths.md)：对高注意视觉区域做 Logit-Lens 一致性检查，并按 mask 反事实分型。
 - [VISOR](../papers/visor.md)：用 real/null-image logit margin 分解属性判断，区分方向、margin 与 SNR。
 - [M3ID](../papers/m3id.md)：有图/无图分布差异与 mutual-information decoding。
