@@ -16,7 +16,7 @@ review_state: automated
 arxiv_version: v1
 last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2604.07914
-overview_figure: ../assets/images/papers/mesa-overview.png
+overview_figure: ../assets/images/papers/mesa-overview-v2.png
 overview_figure_source: Figure 3 from the official arXiv v1 LaTeX source package (figs/overview_mesa_v2.pdf)
 tags: [MESA, Activation steering, Controlled perturbation, Distribution preservation, CHAIR, POPE, AMBER]
 ---
@@ -32,7 +32,7 @@ tags: [MESA, Activation steering, Controlled perturbation, Distribution preserva
 ## 官方方法概览图
 
 <figure class="paper-figure">
-  <a href="../../assets/images/papers/mesa-overview.png" target="_blank" rel="noopener"><img src="../../assets/images/papers/mesa-overview.png" alt="MESA 官方方法总览：分布监督、受控扰动学习、PCA 方向提取与推理时逐层干预"></a>
+  <a href="../../assets/images/papers/mesa-overview-v2.png" target="_blank" rel="noopener"><img src="../../assets/images/papers/mesa-overview-v2.png" alt="MESA 官方方法总览：分布监督、受控扰动学习、PCA 方向提取与推理时逐层干预"></a>
   <figcaption>官方方法总览（论文 Figure 3）。图片由 <a href="https://arxiv.org/abs/2604.07914">arXiv v1</a> 官方 LaTeX source package 中的 <code>figs/overview_mesa_v2.pdf</code> 直接转换；点击查看原图。</figcaption>
 </figure>
 
