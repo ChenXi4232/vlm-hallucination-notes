@@ -125,7 +125,7 @@ LLCC 要读取中间 attention 和 visual hidden states；一旦报警，HARM �
 | Baselines | Greedy/Beam/Nucleus、VCD、OPERA、DeCo、Devils、PAI |
 | 资源 | 单张 NVIDIA A100 40GB；Beam=3，Nucleus top-p=0.9、temperature=0.7 |
 
-### 4.2 可追溯主结果
+### 4.2 主结果
 
 | 结果（论文表号） | Baseline | SADT | 解读 |
 |---|---:|---:|---|
@@ -136,7 +136,11 @@ LLCC 要读取中间 attention 和 visual hidden states；一旦报警，HARM �
 
 CHAIR 表中方法在四个模型上均为最低 CHAIR_S/I；AMBER 中三模型均降低 CHAIR/Hal，并保持 Cover。这个结果支持“分型干预有效”，但不单独证明作者的机制命名，因为一个更保守或更长的多分支过程也可能改变指标；好在 AMBER Cover 没有随幻觉率一起下降，削弱了纯删除解释。
 
-### 4.3 实验还缺什么
+### 4.3 消融与分析实验
+
+论文最关键的分析不是单一 SOTA 表，而是三层证据链：对象词与非对象词的 layer-wise image-attention ratio 定位 Image-Attention Stage；在同样高 attention 的区域上比较 logit-lens 语义一致性以区分真实/幻觉对象；再按 HARM 的两类风险分别使用 VEED 路由。Table 1 的 detector ablation 显示 LLCC/HARM 相对 uncertainty、InterConf 和 SVAR 提升，Table 2–3 的跨模型结果说明该分型能转化为干预收益。仍缺少 random top-k patch、同 attention mass 但不同语义的 matched control，以及自动跨架构层定位消融，因此不能把 LLaVA 的第 20–27 层直接视为普适阶段。
+
+#### 实验还缺什么
 
 最关键的缺口是端到端成本与等算力对照：检测未报警、Type 1、Type 2 的平均额外 forward 数应分别报告。其次，应在每个模型上自动定位 Image-Attention Stage，而非默认 LLaVA 的 20–27 层。第三，LLCC 需要 random top-k、相同 attention 质量但不同语义一致性的对照，以排除只是“高注意区域更容易被 LM head读出”。最后，开放词表对象的 WordNet/相似度阈值会影响检测 F1，需要给 bootstrap CI 与 threshold transfer。
 

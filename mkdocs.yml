@@ -51,6 +51,7 @@ nav:
   - 研究版图: research-map.md
   - Paper Notes:
       - 总索引: papers/index.md
+      - Attention-Guided Switching: papers/attention-guided-switching.md
       - Same Attention, Different Truths: papers/same-attention-different-truths.md
       - VISOR: papers/visor.md
       - Beyond Global Editing: papers/beyond-global-editing.md

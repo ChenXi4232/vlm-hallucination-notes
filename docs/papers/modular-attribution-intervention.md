@@ -92,6 +92,8 @@ TF-HH 只更新被识别的 hallucination heads，而非全模型 fine-tuning。
 
 ## 4. 实验设计与结果审计
 
+### 4.1 设置
+
 | 项目 | 内容 |
 |---|---|
 | Models | 以 LLaVA-family 7B 为核心 |
@@ -101,7 +103,26 @@ TF-HH 只更新被识别的 hallucination heads，而非全模型 fine-tuning。
 | Baselines | Greedy、DoLA、VCD、OPERA、LURE、HALC 等 |
 | Ablations | MLP vs MHA vs head；目标 heads vs其他 heads；AD-HH vs TF-HH |
 
+### 4.2 主结果
+
+| 设置 / 指标（方向） | Greedy | 论文方法 | 变化 / 解读 | 来源 |
+|---|---:|---:|---|---|
+| LLaVA-7B，COCO，CHAIRs / CHAIRi ↓ | 51.8 / 13.3 | **29.6 / 8.0**（AD-HH） | 纯推理时定向 head 干预 | Table 1 |
+| LLaVA-7B，COCO，CHAIRs / CHAIRi ↓ | 51.8 / 13.3 | **35.0 / 8.7**（TF-HH） | 只训练 hallucination heads | Table 1 |
+| LLaVA-7B，Nocaps，CHAIRs / CHAIRi ↓ | 43.2 / 14.3 | **35.6 / 9.4**（AD-HH） | COCO 选出的 heads 可 OOD 迁移 | Table 1 |
+| MiniGPT-4，Nocaps，CHAIRs / CHAIRi ↓ | 57.4 / 20.0 | **45.2 / 16.8**（TF-HH） | 跨模型与 OOD 均改善 | Table 1 |
+| LLaVA-7B，MM-Vet Total ↑ | 31.4 | **34.3**（AD-HH） | 并未以通用能力崩塌换取 CHAIR | Table 2 |
+
 论文结果支持 head-level 稀疏干预在既定 object-caption 场景中有效，并尝试用 Nocaps 与通用 benchmark 检查副作用。最需要补看的结果是：随机 head 等数量/同层对照、不同 head selection data 的迁移、CHAIR 与 object recall/length 的 Pareto curve。
+
+### 4.3 消融与分析实验
+
+| 实验 | 对照 / 唯一变量 | 关键结果 | 能支持什么 | 仍不能证明什么 | 来源 |
+|---|---|---|---|---|---|
+| Contrastive attribution | non-contrastive vs contrastive influence | AD-HH：CHAIRs 41.8→**29.6**，CHAIRi 11.0→**8.8** | 正确/幻觉对象差分比只看幻觉概率更能定位风险 heads | 仍未与同层随机、matched-norm heads 完整比较 | Table 3 |
+| Attribution 样本量 | 50–1000 samples | 500 vs 1000 的 head 排名 Spearman 0.93 | 约 500 样本后排序趋稳 | 单数据集稳定不等于跨域稳定 | Figure 9a |
+| Knockout 定义 | probability zero-ablation、log-prob、mean-ablation | 与默认方法的排名相似度约 0.89 / 0.96 | 结论对三种替代定义不太敏感 | 高相关仍可能共享同一 OOD-ablation 偏差 | Figure 9b–c |
+| Head 数量 | top-k 扫描 | LLaVA 约 k=20、MiniGPT-4 约 k=10 为质量折中；继续增大会伤害生成质量 | 稀疏干预有强度拐点 | 缺少动态逐 token head budget | Figure 15 |
 
 ## 5. 亮点与贡献
 

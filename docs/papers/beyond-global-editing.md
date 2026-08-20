@@ -140,7 +140,9 @@ Nullu 是最直接 baseline，但本方法同时增加了三个自由度：多�
 | Hyperparameters | 不同模型/任务使用不同 K/r；测试图像 mask 70% |
 | Ablations | 子空间数、basis 数、mask/Gaussian/blur |
 
-### 4.2 CHAIR 主结果（Table 1）
+### 4.2 主结果
+
+以下为论文 Table 1 的 CHAIR 主结果：
 
 | Model | Nullu CHAIR_S / CHAIR_I / BLEU | Ours | 变化 |
 |---|---:|---:|---|
@@ -150,15 +152,15 @@ Nullu 是最直接 baseline，但本方法同时增加了三个自由度：多�
 
 改进在三个架构上方向一致，但相对 Nullu 的绝对幅度不大。论文给出标准差，LLaVA CHAIR_S 14.60±0.35 vs 15.20±0.60；mPLUG 的差距相对其 ±1 左右的 run variance 较小，应通过配对统计而不是仅看均值确认。
 
-### 4.3 OPOPE 表与正文冲突
+#### OPOPE 表与正文冲突
 
 v1 表格中 Ours 在三模型的 Accuracy/Precision/F-score 都高于 Nullu：LLaVA F-score 91.92 vs 91.79，MiniGPT-4 92.32 vs 92.07，mPLUG-Owl2 **91.68** vs 90.80。正文却写“LLaVA 和 MiniGPT-4 没有超过 Nullu 的 F-score/precision”，并把 mPLUG 的结果写成 91.60。本站以表格为当前可追溯数值，同时把该冲突标为版本错误；引用前应等待作者修订或代码复算。
 
-### 4.4 Ablation 与超参数矛盾
+### 4.3 消融与分析实验
 
 正文实现细节写 CHAIR 上 mPLUG K=5/r=32、MiniGPT K=11/r=8；消融段又写 LLaVA 选择 K=7，basis=4。basis 表显示从 4 增至 64 时 CHAIR 持续降低但 BLEU 从 15.6 降至 12.7，因此 4 是保真折中，而不是纯 hallucination optimum。mask 优于 Gaussian/blur 支持结构化删除更适合作为探针，但没有 random mask、同面积非显著区域和 mask ratio 曲线。
 
-### 4.5 论文版本内部一致性审计
+### 4.4 论文版本内部一致性审计
 
 当前 v1 实验开头明确是 **2 个 benchmark、3 个 LVLM**，数据段却写 “four benchmark datasets” 后只列 CHAIR 与 POPE，结论又称 “six benchmarks and four LVLM families”。这些数量不一致不能用现有表格补全。另有 OPOPE 被正文称 question-answering，但表题描述 caption-based offline evaluation。它们不必否定方法，但显著降低当前版本的可引用成熟度。
 

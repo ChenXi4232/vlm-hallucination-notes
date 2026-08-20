@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>15</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>16</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>15 / 15</strong><span>方法图完整</span></div>
+  <div class="stat-card"><strong>16 / 16</strong><span>方法图 + 实验登记</span></div>
 </div>
 
 ## 研究入口
@@ -68,6 +68,7 @@ flowchart LR
 
 ## 最近接入
 
+- [Attention-Guided Switching](papers/attention-guided-switching.md)：用视觉—文本注意力比在 latent perception 与 explicit logic 间动态切换，并联合审计 accuracy、generation steps 与 POPE。
 - [HIRE](papers/hire-intermediate-representation-edit.md)：用 Editor 学习 token-specific 表示方向，并由 Router 选择性触发。
 - [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)：用 attention×gradient saliency 筛选候选并强化局部输出记忆。
 - [MARINE](papers/marine-image-grounded-guidance.md)：用外部视觉工具和双分支 logit guidance 补充对象证据。

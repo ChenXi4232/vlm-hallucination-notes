@@ -113,11 +113,25 @@ flowchart TD
 | Baselines | Greedy、Nucleus、Beam、DoLa 等 |
 | Ablations | penalty、retrospection、超参数与不同模型 |
 
-### 4.2 关键结论
+### 4.2 主结果
+
+| 设置 / 指标（方向） | Baseline | OPERA | 变化 / 解读 | 来源 |
+|---|---:|---:|---|---|
+| Shikra，CHAIR 512，CHAIRs / CHAIRi ↓ | Greedy 55.8 / 15.4 | **36.2 / 12.1** | 长生成的 sentence hallucination 明显下降 | Table 1 |
+| LLaVA-1.5，CHAIR 64，CHAIRs / CHAIRi ↓ | Beam 18.8 / 5.9 | **14.2 / 5.2** | 与同为 beam-based 的对照相比改善 | Table 2 |
+| MiniGPT-4，POPE 平均 F1 ↑ | Greedy 58.5 | **73.3** | +14.8 pt；短答案收益小于长生成机制叙事时需谨慎外推 | Table 4 |
+| LLaVA-1.5，GPT-4V Correctness / Detailedness ↑ | Beam 5.53 / 5.15 | **6.32 / 5.16** | 正确性提高，详细度近似保持 | Table 3 |
+| LLaVA-1.5，MME ↑ | Greedy 1510.7 | **1515.4** | 通用能力未明显下降 | Table 6 |
 
 论文报告 OPERA 在多模型、多指标上降低 hallucination，并通过组件消融显示 penalty 与 retrospection 均有贡献。最可信的结论是“该 decoding 组合在既定评测上有效”；更强的“over-trust 是幻觉根因”仍需真实图像反事实和随机 attention-pattern 对照。
 
-### 4.3 指标审计
+### 4.3 消融与分析实验
+
+论文的有意义分析包括：去掉 Over-trust Penalty、去掉 Retrospection-Allocation、局部 attention window/penalty strength 扫描，以及不同最大生成长度（64 与 512）的对照。组件实验显示两部分联合最好：penalty 负责在候选阶段降低 summary-token aggregation 的延续，retrospection 负责已形成重复聚合轨迹后的回滚；任一单独组件都不能复现完整收益。原文主 PDF 主要以曲线/附录形式报告这部分，当前 Note 不从图中估读未印出的精确数值。
+
+输出长度分析同样关键：OPERA 会略缩短描述，因此 Table 3 的 Detailedness 基本不变、Table 5 的 PPL/grammar/fluency 近似保持，是排除“只靠少说”的必要补充，但尚缺 object recall 与 matched-length beam baseline。跨 64/512 token 设置方向一致，支持方法不只在一种长度生效，却不能证明回滚机制在每个 hallucination onset 上都正确定位。
+
+### 4.4 指标审计
 
 - CHAIRs 随长度上升而更容易触发，回滚是否缩短输出必须单独报告。
 - GPT evaluator 的 prompt、版本与一致性影响 fine-grained 结论。

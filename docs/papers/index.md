@@ -8,14 +8,15 @@ description: 由 Deep Paper Note front matter 自动生成
 此页由 `scripts/build_indexes.py` 根据 Deep Paper Note front matter 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。
 
 <div class="stat-grid">
-<div class="stat-card"><strong>15</strong><span>Deep Paper Notes</span></div>
+<div class="stat-card"><strong>16</strong><span>Deep Paper Notes</span></div>
 <div class="stat-card"><strong>4</strong><span>研究方向</span></div>
-<div class="stat-card"><strong>6</strong><span>来源类型</span></div>
-<div class="stat-card"><strong>15</strong><span>已精读</span></div>
+<div class="stat-card"><strong>7</strong><span>来源类型</span></div>
+<div class="stat-card"><strong>16</strong><span>已精读</span></div>
 </div>
 
 | 论文 | 年份 / 来源 | 研究方向 | 资源类型 | 状态 |
 |---|---:|---|---|---|
+| [Balancing Efficiency and Efficacy: Training-Free Attention-Guided Switching Between Explicit and Latent Thoughts for MLLMs](attention-guided-switching.md) | 2026 · ACM MM | Token / Logit | 方法论文 | 已精读 |
 | [Beyond Global Editing: Per-Instance Disentangled Subspaces for Training-Free Hallucination Mitigation in LVLMs](beyond-global-editing.md) | 2026 · arXiv | Representation / Activation | 方法论文 | 已精读 |
 | [Dynamic Multimodal Activation Steering for Hallucination Mitigation in Large Vision-Language Models](dynamic-multimodal-activation-steering.md) | 2026 · arXiv | Representation / Activation | 方法论文 | 已精读 |
 | [Hallucination Begins Where Saliency Drops](hallucination-begins-where-saliency-drops.md) | 2026 · arXiv | Attention Head / Path | 方法论文 | 已精读 |
@@ -55,6 +56,7 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Token / Logit
 
+- [Balancing Efficiency and Efficacy: Training-Free Attention-Guided Switching Between Explicit and Latent Thoughts for MLLMs](attention-guided-switching.md)
 - [Same Attention, Different Truths: Put Logit-Lens over Visual Attention to Detect and Mitigate LVLM Object Hallucination](same-attention-different-truths.md)
 - [When Visual Signals Mislead: A Mechanistic Study of Attribute Hallucination in Vision-Language Models](visor.md)
 - [Mitigating Object Hallucination in Large Vision-Language Models via Image-Grounded Guidance](marine-image-grounded-guidance.md)
@@ -65,12 +67,13 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### 资源类型
 
-- **方法论文**：15
+- **方法论文**：16
 
 ### 论文来源
 
 - **arXiv**：8
 - **CVPR**：3
+- **ACM MM**：1
 - **ACL**：1
 - **NeurIPS**：1
 - **ICML**：1

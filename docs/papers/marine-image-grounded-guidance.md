@@ -88,9 +88,30 @@ LVLM 的视觉编码器通常为全局语义对齐而训练，并不等价于开
 
 ## 4. 实验设计与结果审计
 
+### 4.1 设置
+
 论文覆盖五类 LVLM 架构，主要以 DETR+RAM++ 作为视觉工具组合。CHAIR 同时报 sentence/object hallucination 与 Recall，POPE 覆盖 random/popular/adversarial，并用 LLaVA-QA90 和 GPT-4V-assisted accuracy/detailedness 检查回答质量。附录还报告 BLEU、ROUGE-L、CIDEr、SPICE、温度、动态 γ、显存与 inference latency。
 
+### 4.2 主结果
+
+| 设置 / 指标（方向） | Greedy | MARINE | 变化 / 解读 | 来源 |
+|---|---:|---:|---|---|
+| LLaVA，COCO，CHAIRs / CHAIRi ↓ | 26.6 / 10.5 | **17.8 / 7.2** | 外部 grounding 显著降低对象幻觉 | Table 1 / Table 6 |
+| LLaVA-1.5，COCO，CHAIRs / CHAIRi ↓ | 8.8 / 4.6 | **6.2 / 3.0** | 在较强 baseline 上仍改善 | Table 1 / Table 6 |
+| LLaVA，POPE-MSCOCO Acc / F1 ↑ | 54.2 / 68.5 | **72.2 / 76.4** | Yes ratio 95.5%→66.9% | Table 4 |
+| mPLUG-Owl2，POPE-MSCOCO Acc / F1 ↑ | 76.7 / 80.4 | **85.5 / 85.0** | Yes ratio 68.2%→46.5% | Table 4 |
+| LLaVA，延迟 ms/token ↓ | Greedy 26.3 | 52.2 | 1.98×，包含外部视觉模型 | Table 5 |
+
 从研究设计看，最有价值的不是某个单表 SOTA，而是三组对照：DETR vs RAM++ vs 联合；直接 prompt/integration 方式对比；γ sweep。它们表明覆盖互补的视觉工具通常优于单个模型，且过强 guidance 会生成与问题无关的图像细节。论文也加入 MARINE-Truth，把 ground-truth object information 当作 guidance，近似表示外部证据完美时的上限。
+
+### 4.3 消融与分析实验
+
+| 实验 | 对照 / 唯一变量 | 关键结果 | 能支持什么 | 仍不能证明什么 | 来源 |
+|---|---|---|---|---|---|
+| 外部模型组合 | DETR-only、RAM++-only、联合 | LLaVA CHAIRs：27.6 / 29.0 / **17.8**；CHAIRi：8.4 / 9.1 / **7.2** | 两类视觉工具提供互补证据 | 联合也增加覆盖面与算力，非纯算法协同 | Table 6 |
+| 集成规则 | intersection vs union | LLaVA 17.8/7.2 vs 30.4/9.7；不同模型上并非所有指标都由 intersection 最优 | 一致性过滤可抑制 noisy labels | 不能推为所有 detector 组合都应取交集 | Table 7 |
+| guidance strength | γ 从 0 到 1 | 幻觉先下降，但过强时 Recall/相关性受损 | 存在 hallucination–coverage Pareto | 曲线最优点依模型变化 | Figure 3 |
+| Oracle guidance | MARINE vs MARINE-Truth | Truth 在 POPE 多数设置仍更高 | 外部识别质量构成方法上限 | oracle gap 不等于 detector error 的唯一贡献 | Table 2 |
 
 需要谨慎比较不同 baseline：LURE/Woodpecker 属于输出后校正，VCD/OPERA 属于 decoding intervention，MARINE 则使用额外 detector。即使它们都“training-free”，外部模型参数、显存、预处理与双分支成本不同。公平表应同时列出 detector 参数量、图像前处理时间、首 token 延迟和每 token 延迟。
 

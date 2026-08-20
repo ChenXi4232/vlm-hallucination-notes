@@ -127,6 +127,8 @@ flowchart TD
 
 ## 4. 实验设计与结果审计
 
+### 4.1 设置
+
 | 项目 | 内容 |
 |---|---|
 | Models | LLaVA-1.5、InstructBLIP、Shikra、LLaVA-NeXT |
@@ -137,7 +139,26 @@ flowchart TD
 | Baselines | Sampling、Greedy、DoLa、VCD、ICD、OPERA |
 | Efficiency | 比 VCD/ICD/OPERA 更轻的主张需按硬件、cache 和实现复测 |
 
+### 4.2 主结果
+
+| 设置 / 指标（方向） | Baseline | SID | 变化 / 解读 | 来源 |
+|---|---:|---:|---|---|
+| LLaVA-1.5，CHAIR，Sampling，CHAIRs / CHAIRi ↓ | 51.3 / 16.8 | **45.0 / 11.7** | 同采样设置下降 | Table 3 |
+| InstructBLIP，CHAIR，Greedy，CHAIRs / CHAIRi ↓ | 54.6 / 13.6 | **42.3 / 12.4** | 跨架构方向一致 | Table 3 |
+| LLaVA-1.5，POPE adversarial，Greedy Acc / F1 ↑ | 79.11 / 80.92 | **83.24 / 82.21** | 短答案任务也改善 | Table 4 |
+| LLaVA-1.5，MME / MMBench ↑ | 1510.8 / 64.4 | **1520.4 / 65.0** | 未观察到通用能力下降 | Table 5 |
+| POPE adversarial 全集时间 / 显存 ↓ | VCD 904 s / 16,753 MB | **668 s / 15,767 MB**（SID 10%） | 比双分支 VCD 更轻，但仍高于 Normal 494 s | Table 6 |
+
 论文结果支持 SID 在 object/fine-grained 指标上的整体收益，并报告通用能力基本保持。重要 ablation 是 selection layer、保留比例、contrastive strength，以及 bottom-k 相对 random/top-k 的差异；若缺少 random-token 同信息量对照，便难证明收益来自“模型内省”而不是任意强视觉破坏。
+
+### 4.3 消融与分析实验
+
+| 实验 | 对照 / 唯一变量 | 关键结果 | 能支持什么 | 仍不能证明什么 | 来源 |
+|---|---|---|---|---|---|
+| Token selection | bottom-k（least important）vs random/top-k | bottom-k contrastive branch 的 hallucination 诱导/最终校准更好；top-k 更能保持原能力 | “低重要视觉 token 分支”比任意删 token 更有针对性 | attention importance 仍不是因果贡献 | Table 12–13 |
+| 保留比例 | 10% vs 40% | adversarial POPE Acc 83.24 vs 83.11；时间 668 vs 704 s | 较小保留集已足够，效率更好 | 只在单模型/任务的默认设置比较 | Table 6 |
+| α/β 敏感性 | contrast strength 与 plausibility truncation | SID 对较小 α、较松 β 比 VCD 稳健 | 构造分支比整体视觉扰动噪声更低 | 曲线未给多 seed CI | Figure 8 |
+| 大模型迁移 | LLaVA-NeXT 与更大 backbone | CHAIR/POPE 方向保持 | 机制不完全绑定 LLaVA-1.5 | 仍是相近架构，非广泛闭源迁移 | Table 14 |
 
 ## 5. 亮点与贡献
 
