@@ -22,6 +22,8 @@ tags:
 - [Vision-aware Head Divergence](../papers/vision-aware-head-divergence.md)：有图/无图 head-output divergence。
 - [Intervene-All-Paths](../papers/intervene-all-paths.md)：I2I、I2T、T2T 路径的联合识别与干预。
 - [OPERA](../papers/opera.md)：summary-token aggregation 与 over-trust penalty。
+- [Hallucination Begins Where Saliency Drops](../papers/hallucination-begins-where-saliency-drops.md)：attention×gradient saliency、候选拒绝与局部输出记忆强化。
+- [DMAS](../papers/dynamic-multimodal-activation-steering.md)：按 activation difference 选择 heads，并注入动态真值/视觉向量。
 
 ## 推荐因果验证
 

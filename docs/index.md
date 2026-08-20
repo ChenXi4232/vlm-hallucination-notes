@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>11</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>15</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>9</strong><span>待整理来源</span></div>
+  <div class="stat-card"><strong>15 / 15</strong><span>方法图完整</span></div>
 </div>
 
 ## 研究入口
@@ -68,10 +68,13 @@ flowchart LR
 
 ## 最近接入
 
+- [HIRE](papers/hire-intermediate-representation-edit.md)：用 Editor 学习 token-specific 表示方向，并由 Router 选择性触发。
+- [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)：用 attention×gradient saliency 筛选候选并强化局部输出记忆。
+- [MARINE](papers/marine-image-grounded-guidance.md)：用外部视觉工具和双分支 logit guidance 补充对象证据。
+- [DMAS](papers/dynamic-multimodal-activation-steering.md)：动态检索 truthfulness vector，并结合逐图 visual vector 做 head-level steering。
 - [Same Attention, Different Truths](papers/same-attention-different-truths.md)：用高注意视觉区域的 Logit-Lens 语义一致性检测并分型缓解对象幻觉。
 - [VISOR](papers/visor.md)：把属性判断分解为视觉增量与 null-image prior，按 margin/SNR 路由修复。
 - [Beyond Global Editing](papers/beyond-global-editing.md)：用逐样本动态混合的低秩子空间替代单一 global HalluSpace。
 - [Role-Break](papers/role-break-attention-heads.md)：以每个 head 偏离自身 faithful role 的结构化模式检测幻觉。
-- [Intervene-All-Paths](papers/intervene-all-paths.md)：跨对齐格式的多路径 head intervention。
 
 <p class="source-warning">知识卡包含个人研究解读。标记为“待核对”的条目不可作为最终论文写作中的事实依据，引用前应回查论文原文与公开代码。</p>

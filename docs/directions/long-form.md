@@ -15,6 +15,7 @@ tags:
 - [Curing Semantic Drift](../papers/curing-semantic-drift.md)：动态视觉基线与 token selection failure。
 - [OPERA](../papers/opera.md)：summary-token over-trust 与 rollback。
 - [M3ID](../papers/m3id.md)：conditioning dilution 与视觉 prompt amplification。
+- [Hallucination Begins Where Saliency Drops](../papers/hallucination-begins-where-saliency-drops.md)：output-token saliency drop 与局部上下文记忆强化。
 
 ## 建议分析轴
 
@@ -22,4 +23,3 @@ tags:
 - 以 hallucination onset 为零点观察前后窗口。
 - 区分 candidate absence 与 candidate selection failure。
 - 报告最大长度触发率、重复片段率和平均对象覆盖。
-

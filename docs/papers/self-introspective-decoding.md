@@ -11,9 +11,13 @@ hallucination_type: [Object hallucination, Attribute hallucination]
 method_level: [Visual token, Logit-level]
 training: Training-free
 status: 已精读
-source_status: arXiv 元数据与本地公式笔记已核对；最终 venue 待更新
+source_status: arXiv v3、官方 LaTeX 素材与方法图已核对；最终 venue 待更新
 review_state: automated
+arxiv_version: v3
+last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2408.02032
+overview_figure: ../assets/images/papers/sid-overview.png
+overview_figure_source: SID overview in the official arXiv v3 LaTeX source package
 tags: [Self-introspective decoding, Visual token, Contrastive decoding, Training-free, CHAIR, POPE]
 ---
 
@@ -24,6 +28,13 @@ tags: [Self-introspective decoding, Visual token, Contrastive decoding, Training
 [arXiv](https://arxiv.org/abs/2408.02032){ .kb-button .primary }
 
 <div class="paper-tldr"><strong>一句话总结</strong><p>SID 不用噪声或完全空白图像，而是保留模型当前认为最不重要的少量视觉 tokens，构造“仍与上下文相关但缺关键证据”的 hallucination-amplified branch，再从完整视觉 logits 中减去该分支。</p></div>
+
+## 官方方法概览图
+
+<figure class="paper-figure">
+  <a href="../../assets/images/papers/sid-overview.png" target="_blank" rel="noopener"><img src="../../assets/images/papers/sid-overview.png" alt="Self-Introspective Decoding 方法总览"></a>
+  <figcaption>官方 SID 总览图，来自 arXiv v3 source 的 <code>SID.pdf</code>，展示 CT²S visual-token selection 与完整/弱视觉分支的对比解码。</figcaption>
+</figure>
 
 ## 1. 论文速览
 

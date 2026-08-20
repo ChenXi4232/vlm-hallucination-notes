@@ -20,9 +20,9 @@ tags:
 ## 关键阅读
 
 - [Beyond Global Editing](../papers/beyond-global-editing.md)：将差分聚类为多个低秩 HalluSpaces，再用测试样本的 mask response 动态混合 projector。
+- [HIRE](../papers/hire-intermediate-representation-edit.md)：用 learned Editor 生成 token-specific direction，再由 Router 选择性触发。
+- [DMAS](../papers/dynamic-multimodal-activation-steering.md)：语义检索 truthfulness vector 与逐图 visual-perception vector 的 head-level 注入。
 - [VISOR](../papers/visor.md)：用逐层视觉 margin SNR 定位材质属性信号在 decoder 晚层的坍塌。
-
-IR Edit、Dynamic Multimodal Activation Steering 等其他论文仍在[待读队列](../library/reading-queue.md)，尚未转换成经核对的 Deep Paper Note。
 
 ## 建议输出
 

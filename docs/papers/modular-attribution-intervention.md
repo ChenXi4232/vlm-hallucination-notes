@@ -11,9 +11,13 @@ hallucination_type: [Object hallucination]
 method_level: [Module-level, Head-level]
 training: Inference-time / optional fine-tuning
 status: 已精读
-source_status: ICLR/OpenReview 元数据已核对；公式与定量表格引用前需回查原文
+source_status: ICLR/OpenReview 正式论文、方法流程与官方代码元数据已核对
 review_state: automated
+last_verified: 2026-08-20
 paper_url: https://openreview.net/forum?id=Bjq4W7P2Us
+code_url: https://github.com/TianyunYoung/Hallucination-Attribution
+overview_figure: ../assets/images/papers/modular-overview.png
+overview_figure_source: Method intervention page cropped from the official ICLR 2025 proceedings PDF
 tags: [Object hallucination, Modular attribution, Attention head, Causal intervention, CHAIR, Nocaps]
 ---
 
@@ -24,6 +28,13 @@ tags: [Object hallucination, Modular attribution, Attention head, Causal interve
 [OpenReview](https://openreview.net/forum?id=Bjq4W7P2Us){ .kb-button .primary } [ICLR Proceedings](https://proceedings.iclr.cc/paper_files/paper/2025/hash/8001c3568152d134d821cd46d4d84768-Abstract-Conference.html){ .kb-button }
 
 <div class="paper-tldr"><strong>一句话总结</strong><p>论文用组件消融造成的 hallucination-token probability change 做模块归因，发现风险集中在少量中后层 attention heads；随后用 AD-HH 动态压制这些 heads 的 text attention，或用 TF-HH 仅微调目标 heads。</p></div>
+
+## 官方方法概览图
+
+<figure class="paper-figure">
+  <a href="../../assets/images/papers/modular-overview.png" target="_blank" rel="noopener"><img src="../../assets/images/papers/modular-overview.png" alt="Modular Attribution 论文中的两种 hallucination-head 干预流程"></a>
+  <figcaption>官方 ICLR 2025 proceedings PDF 第 7 页方法区域裁图，包含 Figure 6 与 AD-HH/TF-HH 两个算法。原论文未提供一张独立 pipeline，因此此处保留官方版面并明确为方法页裁图。</figcaption>
+</figure>
 
 ## 1. 论文速览
 
