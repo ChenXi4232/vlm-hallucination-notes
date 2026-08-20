@@ -149,7 +149,6 @@ extra_javascript:
   - assets/javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid@11.4.1/dist/mermaid.min.js
-  - assets/javascripts/mermaid.js
 
 extra:
   social:
