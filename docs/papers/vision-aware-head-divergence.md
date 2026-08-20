@@ -11,10 +11,14 @@ hallucination_type: [Object hallucination]
 method_level: [Head-level]
 training: Training-free
 status: 已精读
-source_status: ACL Anthology 原文与官方代码元数据已核对
+source_status: arXiv v3、ACL Anthology、官方方法图与代码元数据已核对
 review_state: automated
+arxiv_version: v3
+last_verified: 2026-08-20
 paper_url: https://aclanthology.org/2025.acl-long.175/
 code_url: https://github.com/jinghan1he/VHR
+overview_figure: ../assets/images/papers/vhr-overview.png
+overview_figure_source: VHD/VHR framework in the official arXiv v3 LaTeX source package
 tags: [Object hallucination, Vision-aware head, Head divergence, Training-free, CHAIR, POPE]
 ---
 
@@ -25,6 +29,13 @@ tags: [Object hallucination, Vision-aware head, Head divergence, Training-free, 
 [ACL Anthology](https://aclanthology.org/2025.acl-long.175/){ .kb-button .primary } [官方代码](https://github.com/jinghan1he/VHR){ .kb-button }
 
 <div class="paper-tldr"><strong>一句话总结</strong><p>VHD 直接测量每个 attention head 在有图与无图输入下的输出差异，并以 top-k VHD 聚合成 token-level visual dependence；VHR 在每个样本、每个生成步逐层选择高 VHD heads 并放大其输出。</p></div>
+
+## 官方方法概览图
+
+<figure class="paper-figure">
+  <a href="../../assets/images/papers/vhr-overview.png" target="_blank" rel="noopener"><img src="../../assets/images/papers/vhr-overview.png" alt="VHD 指标与 VHR head reinforcement 方法总览"></a>
+  <figcaption>官方 VHD/VHR 框架图，来自 arXiv v3 source 的 <code>figs/framework.pdf</code>：按 VHD 选择视觉敏感 heads，再放大对应 head output。</figcaption>
+</figure>
 
 ## 1. 论文速览
 

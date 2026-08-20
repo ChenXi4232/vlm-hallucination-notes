@@ -11,10 +11,14 @@ hallucination_type: [Object hallucination, Multi-format hallucination]
 method_level: [Head-level, Causal path]
 training: Training-free
 status: 已精读
-source_status: NeurIPS/OpenReview 原文与官方代码元数据已核对
+source_status: arXiv v2、NeurIPS/OpenReview、官方方法图与代码元数据已核对
 review_state: automated
+arxiv_version: v2
+last_verified: 2026-08-20
 paper_url: https://openreview.net/forum?id=HRBhNqkG03
 code_url: https://github.com/SooLab/AllPath
+overview_figure: ../assets/images/papers/allpath-overview.png
+overview_figure_source: Pipeline figure in the official arXiv v2 LaTeX source package
 tags: [Object hallucination, Causal path, Attention head, Training-free, CHAIR, POPE, Recall]
 ---
 
@@ -25,6 +29,13 @@ tags: [Object hallucination, Causal path, Attention head, Training-free, CHAIR, 
 [OpenReview](https://openreview.net/forum?id=HRBhNqkG03){ .kb-button .primary } [官方代码](https://github.com/SooLab/AllPath){ .kb-button }
 
 <div class="paper-tldr"><strong>一句话总结</strong><p>AllPath 认为不同 alignment format 会调用不同信息路径：POPE 式短答案更依赖 image-to-input-text 与 text-to-text，CHAIR 生成还需要 image-to-output-text；因此分别探测 T2T/I2T heads，再联合压制坏路径与增强好路径。</p></div>
+
+## 官方方法概览图
+
+<figure class="paper-figure">
+  <a href="../../assets/images/papers/allpath-overview.png" target="_blank" rel="noopener"><img src="../../assets/images/papers/allpath-overview.png" alt="AllPath 的 T2T 与 I2T head 识别和联合干预流程"></a>
+  <figcaption>官方 AllPath pipeline，来自 arXiv v2 source 的 <code>figs/pipeline.pdf</code>：先识别 text-to-text 与 image-to-text 关键 heads，再按路径分别实施自适应干预。</figcaption>
+</figure>
 
 ## 1. 论文速览
 

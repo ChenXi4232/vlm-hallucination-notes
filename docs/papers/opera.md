@@ -11,10 +11,14 @@ hallucination_type: [Object hallucination, Fine-grained hallucination]
 method_level: [Attention pattern, Decoding]
 training: Training-free
 status: 已精读
-source_status: CVF 论文与官方代码元数据已核对；表格数字引用前需回查原文
+source_status: arXiv v3、CVF 论文、官方两阶段方法图与代码元数据已核对
 review_state: automated
+arxiv_version: v3
+last_verified: 2026-08-20
 paper_url: https://openaccess.thecvf.com/content/CVPR2024/html/Huang_OPERA_Alleviating_Hallucination_in_Multi-Modal_Large_Language_Models_via_Over-Trust_CVPR_2024_paper.html
 code_url: https://github.com/shikiw/OPERA
+overview_figure: ../assets/images/papers/opera-overview.png
+overview_figure_source: Over-trust penalty and retrospection figures combined from the official arXiv v3 source package
 tags: [Object hallucination, Attention, Beam search, Rollback, Training-free, CHAIR, POPE]
 ---
 
@@ -25,6 +29,13 @@ tags: [Object hallucination, Attention, Beam search, Rollback, Training-free, CH
 [CVF 原文](https://openaccess.thecvf.com/content/CVPR2024/html/Huang_OPERA_Alleviating_Hallucination_in_Multi-Modal_Large_Language_Models_via_Over-Trust_CVPR_2024_paper.html){ .kb-button .primary } [官方代码](https://github.com/shikiw/OPERA){ .kb-button }
 
 <div class="paper-tldr"><strong>一句话总结</strong><p>OPERA 将幻觉前兆定位为生成 token 对少数历史 summary/anchor token 的异常聚合：先在 beam score 中惩罚 over-trust，严重时再回滚到可疑聚合点重新分配候选，从而在不训练模型的前提下改变错误生成轨迹。</p></div>
+
+## 官方方法概览图
+
+<figure class="paper-figure">
+  <a href="../../assets/images/papers/opera-overview.png" target="_blank" rel="noopener"><img src="../../assets/images/papers/opera-overview.png" alt="OPERA 的 over-trust penalty 与 retrospection 两阶段方法"></a>
+  <figcaption>由官方 arXiv v3 source 的 <code>method1.pdf</code> 与 <code>method2.pdf</code> 纵向合并：上图计算 over-trust penalty，下图检测重复聚合并回滚重选。</figcaption>
+</figure>
 
 ## 1. 论文速览
 

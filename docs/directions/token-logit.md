@@ -25,6 +25,7 @@ $$
 - [M3ID](../papers/m3id.md)：有图/无图分布差异与 mutual-information decoding。
 - [Self-Introspective Decoding](../papers/self-introspective-decoding.md)：基于 least-important visual tokens 的对比分支。
 - [Curing Semantic Drift](../papers/curing-semantic-drift.md)：top-k candidates 的视觉重排与 selection failure。
+- [MARINE](../papers/marine-image-grounded-guidance.md)：外部 detector/tagger prompt 与双分支 logit guidance。
 
 ## 最小实验记录
 

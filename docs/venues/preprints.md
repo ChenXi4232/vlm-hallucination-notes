@@ -12,6 +12,9 @@ tags:
 - [Role-Break](../papers/role-break-attention-heads.md) — arXiv 2026 v1，head-level 线性检测。
 - [Curing Semantic Drift](../papers/curing-semantic-drift.md) — arXiv 2025，持续修订。
 - [Self-Introspective Decoding](../papers/self-introspective-decoding.md) — 以 arXiv 版本登记，venue 需随最终版本更新。
+- [HIRE](../papers/hire-intermediate-representation-edit.md) — arXiv 2026 v1，learned representation editor 与 Router。
+- [Hallucination Begins Where Saliency Drops](../papers/hallucination-begins-where-saliency-drops.md) — arXiv 2026 v1，gradient-aware saliency 与闭环干预。
+- [DMAS](../papers/dynamic-multimodal-activation-steering.md) — arXiv 2026 v1，动态多模态 activation steering。
 
 ## 版本记录规范
 

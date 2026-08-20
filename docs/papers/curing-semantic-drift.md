@@ -11,9 +11,13 @@ hallucination_type: [Object hallucination, Long-form hallucination]
 method_level: [Token-level, Logit-level]
 training: Training-free
 status: 已精读
-source_status: arXiv v1 元数据与知识卡已核对；预印本版本持续更新
+source_status: arXiv v4、官方 LaTeX 素材与方法图已核对
 review_state: automated
+arxiv_version: v4
+last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2506.21509
+overview_figure: ../assets/images/papers/dlc-overview.png
+overview_figure_source: DLC overview in the official arXiv v4 LaTeX source package
 tags: [Semantic drift, Long-form generation, Logit calibration, CLIP, Training-free, CHAIR, POPE]
 ---
 
@@ -24,6 +28,13 @@ tags: [Semantic drift, Long-form generation, Logit calibration, CLIP, Training-f
 [arXiv](https://arxiv.org/abs/2506.21509){ .kb-button .primary }
 
 <div class="paper-tldr"><strong>一句话总结</strong><p>论文把长生成幻觉解释为 token selection trajectory 的 semantic drift：正确候选常已在 top-k 中，但 raw logits 偏向语言上顺滑的错误词；DLC 用 CLIP-family 视觉相关性与历史对齐基线动态重排候选。</p></div>
+
+## 官方方法概览图
+
+<figure class="paper-figure">
+  <a href="../../assets/images/papers/dlc-overview.png" target="_blank" rel="noopener"><img src="../../assets/images/papers/dlc-overview.png" alt="Dynamic Logits Calibration 方法总览"></a>
+  <figcaption>官方 DLC 总览图，来自 arXiv v4 source 的 <code>figure/overall.pdf</code>：对 top-k 候选计算视觉对齐分数，再结合历史基线动态校准 logits。</figcaption>
+</figure>
 
 ## 1. 论文速览
 

@@ -23,9 +23,13 @@ method_level:
   - Decoding
 training: Training-free
 status: 已精读
-source_status: CVF 原文元数据已核对；定量结论引用前仍应回查对应表格
+source_status: arXiv v1、CVF 原文、官方 LaTeX 素材与方法图已核对
 review_state: automated
+arxiv_version: v1
+last_verified: 2026-08-20
 paper_url: https://openaccess.thecvf.com/content/CVPR2024/html/Favero_Multi-Modal_Hallucination_Control_by_Visual_Information_Grounding_CVPR_2024_paper.html
+overview_figure: ../assets/images/papers/m3id-overview.png
+overview_figure_source: M3ID overview in the official arXiv v1 LaTeX source package
 tags:
   - Object hallucination
   - Logit-level
@@ -43,6 +47,13 @@ tags:
 [CVF 原文](https://openaccess.thecvf.com/content/CVPR2024/html/Favero_Multi-Modal_Hallucination_Control_by_Visual_Information_Grounding_CVPR_2024_paper.html){ .kb-button .primary } [arXiv](https://arxiv.org/abs/2403.14003){ .kb-button }
 
 <div class="paper-tldr"><strong>一句话总结</strong><p>M3ID 把“有图条件分布减去无图分布”视为视觉条件带来的信息增益，并随生成步推进逐渐加强这项对比，从 logit 层抵消视觉条件被历史文本稀释的问题。</p></div>
+
+## 官方方法概览图
+
+<figure class="paper-figure">
+  <a href="../../assets/images/papers/m3id-overview.png" target="_blank" rel="noopener"><img src="../../assets/images/papers/m3id-overview.png" alt="M3ID 视觉条件与无视觉分布对比解码示意"></a>
+  <figcaption>官方 M3ID 方法图，来自 arXiv v1 source 的 <code>figures/splash_cr.pdf</code>：放大有图与无图分布的差异，抑制语言先验支持但视觉证据不足的对象。</figcaption>
+</figure>
 
 ## 1. 论文速览
 
