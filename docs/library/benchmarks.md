@@ -15,6 +15,8 @@ tags:
 |---|---|---|---|
 | CHAIR | COCO caption | object hallucination | object recall、length、repetition |
 | POPE | Yes/No QA | object existence | yes-ratio、三种负例采样 |
+| ROHE | 原图/对象移除图成对 Yes/No QA | 相关场景中的 object absence | positive/negative 分项、LaMa 伪影、paired $acc^+$ |
+| CountBench-PIH | 正确计数图 + $N+k$ 冲突 prompt | prompt-induced counting hallucination | baseline 计数、offset、无数字回答率 |
 | AMBER | 生成 + 判别 | object/attribute/relation | 分类别结果与 coverage |
 | MMHal-Bench | 开放回答 | 多类型幻觉 | judge 模型与提示敏感性 |
 | SHR / HalluBench | sentence/word | 细粒度幻觉 | 标注一致性与 evaluator 误差 |
@@ -25,6 +27,8 @@ tags:
 |---|---|---|
 | Object caption | CHAIR | 同义词映射、length 与 recall 必须并报 |
 | Object existence QA | POPE | random/popular/adversarial 与 yes-ratio 必须并报 |
+| Removed-object QA | ROHE | 必须并报原图 positive accuracy、移除图 negative accuracy 与 inpainting artifact control |
+| Prompt–image conflict | CountBench-PIH / Visual CounterFact | 必须分开计数/属性、冲突方向与 baseline 正确子集 |
 | Attribute / relation | AMBER | 应按 existence/attribute/relation 分层 |
 | Open-ended multi-type | MMHal-Bench | judge model、prompt 与版本必须冻结 |
 | Token/sentence detection | SHR / HalluBench | 需报告类别基率、AUROC 与 AUPRC |

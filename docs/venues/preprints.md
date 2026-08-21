@@ -7,6 +7,7 @@ tags:
 
 # arXiv / OpenReview
 
+- [Dual-Pathway Circuits](../papers/dual-pathway-circuits.md) — arXiv 2026 v1，跨架构 grounding/hallucination 双路径。
 - [MESA](../papers/mesa-mitigating-entangled-steering.md) — arXiv 2026 v1，解耦式 activation steering。
 - [Risk-aware Selective Prompting](../papers/risk-aware-selective-prompting.md) — arXiv 2026 v1，风险门控的选择性视觉 prompting。
 - [VISOR](../papers/visor.md) — arXiv 2026 v1，属性幻觉机制诊断与路由修复。

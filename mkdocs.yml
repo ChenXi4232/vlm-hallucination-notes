@@ -58,6 +58,10 @@ nav:
           - M3ID: papers/m3id.md
           - Self-Introspective Decoding: papers/self-introspective-decoding.md
       - Attention Head / Causal Path:
+          - Dual-Pathway Circuits: papers/dual-pathway-circuits.md
+          - Prompt-Induced Hallucination: papers/prompt-induced-hallucination.md
+          - PAS Prelim Attention Score: papers/pas-prelim-attention-score.md
+          - NOTICE: papers/notice.md
           - Attention-Space Contrastive Guidance: papers/attention-space-contrastive-guidance.md
           - CausalLens: papers/causallens.md
           - Role-Break: papers/role-break-attention-heads.md
@@ -67,12 +71,16 @@ nav:
           - Intervene-All-Paths: papers/intervene-all-paths.md
           - OPERA: papers/opera.md
       - Representation / Activation Editing:
+          - VES-RFT: papers/ves-rft.md
+          - Pixels Versus Priors: papers/pixels-versus-priors.md
           - MESA: papers/mesa-mitigating-entangled-steering.md
           - Beyond Global Editing: papers/beyond-global-editing.md
           - HIRE: papers/hire-intermediate-representation-edit.md
           - DMAS: papers/dynamic-multimodal-activation-steering.md
       - Long-form / Semantic Drift:
           - Curing Semantic Drift: papers/curing-semantic-drift.md
+      - Evaluation / Benchmark & Training:
+          - ROHE 与 oDPO: papers/removed-object-hallucination-odpo.md
   - Method Taxonomy:
       - 方法分类总览: method-taxonomy/index.md
       - Token / Logit: directions/token-logit.md

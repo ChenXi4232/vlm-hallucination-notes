@@ -19,6 +19,8 @@ tags:
 
 ## 关键阅读
 
+- [VES-RFT](../papers/ves-rft.md)：把有图/无图决策熵差变成训练奖励，并用 verifier 约束“正确地依赖图像”。
+- [Pixels Versus Priors](../papers/pixels-versus-priors.md)：以视觉反事实观察 pixel/prior 的逐层竞争，并构造双向 PvP steering vectors。
 - [MESA](../papers/mesa-mitigating-entangled-steering.md)：显式分离 hallucination steering 与内容语义，减少全局方向带来的能力损失。
 - [Beyond Global Editing](../papers/beyond-global-editing.md)：将差分聚类为多个低秩 HalluSpaces，再用测试样本的 mask response 动态混合 projector。
 - [HIRE](../papers/hire-intermediate-representation-edit.md)：用 learned Editor 生成 token-specific direction，再由 Router 选择性触发。

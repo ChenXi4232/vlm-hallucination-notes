@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>20</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>27</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>20 / 20</strong><span>方法图 + 实验登记</span></div>
+  <div class="stat-card"><strong>27 / 27</strong><span>官方图/缺图说明 + 实验登记</span></div>
 </div>
 
 ## 研究入口
@@ -68,6 +68,13 @@ flowchart LR
 
 ## 最近接入
 
+- [Dual-Pathway Circuits](papers/dual-pathway-circuits.md)：以跨五模型 activation patching 划分 grounding 与 hallucination 双路径，并用 held-out 缩放验证。
+- [Prompt-Induced Hallucination](papers/prompt-induced-hallucination.md)：定位图文计数/颜色冲突中传播错误 prompt 的早层 heads。
+- [VES-RFT](papers/ves-rft.md)：把有图/无图熵差与可验证正确性组合成 GRPO 训练奖励。
+- [PAS](papers/pas-prelim-attention-score.md)：用 layer-0 prelim attention 做单 pass 对象幻觉检测。
+- [Pixels Versus Priors](papers/pixels-versus-priors.md)：用 Visual CounterFact 与 PvP steering 控制 pixel/prior 竞争。
+- [NOTICE](papers/notice.md)：用 SIP/STR 语义腐蚀替代 Gaussian noise，定位跨任务 universal heads。
+- [ROHE 与 oDPO](papers/removed-object-hallucination-odpo.md)：以对象移除图做成对评测和视觉偏好优化。
 - [MESA](papers/mesa-mitigating-entangled-steering.md)：以语义解耦约束缓解 steering direction 中的任务内容纠缠，并审计幻觉—通用能力权衡。
 - [Risk-aware Selective Prompting](papers/risk-aware-selective-prompting.md)：用校准后的风险估计只为高风险样本追加视觉描述提示。
 - [Attention-Space Contrastive Guidance](papers/attention-space-contrastive-guidance.md)：直接在注意力空间构造对比分支，以较低额外开销修正生成分布。

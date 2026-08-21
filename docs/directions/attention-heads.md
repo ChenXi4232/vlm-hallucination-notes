@@ -16,6 +16,10 @@ tags:
 
 ## 关键阅读
 
+- [Dual-Pathway Circuits](../papers/dual-pathway-circuits.md)：跨五种 VLM 用 activation patching 区分 grounding 与 hallucination 组件路径，并用定向缩放验证。
+- [Mechanisms of Prompt-Induced Hallucination](../papers/prompt-induced-hallucination.md)：定位传播错误 prompt 数量/颜色的早层 PIH heads。
+- [PAS](../papers/pas-prelim-attention-score.md)：把对 prelim tokens 的 layer-0 attention 作为轻量对象幻觉检测信号。
+- [NOTICE](../papers/notice.md)：用 SIP/STR 分布内语义腐蚀审计 Gaussian-noise patching，并比较 BLIP/LLaVA universal heads。
 - [Attention-Space Contrastive Guidance](../papers/attention-space-contrastive-guidance.md)：在注意力分布空间生成退化对比分支，以轻量 guidance 校正解码。
 - [CausalLens](../papers/causallens.md)：以梯度敏感度筛选关键 heads，并执行多头因果干预。
 - [Role-Break](../papers/role-break-attention-heads.md)：将每个 head 相对自身 faithful source-allocation baseline 的偏离作为统一检测特征。
