@@ -17,8 +17,12 @@ tags:
 | Visual Genome | 属性、关系、region-level grounding | 标注噪声与长尾分布 |
 | NoCaps | out-of-domain caption 泛化 | 对象覆盖和评测工具依赖 |
 | AMBER data | 多类型生成/判别评测 | 需按版本核查标签与协议 |
+| Visual CounterFact | 颜色/大小的 pixel–prior 反事实冲突与 steering | GPT-4o 筛选、SAM2 编辑伪影、仅两类属性 |
+| CountBench-PIH | 对 baseline 计数正确样本施加 $N+k$ prompt 冲突 | 491 图规模小、任务定义依赖提示语义 |
+| ROHE | MSCOCO 2017 对象移除后的成对存在性评测 | LaMa 伪影、人工筛选偏差、仅 object existence |
+| SVO-Probes / MIT States / Facial Expressions | NOTICE 的 Semantic Image Pair 机制评测 | 自然配对背景差异与二选一任务简化 |
 
-当前目录已覆盖 15 篇 Notes 中反复出现的五类核心数据入口；新增论文若使用新数据集，应先补到这里，再在 benchmark 页补评测协议。
+当前目录覆盖 27 篇 Notes 中反复出现的核心数据入口；新增论文若使用新数据集，应先补到这里，再在 benchmark 页补评测协议。
 
 ## 建议新增的数据视图
 

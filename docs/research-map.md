@@ -51,13 +51,17 @@ flowchart TD
 
 === "从 Head 机制入门"
 
-    1. [Attention-Space Contrastive Guidance](papers/attention-space-contrastive-guidance.md)
-    2. [CausalLens](papers/causallens.md)
-    3. [Role-Break](papers/role-break-attention-heads.md)
-    4. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
-    5. [Vision-aware Head Divergence](papers/vision-aware-head-divergence.md)
-    6. [Intervene-All-Paths](papers/intervene-all-paths.md)
-    7. [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)
+    1. [NOTICE](papers/notice.md)
+    2. [Dual-Pathway Circuits](papers/dual-pathway-circuits.md)
+    3. [Prompt-Induced Hallucination](papers/prompt-induced-hallucination.md)
+    4. [PAS](papers/pas-prelim-attention-score.md)
+    5. [Attention-Space Contrastive Guidance](papers/attention-space-contrastive-guidance.md)
+    6. [CausalLens](papers/causallens.md)
+    7. [Role-Break](papers/role-break-attention-heads.md)
+    8. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
+    9. [Vision-aware Head Divergence](papers/vision-aware-head-divergence.md)
+    10. [Intervene-All-Paths](papers/intervene-all-paths.md)
+    11. [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)
 
 === "从解码干预入门"
 
@@ -68,9 +72,17 @@ flowchart TD
 
 === "从表征编辑入门"
 
-    1. [MESA](papers/mesa-mitigating-entangled-steering.md)
-    2. [Beyond Global Editing](papers/beyond-global-editing.md)
-    3. [HIRE](papers/hire-intermediate-representation-edit.md)
-    4. [DMAS](papers/dynamic-multimodal-activation-steering.md)
-    5. [VISOR](papers/visor.md)
-    6. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
+    1. [Pixels Versus Priors](papers/pixels-versus-priors.md)
+    2. [MESA](papers/mesa-mitigating-entangled-steering.md)
+    3. [Beyond Global Editing](papers/beyond-global-editing.md)
+    4. [HIRE](papers/hire-intermediate-representation-edit.md)
+    5. [DMAS](papers/dynamic-multimodal-activation-steering.md)
+    6. [VISOR](papers/visor.md)
+    7. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
+
+=== "从评测与训练入门"
+
+    1. [ROHE 与 oDPO](papers/removed-object-hallucination-odpo.md)
+    2. [PAS](papers/pas-prelim-attention-score.md)
+    3. [VES-RFT](papers/ves-rft.md)
+    4. [Risk-aware Selective Prompting](papers/risk-aware-selective-prompting.md)

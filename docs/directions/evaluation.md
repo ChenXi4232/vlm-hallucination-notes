@@ -29,6 +29,11 @@ tags:
 4. 重复/循环率；
 5. 至少一个通用能力或人工质量检查。
 
+## 关键阅读
+
+- [PAS](../papers/pas-prelim-attention-score.md)：对象 token 级检测应报告 AUROC/AUPRC、阈值校准和解码迁移，且需区分“部署 reference-free”与“评测有 annotation”。
+- [ROHE 与 oDPO](../papers/removed-object-hallucination-odpo.md)：用原图/对象移除图的 paired accuracy 同时约束 yes 与 no，避免单侧回答偏差。
+- [VES-RFT](../papers/ves-rft.md)：联合检查 CHAIR、POPE、AMBER coverage，并审计 verifier 与 metric 是否共享对象词表。
+
 !!! danger "常见伪改进"
     更短、更保守或删除细节的回答经常降低 CHAIR，却没有增强视觉 grounding。若 recall 与 detailedness 同时下降，应把结论表述为 trade-off，而不是无条件缓解。
-
