@@ -27,6 +27,7 @@ REQUIRED_META = {
     "status",
     "source_status",
     "review_state",
+    "added_at",
     "paper_url",
     "overview_figure",
     "overview_figure_source",

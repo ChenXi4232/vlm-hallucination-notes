@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v1、官方 LaTeX 素材与表格已核对；正文未给出可核验的官方代码链接
 review_state: automated
 arxiv_version: v1
+added_at: 2026-08-20
 last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2602.21704
 overview_figure: ../assets/images/papers/dmas-overview.png

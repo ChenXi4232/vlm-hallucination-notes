@@ -13,6 +13,7 @@ training: Evaluation-only
 status: 已精读
 source_status: NAACL 2025 正式论文、附录与官方代码链接已核对
 review_state: automated
+added_at: 2026-08-21
 last_verified: 2026-08-21
 paper_url: https://aclanthology.org/2025.naacl-long.571/
 code_url: https://github.com/wrudman/NOTICE

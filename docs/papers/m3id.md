@@ -26,6 +26,7 @@ status: 已精读
 source_status: arXiv v1、CVF 原文、官方 LaTeX 素材与方法图已核对
 review_state: automated
 arxiv_version: v1
+added_at: 2026-08-19
 last_verified: 2026-08-20
 paper_url: https://openaccess.thecvf.com/content/CVPR2024/html/Favero_Multi-Modal_Hallucination_Control_by_Visual_Information_Grounding_CVPR_2024_paper.html
 overview_figure: ../assets/images/papers/m3id-overview.png

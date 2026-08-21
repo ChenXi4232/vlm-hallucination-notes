@@ -274,6 +274,47 @@
 .evidence-medium { color: #8a6200; background: rgba(224, 166, 31, 0.14); }
 .evidence-low { color: #a33939; background: rgba(239, 106, 103, 0.13); }
 
+.paper-index-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.25rem 0 0.8rem;
+  padding: 0.72rem 0.85rem;
+  border: 1px solid var(--atlas-border);
+  border-radius: 0.75rem;
+  background: rgba(103, 80, 230, 0.045);
+}
+
+.paper-index-toolbar label {
+  color: var(--atlas-ink);
+  font-size: 0.74rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.paper-index-toolbar select {
+  min-width: 13rem;
+  padding: 0.42rem 2rem 0.42rem 0.65rem;
+  border: 1px solid var(--atlas-border);
+  border-radius: 0.5rem;
+  color: var(--atlas-ink);
+  background: var(--md-default-bg-color);
+  font: inherit;
+  font-size: 0.72rem;
+}
+
+.paper-index-toolbar select:focus-visible {
+  outline: 0.14rem solid var(--atlas-violet);
+  outline-offset: 0.12rem;
+}
+
+.paper-sort-status {
+  margin-left: auto;
+  color: var(--atlas-muted);
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
 .md-typeset table:not([class]) {
   border: 1px solid var(--atlas-border);
   border-radius: 0.65rem;
@@ -295,5 +336,19 @@
   .stat-grid,
   .atlas-grid {
     grid-template-columns: 1fr;
+  }
+
+  .paper-index-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .paper-index-toolbar select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .paper-sort-status {
+    margin-left: 0;
   }
 }

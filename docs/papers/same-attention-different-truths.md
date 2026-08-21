@@ -14,6 +14,7 @@ status: 已精读
 source_status: CVPR 2026 正式论文、arXiv v1、补充材料、官方 LaTeX 素材与官方代码入口已核对
 review_state: automated
 arxiv_version: v1
+added_at: 2026-08-20
 last_verified: 2026-08-19
 paper_url: https://arxiv.org/abs/2608.07302
 proceedings_url: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Same_Attention_Different_Truths_Put_Logit-Lens_over_Visual_Attention_to_CVPR_2026_paper.html

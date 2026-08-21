@@ -13,6 +13,7 @@ training: Training-free
 status: 已精读
 source_status: ACL 2026 正式论文、附录与官方代码链接已核对
 review_state: automated
+added_at: 2026-08-21
 last_verified: 2026-08-21
 paper_url: https://aclanthology.org/2026.acl-long.1941/
 code_url: https://github.com/michalg04/prompt-induced_hallucinations
