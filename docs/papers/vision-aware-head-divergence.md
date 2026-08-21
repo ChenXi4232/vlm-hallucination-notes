@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v3、ACL Anthology、官方方法图与代码元数据已核对
 review_state: automated
 arxiv_version: v3
+added_at: 2026-08-19
 last_verified: 2026-08-20
 paper_url: https://aclanthology.org/2025.acl-long.175/
 code_url: https://github.com/jinghan1he/VHR

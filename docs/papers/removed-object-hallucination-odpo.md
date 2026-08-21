@@ -13,6 +13,7 @@ training: Preference optimization
 status: 已精读
 source_status: NAACL 2025 正式论文与附录已核对；截至核对日未发现论文声明的官方代码链接
 review_state: automated
+added_at: 2026-08-21
 last_verified: 2026-08-21
 paper_url: https://aclanthology.org/2025.naacl-long.349/
 overview_figure: ../assets/images/papers/odpo-overview.png

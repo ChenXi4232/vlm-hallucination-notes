@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v2、CVPR 2026 Findings 论文、官方 LaTeX source package 已核对；截至核对日未发现官方代码
 review_state: automated
 arxiv_version: v2
+added_at: 2026-08-20
 last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2601.13707
 proceedings_url: https://openaccess.thecvf.com/content/CVPR2026F/html/Jo_Attention-Space_Contrastive_Guidance_for_Efficient_Hallucination_Mitigation_in_LVLMs_CVPRF_2026_paper.html

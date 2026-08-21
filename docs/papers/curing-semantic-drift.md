@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v4、官方 LaTeX 素材与方法图已核对
 review_state: automated
 arxiv_version: v4
+added_at: 2026-08-19
 last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2506.21509
 overview_figure: ../assets/images/papers/dlc-overview.png

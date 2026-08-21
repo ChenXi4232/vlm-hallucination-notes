@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v3、CVF 论文、官方两阶段方法图与代码元数据已核对
 review_state: automated
 arxiv_version: v3
+added_at: 2026-08-19
 last_verified: 2026-08-20
 paper_url: https://openaccess.thecvf.com/content/CVPR2024/html/Huang_OPERA_Alleviating_Hallucination_in_Multi-Modal_Large_Language_Models_via_Over-Trust_CVPR_2024_paper.html
 code_url: https://github.com/shikiw/OPERA

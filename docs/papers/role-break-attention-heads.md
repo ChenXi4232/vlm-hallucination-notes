@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v1、补充材料、官方 LaTeX 素材与完整实验表已核对；截至核对日未发现官方代码与公开评审页
 review_state: automated
 arxiv_version: v1
+added_at: 2026-08-20
 last_verified: 2026-08-19
 paper_url: https://arxiv.org/abs/2607.29412
 overview_figure: ../assets/images/papers/role-break-overview.png

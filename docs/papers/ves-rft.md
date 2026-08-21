@@ -13,6 +13,7 @@ training: Reinforcement fine-tuning
 status: 已精读
 source_status: CVPR 2026 open-access 正式论文与补充说明已核对；截至核对日未发现官方代码
 review_state: automated
+added_at: 2026-08-21
 last_verified: 2026-08-21
 paper_url: https://openaccess.thecvf.com/content/CVPR2026/html/Hou_VES-RFT_Rewarding_Visual_Evidence_Sensitivity_to_Mitigate_Hallucinations_in_Large_CVPR_2026_paper.html
 overview_figure: ../assets/images/papers/ves-rft-overview.png
