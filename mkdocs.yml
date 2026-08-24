@@ -50,6 +50,7 @@ nav:
   - Paper Notes:
       - 总索引: papers/index.md
       - Token / Logit 反事实与解码:
+          - DiVE: papers/dive.md
           - Risk-aware Selective Prompting: papers/risk-aware-selective-prompting.md
           - Attention-Guided Switching: papers/attention-guided-switching.md
           - Same Attention, Different Truths: papers/same-attention-different-truths.md
@@ -58,6 +59,8 @@ nav:
           - M3ID: papers/m3id.md
           - Self-Introspective Decoding: papers/self-introspective-decoding.md
       - Attention Head / Causal Path:
+          - VIB-Probe: papers/vib-probe.md
+          - ICT: papers/ict.md
           - Dual-Pathway Circuits: papers/dual-pathway-circuits.md
           - Prompt-Induced Hallucination: papers/prompt-induced-hallucination.md
           - PAS Prelim Attention Score: papers/pas-prelim-attention-score.md
@@ -71,6 +74,8 @@ nav:
           - Intervene-All-Paths: papers/intervene-all-paths.md
           - OPERA: papers/opera.md
       - Representation / Activation Editing:
+          - MemVR: papers/memvr.md
+          - Locate-then-Sparsify: papers/locate-then-sparsify.md
           - VES-RFT: papers/ves-rft.md
           - Pixels Versus Priors: papers/pixels-versus-priors.md
           - MESA: papers/mesa-mitigating-entangled-steering.md
@@ -80,6 +85,11 @@ nav:
       - Long-form / Semantic Drift:
           - Curing Semantic Drift: papers/curing-semantic-drift.md
       - Evaluation / Benchmark & Training:
+          - THRONE: papers/throne.md
+          - HALVA: papers/halva.md
+          - OPA-DPO: papers/opa-dpo.md
+          - LPOI: papers/lpoi.md
+          - CF-VLM: papers/cf-vlm.md
           - ROHE 与 oDPO: papers/removed-object-hallucination-odpo.md
   - Method Taxonomy:
       - 方法分类总览: method-taxonomy/index.md

@@ -6,10 +6,11 @@ tags:
 
 # 方法论文
 
-本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 27 篇，全部带有可追溯的官方方法图（或论文未提供方法图时的明确说明）与实验登记。
+本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 37 篇，全部带有可追溯的官方方法图（或论文未提供方法图时的明确说明）与实验登记。
 
 ## Logit / decoding
 
+- [DiVE](../papers/dive.md) — 在单次前向内解耦层内视觉证据，构造语言先验参考做对比解码。
 - [Attention-Guided Switching (AGS)](../papers/attention-guided-switching.md) — 以视觉—文本注意力比在显式逻辑与潜在感知之间动态路由。
 - [Risk-aware Selective Prompting (RSP)](../papers/risk-aware-selective-prompting.md) — 用校准集学习层级风险分数，只在高风险输入上追加视觉描述提示。
 - [Same Attention, Different Truths](../papers/same-attention-different-truths.md) — LLCC + HARM + VEED 的分型检测与缓解。
@@ -22,6 +23,8 @@ tags:
 
 ## Head / path intervention
 
+- [VIB-Probe](../papers/vib-probe.md) — 以变分信息瓶颈检测幻觉，并用梯度敏感度定位干预头。
+- [ICT](../papers/ict.md) — 图像级与对象级可信头定位及 activation-shift intervention。
 - [Dual-Pathway Circuits](../papers/dual-pathway-circuits.md) — 跨五种 VLM 的 activation patching、双路径识别与组件缩放因果验证。
 - [Mechanisms of Prompt-Induced Hallucination](../papers/prompt-induced-hallucination.md) — 图文计数冲突中的 PIH heads 与 mean-ablation 修复。
 - [PAS](../papers/pas-prelim-attention-score.md) — 以 layer-0 prelim attention 做单 pass 对象幻觉检测。
@@ -36,6 +39,8 @@ tags:
 
 ## Representation editing
 
+- [MemVR](../papers/memvr.md) — 在中层不确定时向 FFN memory space 动态重注入视觉表征。
+- [Locate-then-Sparsify](../papers/locate-then-sparsify.md) — 用双粒度幻觉归因将全层 steering 转为逐层稀疏强度。
 - [VES-RFT](../papers/ves-rft.md) — 将有图/无图熵差与对象正确性组合为 GRPO 训练奖励。
 - [Pixels Versus Priors](../papers/pixels-versus-priors.md) — Visual CounterFact 与双向 pixel/prior activation steering。
 - [MESA](../papers/mesa-mitigating-entangled-steering.md) — 将幻觉方向与内容语义解耦，在保留任务表征的同时执行选择性 steering。
@@ -45,6 +50,11 @@ tags:
 
 ## Benchmark-guided training
 
+- [THRONE](../papers/throne.md) — 面向自由生成、类别平衡的对象级 hallucination benchmark。
+- [HALVA](../papers/halva.md) — 对象短语级正负对齐与分布保持训练。
+- [OPA-DPO](../papers/opa-dpo.md) — 当前策略采样、最小纠错与 image-focused DPO。
+- [LPOI](../papers/lpoi.md) — 由对象可见度序列构造 listwise visual preference。
+- [CF-VLM](../papers/cf-vlm.md) — 图文双侧反事实与细粒度因果对齐训练。
 - [ROHE 与 oDPO](../papers/removed-object-hallucination-odpo.md) — 对象移除成对评测与原图优于移除图的多模态偏好优化。
 
 ## Baseline 选择建议
