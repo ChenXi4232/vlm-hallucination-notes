@@ -8,10 +8,10 @@ description: 由 Deep Paper Note front matter 自动生成
 此页由 `scripts/build_indexes.py` 根据 Deep Paper Note front matter 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。
 
 <div class="stat-grid">
-<div class="stat-card"><strong>27</strong><span>Deep Paper Notes</span></div>
-<div class="stat-card"><strong>5</strong><span>研究方向</span></div>
+<div class="stat-card"><strong>37</strong><span>Deep Paper Notes</span></div>
+<div class="stat-card"><strong>6</strong><span>研究方向</span></div>
 <div class="stat-card"><strong>10</strong><span>来源类型</span></div>
-<div class="stat-card"><strong>27</strong><span>已精读</span></div>
+<div class="stat-card"><strong>37</strong><span>已精读</span></div>
 </div>
 
 <div class="paper-index-toolbar" data-paper-index-toolbar>
@@ -22,13 +22,23 @@ description: 由 Deep Paper Note front matter 自动生成
     <option value="year-desc">论文年份：新到旧</option>
     <option value="title-asc">标题：A–Z</option>
   </select>
-  <span class="paper-sort-status" aria-live="polite">共 27 篇</span>
+  <span class="paper-sort-status" aria-live="polite">共 37 篇</span>
 </div>
 
 <div id="paper-index-table" markdown="1">
 
 | 论文 | 收录时间 | 年份 / 来源 | 研究方向 | 资源类型 | 状态 |
 |---|---:|---:|---|---|---|
+| [DiVE: Decoupling Intra-layer Visual Evidence for Mitigating Hallucinations in Large Vision-Language Models](dive.md) | 2026-08-24 | 2026 · ACL | Token / Logit | 方法论文 | 已精读 |
+| [Locate-then-Sparsify: Attribution Guided Sparse Strategy for Visual Hallucination Mitigation](locate-then-sparsify.md) | 2026-08-24 | 2026 · CVPR | Representation / Activation | 方法论文 | 已精读 |
+| [VIB-Probe: Detecting and Mitigating Hallucinations in Vision-Language Models via Variational Information Bottleneck](vib-probe.md) | 2026-08-24 | 2026 · ACL | Attention Head / Path | 检测与方法论文 | 已精读 |
+| [CF-VLM: Counterfactual Vision-Language Fine-tuning](cf-vlm.md) | 2026-08-24 | 2025 · NeurIPS | Training / Alignment | 方法论文 | 已精读 |
+| [ICT: Image-Object Cross-Level Trusted Intervention for Mitigating Object Hallucination in Large Vision-Language Models](ict.md) | 2026-08-24 | 2025 · CVPR | Attention Head / Path | 方法论文 | 已精读 |
+| [Look Twice Before You Answer: Memory-Space Visual Retracing for Hallucination Mitigation in Multimodal Large Language Models](memvr.md) | 2026-08-24 | 2025 · ICML | Representation / Activation | 方法论文 | 已精读 |
+| [LPOI: Listwise Preference Optimization for Vision Language Models](lpoi.md) | 2026-08-24 | 2025 · ACL | Training / Alignment | 方法论文 | 已精读 |
+| [Mitigating Hallucinations in Large Vision-Language Models via DPO: On-Policy Data Hold the Key](opa-dpo.md) | 2026-08-24 | 2025 · CVPR | Training / Alignment | 方法论文 | 已精读 |
+| [Mitigating Object Hallucination in MLLMs via Data-Augmented Phrase-Level Alignment](halva.md) | 2026-08-24 | 2025 · ICLR | Training / Alignment | 方法论文 | 已精读 |
+| [THRONE: An Object-based Hallucination Benchmark for the Free-form Generations of Large Vision-Language Models](throne.md) | 2026-08-24 | 2024 · CVPR | Evaluation / Benchmark | Benchmark 论文 | 已精读 |
 | [Dual-Pathway Circuits of Object Hallucination in Vision-Language Models](dual-pathway-circuits.md) | 2026-08-21 | 2026 · arXiv | Attention Head / Path | 机制论文 | 已精读 |
 | [Mechanisms of Prompt-Induced Hallucination in Vision–Language Models](prompt-induced-hallucination.md) | 2026-08-21 | 2026 · ACL | Attention Head / Path | 机制论文 | 已精读 |
 | [PAS: Prelim Attention Score for Detecting Object Hallucinations in Large Vision–Language Models](pas-prelim-attention-score.md) | 2026-08-21 | 2026 · CVPR | Attention Head / Path | 检测论文 | 已精读 |
@@ -63,6 +73,8 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Attention Head / Path
 
+- [VIB-Probe: Detecting and Mitigating Hallucinations in Vision-Language Models via Variational Information Bottleneck](vib-probe.md)
+- [ICT: Image-Object Cross-Level Trusted Intervention for Mitigating Object Hallucination in Large Vision-Language Models](ict.md)
 - [Dual-Pathway Circuits of Object Hallucination in Vision-Language Models](dual-pathway-circuits.md)
 - [Mechanisms of Prompt-Induced Hallucination in Vision–Language Models](prompt-induced-hallucination.md)
 - [PAS: Prelim Attention Score for Detecting Object Hallucinations in Large Vision–Language Models](pas-prelim-attention-score.md)
@@ -78,6 +90,7 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Evaluation / Benchmark
 
+- [THRONE: An Object-based Hallucination Benchmark for the Free-form Generations of Large Vision-Language Models](throne.md)
 - [Evaluating and Mitigating Object Hallucination in Large Vision-Language Models: Can They Still See Removed Objects?](removed-object-hallucination-odpo.md)
 
 ### Long-form / Semantic Drift
@@ -86,6 +99,8 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Representation / Activation
 
+- [Locate-then-Sparsify: Attribution Guided Sparse Strategy for Visual Hallucination Mitigation](locate-then-sparsify.md)
+- [Look Twice Before You Answer: Memory-Space Visual Retracing for Hallucination Mitigation in Multimodal Large Language Models](memvr.md)
 - [VES-RFT: Rewarding Visual Evidence Sensitivity to Mitigate Hallucinations in Large Vision–Language Models](ves-rft.md)
 - [Pixels Versus Priors: Controlling Knowledge Priors in Vision-Language Models through Visual Counterfacts](pixels-versus-priors.md)
 - [Beyond Global Editing: Per-Instance Disentangled Subspaces for Training-Free Hallucination Mitigation in LVLMs](beyond-global-editing.md)
@@ -95,6 +110,7 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Token / Logit
 
+- [DiVE: Decoupling Intra-layer Visual Evidence for Mitigating Hallucinations in Large Vision-Language Models](dive.md)
 - [Balancing Efficiency and Efficacy: Training-Free Attention-Guided Switching Between Explicit and Latent Thoughts for MLLMs](attention-guided-switching.md)
 - [Risk-aware Selective Prompting for Hallucination Mitigation in Large Vision-Language Models](risk-aware-selective-prompting.md)
 - [Same Attention, Different Truths: Put Logit-Lens over Visual Attention to Detect and Mitigate LVLM Object Hallucination](same-attention-different-truths.md)
@@ -103,12 +119,21 @@ description: 由 Deep Paper Note front matter 自动生成
 - [Multi-Modal Hallucination Control by Visual Information Grounding](m3id.md)
 - [Self-Introspective Decoding: Alleviating Hallucinations for Large Vision-Language Models](self-introspective-decoding.md)
 
+### Training / Alignment
+
+- [CF-VLM: Counterfactual Vision-Language Fine-tuning](cf-vlm.md)
+- [LPOI: Listwise Preference Optimization for Vision Language Models](lpoi.md)
+- [Mitigating Hallucinations in Large Vision-Language Models via DPO: On-Policy Data Hold the Key](opa-dpo.md)
+- [Mitigating Object Hallucination in MLLMs via Data-Augmented Phrase-Level Alignment](halva.md)
+
 ## 当前覆盖
 
 ### 资源类型
 
-- **方法论文**：21
+- **方法论文**：29
 - **机制论文**：2
+- **检测与方法论文**：1
+- **Benchmark 论文**：1
 - **检测论文**：1
 - **Benchmark 与方法论文**：1
 - **机制与方法论文**：1
@@ -117,12 +142,12 @@ description: 由 Deep Paper Note front matter 自动生成
 ### 论文来源
 
 - **arXiv**：11
-- **CVPR**：6
-- **ACL**：2
+- **CVPR**：10
+- **ACL**：5
+- **NeurIPS**：2
+- **ICML**：2
+- **ICLR**：2
 - **NAACL**：2
 - **EMNLP**：1
 - **CVPR Findings**：1
 - **ACM MM**：1
-- **ICML**：1
-- **NeurIPS**：1
-- **ICLR**：1

@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>27</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>37</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>27 / 27</strong><span>官方图/缺图说明 + 实验登记</span></div>
+  <div class="stat-card"><strong>37 / 37</strong><span>官方图/缺图说明 + 实验登记</span></div>
 </div>
 
 ## 研究入口
