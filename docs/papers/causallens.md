@@ -13,6 +13,7 @@ training: Training-free
 status: 已精读
 source_status: CVPR 2026 公开论文、补充材料与官方代码仓库已核对
 review_state: automated
+added_at: 2026-08-20
 last_verified: 2026-08-20
 paper_url: https://openaccess.thecvf.com/content/CVPR2026/html/Ji_CausalLens_Sensitivity-Guided_Multi-Head_Causal_Intervention_for_Hallucination_Mitigation_in_Large_CVPR_2026_paper.html
 code_url: https://github.com/jijy20/CausalLens

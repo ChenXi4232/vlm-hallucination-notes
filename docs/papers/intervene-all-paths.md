@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v2、NeurIPS/OpenReview、官方方法图与代码元数据已核对
 review_state: automated
 arxiv_version: v2
+added_at: 2026-08-19
 last_verified: 2026-08-20
 paper_url: https://openreview.net/forum?id=HRBhNqkG03
 code_url: https://github.com/SooLab/AllPath

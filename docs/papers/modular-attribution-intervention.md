@@ -13,6 +13,7 @@ training: Inference-time / optional fine-tuning
 status: 已精读
 source_status: ICLR/OpenReview 正式论文、方法流程与官方代码元数据已核对
 review_state: automated
+added_at: 2026-08-19
 last_verified: 2026-08-20
 paper_url: https://openreview.net/forum?id=Bjq4W7P2Us
 code_url: https://github.com/TianyunYoung/Hallucination-Attribution

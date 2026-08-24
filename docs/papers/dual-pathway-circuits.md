@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v1 原文与附录已核对；截至核对日未发现官方代码
 review_state: automated
 arxiv_version: v1
+added_at: 2026-08-21
 last_verified: 2026-08-21
 paper_url: https://arxiv.org/abs/2605.13156
 overview_figure: ../assets/images/papers/dual-pathway-circuits-overview.png

@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v3、官方 LaTeX 素材与方法图已核对；最终 venue 待更新
 review_state: automated
 arxiv_version: v3
+added_at: 2026-08-19
 last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2408.02032
 overview_figure: ../assets/images/papers/sid-overview.png

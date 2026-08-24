@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import re
 from collections import Counter, defaultdict
+from datetime import date
 from pathlib import Path
 
 import yaml
@@ -20,10 +21,25 @@ def read_card(path: Path) -> dict:
     if not match:
         raise SystemExit(f"Missing YAML front matter: {path.relative_to(ROOT)}")
     data = yaml.safe_load(match.group(1)) or {}
-    required = {"title", "year", "venue", "resource_type", "direction", "status", "tags"}
+    required = {
+        "title",
+        "year",
+        "venue",
+        "resource_type",
+        "direction",
+        "status",
+        "added_at",
+        "tags",
+    }
     missing = sorted(required - set(data))
     if missing:
         raise SystemExit(f"Missing {', '.join(missing)}: {path.relative_to(ROOT)}")
+    try:
+        data["added_at"] = date.fromisoformat(str(data["added_at"])).isoformat()
+    except ValueError as error:
+        raise SystemExit(
+            f"Invalid added_at (expected YYYY-MM-DD): {path.relative_to(ROOT)}"
+        ) from error
     data["path"] = path
     return data
 
@@ -39,7 +55,11 @@ def link(card: dict) -> str:
 def main() -> None:
     cards = sorted(
         (read_card(path) for path in PAPERS.glob("*.md") if path.name != "index.md"),
-        key=lambda item: (-int(item["year"]), str(item["title"]).lower()),
+        key=lambda item: (
+            -date.fromisoformat(str(item["added_at"])).toordinal(),
+            -int(item["year"]),
+            str(item["title"]).lower(),
+        ),
     )
     if not cards:
         raise SystemExit("No Paper Notes found")
@@ -68,16 +88,29 @@ def main() -> None:
         f'<div class="stat-card"><strong>{sum(card["status"] == "已精读" for card in cards)}</strong><span>已精读</span></div>',
         "</div>",
         "",
-        "| 论文 | 年份 / 来源 | 研究方向 | 资源类型 | 状态 |",
-        "|---|---:|---|---|---|",
+        '<div class="paper-index-toolbar" data-paper-index-toolbar>',
+        '  <label for="paper-index-sort">排序方式</label>',
+        '  <select id="paper-index-sort" aria-label="论文排序方式">',
+        '    <option value="added-desc">收录时间：最新优先</option>',
+        '    <option value="added-asc">收录时间：最早优先</option>',
+        '    <option value="year-desc">论文年份：新到旧</option>',
+        '    <option value="title-asc">标题：A–Z</option>',
+        "  </select>",
+        f'  <span class="paper-sort-status" aria-live="polite">共 {len(cards)} 篇</span>',
+        "</div>",
+        "",
+        '<div id="paper-index-table" markdown="1">',
+        "",
+        "| 论文 | 收录时间 | 年份 / 来源 | 研究方向 | 资源类型 | 状态 |",
+        "|---|---:|---:|---|---|---|",
     ]
     for card in cards:
         lines.append(
-            f"| {link(card)} | {esc(card['year'])} · {esc(card['venue'])} | "
+            f"| {link(card)} | {esc(card['added_at'])} | {esc(card['year'])} · {esc(card['venue'])} | "
             f"{esc(card['direction'])} | {esc(card['resource_type'])} | {esc(card['status'])} |"
         )
 
-    lines.extend(["", "## 按研究方向", ""])
+    lines.extend(["", "</div>", "", "## 按研究方向", ""])
     for direction in sorted(grouped):
         lines.extend([f"### {direction}", ""])
         lines.extend(f"- {link(card)}" for card in grouped[direction])

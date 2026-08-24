@@ -38,6 +38,7 @@ status: 已精读
 source_status: 原文、补充材料与官方代码已核对
 review_state: automated
 arxiv_version: v1
+added_at: 2026-08-19
 last_verified: 2026-08-19
 paper_url: https://...
 openreview_url: https://...
@@ -53,7 +54,7 @@ tags:
 
 `review_state` 建议使用 `automated`、`user-reviewed` 或 `user-approved`；不要把 AI 精读自动标记为已人工复核。
 
-`arxiv_version` 与 `last_verified` 用来冻结本次精读所依据的版本和核对日期；若不存在公开评审或官方代码，不要制造空链接，在正文“来源边界”中写明检索日期与“未发现”。
+`added_at` 是该 Note 首次进入知识库的日期，用于论文总索引排序，首次登记后不应随内容修订改变；`arxiv_version` 与 `last_verified` 用来冻结本次精读所依据的版本和最近核对日期。若不存在公开评审或官方代码，不要制造空链接，在正文“来源边界”中写明检索日期与“未发现”。
 
 ## 页面开头
 

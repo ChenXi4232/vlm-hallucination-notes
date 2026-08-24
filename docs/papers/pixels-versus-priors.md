@@ -13,6 +13,7 @@ training: Training-free
 status: 已精读
 source_status: EMNLP 2025 正式论文、附录与官方代码链接已核对
 review_state: automated
+added_at: 2026-08-21
 last_verified: 2026-08-21
 paper_url: https://aclanthology.org/2025.emnlp-main.1262/
 code_url: https://github.com/rsinghlab/pixels_vs_priors

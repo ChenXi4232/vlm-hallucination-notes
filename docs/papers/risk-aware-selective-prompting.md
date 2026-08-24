@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v1、官方 PDF 与 LaTeX source package 已核对；ACL ARR 投稿状态来自 arXiv comments
 review_state: automated
 arxiv_version: v1
+added_at: 2026-08-20
 last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2605.28123
 overview_figure: ../assets/images/papers/risk-aware-selective-prompting-overview.png

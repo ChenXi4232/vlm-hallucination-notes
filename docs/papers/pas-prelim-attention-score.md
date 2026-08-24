@@ -13,6 +13,7 @@ training: Training-free
 status: 已精读
 source_status: CVPR 2026 open-access 正式论文、附录与官方代码链接已核对
 review_state: automated
+added_at: 2026-08-21
 last_verified: 2026-08-21
 paper_url: https://openaccess.thecvf.com/content/CVPR2026/html/Hoang_PAS_Prelim_Attention_Score_for_Detecting_Object_Hallucinations_in_Large_CVPR_2026_paper.html
 code_url: https://github.com/lanl/pas

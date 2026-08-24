@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v1、官方 PDF 与 LaTeX source package 已核对；截至核对日未发现官方代码
 review_state: automated
 arxiv_version: v1
+added_at: 2026-08-20
 last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2604.07914
 overview_figure: ../assets/images/papers/mesa-overview-v2.png

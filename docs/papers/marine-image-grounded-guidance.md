@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v2、ICML 2025/PMLR 版本、官方 LaTeX 素材与代码链接已核对
 review_state: automated
 arxiv_version: v2
+added_at: 2026-08-20
 last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2402.08680
 code_url: https://github.com/Linxi-ZHAO/MARINE

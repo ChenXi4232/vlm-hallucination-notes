@@ -14,6 +14,7 @@ status: 已精读
 source_status: arXiv v1、官方 LaTeX 素材、表格与代码链接已核对
 review_state: automated
 arxiv_version: v1
+added_at: 2026-08-20
 last_verified: 2026-08-20
 paper_url: https://arxiv.org/abs/2601.20279
 code_url: https://github.com/zhangbaijin/LVLMs-Saliency
