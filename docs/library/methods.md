@@ -6,10 +6,11 @@ tags:
 
 # 方法论文
 
-本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 37 篇，全部带有可追溯的官方方法图（或论文未提供方法图时的明确说明）与实验登记。
+本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 38 篇，全部带有可追溯的官方方法图（或论文未提供方法图时的明确说明）与实验登记。
 
 ## Logit / decoding
 
+- [PatchGate](../papers/patchgate.md) — 从 prompt-free patch readout 构造对象清单，以 ESI/EDE 双向 logits 编辑联合约束遗漏与幻觉。
 - [DiVE](../papers/dive.md) — 在单次前向内解耦层内视觉证据，构造语言先验参考做对比解码。
 - [Attention-Guided Switching (AGS)](../papers/attention-guided-switching.md) — 以视觉—文本注意力比在显式逻辑与潜在感知之间动态路由。
 - [Risk-aware Selective Prompting (RSP)](../papers/risk-aware-selective-prompting.md) — 用校准集学习层级风险分数，只在高风险输入上追加视觉描述提示。
@@ -61,7 +62,7 @@ tags:
 
 | 研究层级 | 最小 baseline 组 | 主要用途 |
 |---|---|---|
-| Logit | Vanilla + M3ID/SID + MARINE + RSP | 比较内部反事实、外部视觉 guidance 与风险门控 prompting |
+| Logit | Vanilla + M3ID/SID + MARINE + RSP + PatchGate | 比较内部反事实、外部视觉 guidance、风险门控与 recall-aware 双向编辑 |
 | Head | Vanilla + random-head + PAS/NOTICE + PIH/Dual-Pathway + ACG/CausalLens | 验证检测信号、腐蚀方案、头集合、路径与局部历史干预 |
 | Representation | global vector + PvP + HIRE + DMAS + MESA + multi-subspace | 拆解学习式、检索式、解耦式与逐样本方向 |
 | Dynamic | static intervention + risk-gated intervention | 检查收益是否来自避免全程过强干预 |

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">PatchGate 等价流程抽象</title>
+  <desc id="desc">图像经过 image-only forward 和 patch logit-lens 生成对象清单，清单通过 ESI 和 EDE 双向修改生成 logits。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.box{fill:#fff;stroke:#475569;stroke-width:2}.accent{fill:#eef2ff;stroke:#4f46e5;stroke-width:2}.good{fill:#ecfdf5;stroke:#059669;stroke-width:2}.warn{fill:#fff7ed;stroke:#ea580c;stroke-width:2}.t{font:600 20px system-ui,sans-serif;fill:#0f172a}.s{font:15px system-ui,sans-serif;fill:#334155}.a{stroke:#64748b;stroke-width:2.5;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#64748b"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="430" rx="18"/>
+  <text class="t" x="40" y="42">本站等价抽象 · 基于 arXiv v1 Sections 3.1–3.2</text>
+  <rect class="box" x="40" y="105" width="150" height="88" rx="14"/><text class="t" x="76" y="140">图像 I</text><text class="s" x="61" y="169">无任务 prompt</text>
+  <rect class="accent" x="240" y="90" width="220" height="118" rx="14"/><text class="t" x="276" y="128">VEX</text><text class="s" x="266" y="158">image-only forward</text><text class="s" x="267" y="183">late-layer patch readout</text>
+  <rect class="accent" x="520" y="90" width="210" height="118" rx="14"/><text class="t" x="550" y="128">对象清单 T(I)</text><text class="s" x="547" y="158">PCS + 自适应阈值</text><text class="s" x="551" y="183">prompt-free evidence</text>
+  <rect class="box" x="40" y="280" width="220" height="88" rx="14"/><text class="t" x="70" y="316">基础生成 logits</text><text class="s" x="90" y="344">逐 token 解码</text>
+  <rect class="good" x="800" y="72" width="230" height="110" rx="14"/><text class="t" x="838" y="111">ESI · Inclusion</text><text class="s" x="826" y="141">提升有证据且未提及对象</text>
+  <rect class="warn" x="800" y="226" width="230" height="110" rx="14"/><text class="t" x="835" y="265">EDE · Exclusion</text><text class="s" x="822" y="295">压低高语言 logit / 低 PCS</text>
+  <rect class="box" x="1070" y="150" width="100" height="108" rx="14"/><text class="t" x="1090" y="192">更新</text><text class="t" x="1082" y="220">logits</text>
+  <path class="a" d="M190 149H240"/><path class="a" d="M460 149H520"/><path class="a" d="M730 135H800"/><path class="a" d="M730 165C760 165 770 281 800 281"/><path class="a" d="M260 324C540 324 600 127 800 127"/><path class="a" d="M260 324H800"/><path class="a" d="M1030 127C1050 127 1050 185 1070 185"/><path class="a" d="M1030 281C1050 281 1050 224 1070 224"/>
+</svg>

@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>37</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>38</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>37 / 37</strong><span>官方图/缺图说明 + 实验登记</span></div>
+  <div class="stat-card"><strong>38 / 38</strong><span>官方图/缺图说明 + 实验登记</span></div>
 </div>
 
 ## 研究入口
@@ -68,6 +68,7 @@ flowchart LR
 
 ## 最近接入
 
+- [PatchGate](papers/patchgate.md)：从 prompt-free patch states 建立内部对象清单，以 ESI/EDE 双向 logits 编辑同时优化对象覆盖与幻觉抑制。
 - [Dual-Pathway Circuits](papers/dual-pathway-circuits.md)：以跨五模型 activation patching 划分 grounding 与 hallucination 双路径，并用 held-out 缩放验证。
 - [Prompt-Induced Hallucination](papers/prompt-induced-hallucination.md)：定位图文计数/颜色冲突中传播错误 prompt 的早层 heads。
 - [VES-RFT](papers/ves-rft.md)：把有图/无图熵差与可验证正确性组合成 GRPO 训练奖励。
