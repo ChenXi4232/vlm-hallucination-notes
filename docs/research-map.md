@@ -45,9 +45,10 @@ flowchart TD
     1. [Risk-aware Selective Prompting](papers/risk-aware-selective-prompting.md)
     2. [VISOR](papers/visor.md)
     3. [Same Attention, Different Truths](papers/same-attention-different-truths.md)
-    4. [M3ID](papers/m3id.md)
-    5. [Self-Introspective Decoding](papers/self-introspective-decoding.md)
-    6. [MARINE](papers/marine-image-grounded-guidance.md)
+    4. [PatchGate](papers/patchgate.md)
+    5. [M3ID](papers/m3id.md)
+    6. [Self-Introspective Decoding](papers/self-introspective-decoding.md)
+    7. [MARINE](papers/marine-image-grounded-guidance.md)
 
 === "从 Head 机制入门"
 
@@ -84,5 +85,6 @@ flowchart TD
 
     1. [ROHE 与 oDPO](papers/removed-object-hallucination-odpo.md)
     2. [PAS](papers/pas-prelim-attention-score.md)
-    3. [VES-RFT](papers/ves-rft.md)
-    4. [Risk-aware Selective Prompting](papers/risk-aware-selective-prompting.md)
+    3. [PatchGate](papers/patchgate.md)
+    4. [VES-RFT](papers/ves-rft.md)
+    5. [Risk-aware Selective Prompting](papers/risk-aware-selective-prompting.md)

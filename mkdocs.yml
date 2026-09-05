@@ -50,6 +50,7 @@ nav:
   - Paper Notes:
       - 总索引: papers/index.md
       - Token / Logit 反事实与解码:
+          - PatchGate: papers/patchgate.md
           - DiVE: papers/dive.md
           - Risk-aware Selective Prompting: papers/risk-aware-selective-prompting.md
           - Attention-Guided Switching: papers/attention-guided-switching.md

@@ -7,6 +7,7 @@ tags:
 
 # arXiv / OpenReview
 
+- [PatchGate](../papers/patchgate.md) — arXiv 2026 v1，prompt-free intrinsic object inventory 与双向 logits 编辑；作者公开页面标注 Under Review。
 - [Dual-Pathway Circuits](../papers/dual-pathway-circuits.md) — arXiv 2026 v1，跨架构 grounding/hallucination 双路径。
 - [MESA](../papers/mesa-mitigating-entangled-steering.md) — arXiv 2026 v1，解耦式 activation steering。
 - [Risk-aware Selective Prompting](../papers/risk-aware-selective-prompting.md) — arXiv 2026 v1，风险门控的选择性视觉 prompting。

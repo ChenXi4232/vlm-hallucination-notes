@@ -20,6 +20,7 @@ $$
 
 ## 关键阅读
 
+- [PatchGate](../papers/patchgate.md)：从 late-layer patch states 读取 prompt-free 对象清单，以包含—排除双向 logits 编辑同时约束遗漏与幻觉。
 - [Risk-aware Selective Prompting](../papers/risk-aware-selective-prompting.md)：用层级隐藏状态估计输入风险，只对高风险样本追加视觉描述提示。
 - [Same Attention, Different Truths](../papers/same-attention-different-truths.md)：对高注意视觉区域做 Logit-Lens 一致性检查，并按 mask 反事实分型。
 - [VISOR](../papers/visor.md)：用 real/null-image logit margin 分解属性判断，区分方向、margin 与 SNR。
@@ -40,4 +41,4 @@ $$
 !!! warning "解释边界"
     较大的 real-vs-blank logit gap 说明“输入条件改变了输出分布”，但不保证改变来自正确视觉证据；视觉编码器也可能稳定地读错属性或对象。
 
-SADT 与 VISOR 都进一步说明：视觉依赖的**方向与语义质量**比绝对强度更重要。前者检查所注意区域能否读出目标对象，后者直接展示强视觉增量也可能把属性推向错误答案。
+SADT、VISOR 与 PatchGate 都进一步说明：视觉依赖的**方向、语义质量和最终 verbalization**比绝对强度更重要。前两者检查所读视觉语义和 real/null 增量方向；PatchGate 则暴露“内部可读但未说出”与“证据弱却被说出”的双向缺口。

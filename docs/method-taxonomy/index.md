@@ -34,6 +34,7 @@ flowchart TD
 
 | 论文 | 主要位置 | 诊断 / 干预 |
 |---|---|---|
+| [PatchGate](../papers/patchgate.md) | late-layer patch states + next-token logits | prompt-free 对象 inventory；ESI 召回遗漏、EDE 抑制弱证据提及 |
 | [SADT](../papers/same-attention-different-truths.md) | visual token attention + LM head | LLCC 语义一致性；HARM/VEED 分型缓解 |
 | [VISOR](../papers/visor.md) | real/null-image logits + layer states | signed visual margin/SNR；Calib/Abstain/Adapt |
 | [Beyond Global Editing](../papers/beyond-global-editing.md) | residual hidden states | 多低秩子空间的逐样本 soft projection |

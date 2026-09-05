@@ -10,6 +10,10 @@ tags:
 
 | 来源 | 计划类型 | 目标方向 | 状态 |
 |---|---|---|---|
+| Does Playing it Safe Count as Faithfulness? Reassessing LVLM Hallucination Mitigation Methods (arXiv:2609.01888 v1) | 高优先级评测审计 | Evaluation / Recall Trade-off | 暂停收录：摘要称 4 个 benchmarks，正文主协议称 3 个，公开代码仓库又列 CHAIR/AMBER/MMHal/MMStar；待版本澄清 |
+| VisER: Visual Evidence and Reliance for Object Hallucination Detection in LVLMs (arXiv:2608.30480 v1) | 候选检测论文 | Token / Logit | 待读：需核对双轴证据是否独立于对象词表与标注 |
+| ReWEIGH the Evidence: Calibrating Token-Level Ordinal Visual Evidence to Mitigate Hallucinations in Large Vision-Language Models (arXiv:2608.19075 v1) | 候选方法论文 | Token / Logit | 待读：与 SADT/PatchGate 的增量和代码状态待核对 |
+| Targeting the Attention Heads Behind Object Hallucination in LLaVA (arXiv:2608.24966 v1) | 候选机制/负结果 | Attention Head / Path | 待读：需完整核对 head mining、随机头对照与干预退化证据 |
 | LLM Unlearning Should Be Form-Independent | 相邻工作 | Form-independent intervention | 相关性待判断 |
 
 ## 本轮已迁移
