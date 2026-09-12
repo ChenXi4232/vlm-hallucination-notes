@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+  <title id="title">HEAL 等价流程抽象</title>
+  <desc id="desc">从 head output 冗余筛除，经视觉文本四状态贡献分解，到 synergy head 的视觉和语言 value 动态校准。</desc>
+  <defs>
+    <style>
+      .box{fill:#f7f8fc;stroke:#596780;stroke-width:2;rx:16}.accent{fill:#e7f2ff;stroke:#2878bd;stroke-width:2;rx:16}.warn{fill:#fff4df;stroke:#bb7a14;stroke-width:2;rx:16}.t{font:600 21px system-ui,sans-serif;fill:#172033}.s{font:16px system-ui,sans-serif;fill:#43506a}.a{stroke:#596780;stroke-width:3;fill:none;marker-end:url(#m)}
+      @media (prefers-color-scheme:dark){.box{fill:#202838}.accent{fill:#17334d}.warn{fill:#3c301c}.t{fill:#f2f5fb}.s{fill:#c9d2e3}}
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#596780"/></marker>
+  </defs>
+  <rect class="box" x="35" y="145" width="210" height="145"/>
+  <text class="t" x="140" y="190" text-anchor="middle">当前生成状态</text>
+  <text class="s" x="140" y="225" text-anchor="middle">all layers · all heads</text>
+  <text class="s" x="140" y="253" text-anchor="middle">head outputs / V values</text>
+  <path class="a" d="M245 217 H305"/>
+  <rect class="box" x="305" y="120" width="235" height="195"/>
+  <text class="t" x="422" y="168" text-anchor="middle">冗余筛除</text>
+  <text class="s" x="422" y="207" text-anchor="middle">替换单头输出</text>
+  <text class="s" x="422" y="235" text-anchor="middle">1 − cosine similarity</text>
+  <text class="s" x="422" y="277" text-anchor="middle">仅保留非冗余 heads</text>
+  <path class="a" d="M540 217 H600"/>
+  <rect class="accent" x="600" y="80" width="260" height="275"/>
+  <text class="t" x="730" y="126" text-anchor="middle">四状态贡献分解</text>
+  <text class="s" x="730" y="169" text-anchor="middle">H(V,T) · H(V̄,T)</text>
+  <text class="s" x="730" y="199" text-anchor="middle">H(V,T̄) · H(V̄,T̄)</text>
+  <text class="s" x="730" y="246" text-anchor="middle">Ivis · Ilang · Isyn</text>
+  <text class="s" x="730" y="293" text-anchor="middle">visual / language / synergy</text>
+  <text class="s" x="730" y="323" text-anchor="middle">动态 head taxonomy</text>
+  <path class="a" d="M860 217 H920"/>
+  <rect class="warn" x="920" y="120" width="245" height="195"/>
+  <text class="t" x="1042" y="168" text-anchor="middle">Synergy 校准</text>
+  <text class="s" x="1042" y="207" text-anchor="middle">β · Vvis</text>
+  <text class="s" x="1042" y="237" text-anchor="middle">γ · Vlang</text>
+  <text class="s" x="1042" y="277" text-anchor="middle">继续 attention / decoding</text>
+  <text class="s" x="600" y="420">本站等价抽象 · 依据 arXiv:2609.09206 v1 Sections 3.1–3.3</text>
+</svg>

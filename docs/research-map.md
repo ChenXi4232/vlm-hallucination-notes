@@ -53,16 +53,17 @@ flowchart TD
 === "从 Head 机制入门"
 
     1. [NOTICE](papers/notice.md)
-    2. [Dual-Pathway Circuits](papers/dual-pathway-circuits.md)
-    3. [Prompt-Induced Hallucination](papers/prompt-induced-hallucination.md)
-    4. [PAS](papers/pas-prelim-attention-score.md)
-    5. [Attention-Space Contrastive Guidance](papers/attention-space-contrastive-guidance.md)
-    6. [CausalLens](papers/causallens.md)
-    7. [Role-Break](papers/role-break-attention-heads.md)
-    8. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
-    9. [Vision-aware Head Divergence](papers/vision-aware-head-divergence.md)
-    10. [Intervene-All-Paths](papers/intervene-all-paths.md)
-    11. [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)
+    2. [HEAL](papers/heal-synergy-heads.md)
+    3. [Dual-Pathway Circuits](papers/dual-pathway-circuits.md)
+    4. [Prompt-Induced Hallucination](papers/prompt-induced-hallucination.md)
+    5. [PAS](papers/pas-prelim-attention-score.md)
+    6. [Attention-Space Contrastive Guidance](papers/attention-space-contrastive-guidance.md)
+    7. [CausalLens](papers/causallens.md)
+    8. [Role-Break](papers/role-break-attention-heads.md)
+    9. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
+    10. [Vision-aware Head Divergence](papers/vision-aware-head-divergence.md)
+    11. [Intervene-All-Paths](papers/intervene-all-paths.md)
+    12. [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)
 
 === "从解码干预入门"
 

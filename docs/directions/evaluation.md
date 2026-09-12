@@ -32,6 +32,7 @@ tags:
 ## 关键阅读
 
 - [PatchGate](../papers/patchgate.md)：把 Cover 与 CHAIR 设为互补主轴，并展示 full 方法可同时改善两者、却使 sentence-level Hal 退化，提醒指标聚合粒度会改变结论。
+- [HEAL](../papers/heal-synergy-heads.md)：同时报告 CHAIRs/CHAIRi、Recall、Length 与系统吞吐；尤其提示显存增量很小并不等价于低推理成本，墙钟时间约为原模型 6.22×。
 - [PAS](../papers/pas-prelim-attention-score.md)：对象 token 级检测应报告 AUROC/AUPRC、阈值校准和解码迁移，且需区分“部署 reference-free”与“评测有 annotation”。
 - [ROHE 与 oDPO](../papers/removed-object-hallucination-odpo.md)：用原图/对象移除图的 paired accuracy 同时约束 yes 与 no，避免单侧回答偏差。
 - [VES-RFT](../papers/ves-rft.md)：联合检查 CHAIR、POPE、AMBER coverage，并审计 verifier 与 metric 是否共享对象词表。

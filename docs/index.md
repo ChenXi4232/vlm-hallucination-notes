@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>38</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>39</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>38 / 38</strong><span>官方图/缺图说明 + 实验登记</span></div>
+  <div class="stat-card"><strong>39 / 39</strong><span>官方图/缺图说明 + 实验登记</span></div>
 </div>
 
 ## 研究入口
@@ -68,6 +68,7 @@ flowchart LR
 
 ## 最近接入
 
+- [HEAL](papers/heal-synergy-heads.md)：用四种视觉/文本反事实状态分解非冗余 heads 的模态贡献，再动态校准 synergy heads；效果明确但完整推理墙钟成本约为 baseline 的 6.22×。
 - [PatchGate](papers/patchgate.md)：从 prompt-free patch states 建立内部对象清单，以 ESI/EDE 双向 logits 编辑同时优化对象覆盖与幻觉抑制。
 - [Dual-Pathway Circuits](papers/dual-pathway-circuits.md)：以跨五模型 activation patching 划分 grounding 与 hallucination 双路径，并用 held-out 缩放验证。
 - [Prompt-Induced Hallucination](papers/prompt-induced-hallucination.md)：定位图文计数/颜色冲突中传播错误 prompt 的早层 heads。

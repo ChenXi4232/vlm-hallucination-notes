@@ -16,6 +16,7 @@ tags:
 
 ## 关键阅读
 
+- [HEAL](../papers/heal-synergy-heads.md)：先以 head-output perturbation 排除冗余头，再用视觉/文本四状态分解 synergy 贡献并逐步校准 values；机制对照完整，但墙钟成本显著。
 - [Dual-Pathway Circuits](../papers/dual-pathway-circuits.md)：跨五种 VLM 用 activation patching 区分 grounding 与 hallucination 组件路径，并用定向缩放验证。
 - [Mechanisms of Prompt-Induced Hallucination](../papers/prompt-induced-hallucination.md)：定位传播错误 prompt 数量/颜色的早层 PIH heads。
 - [PAS](../papers/pas-prelim-attention-score.md)：把对 prelim tokens 的 layer-0 attention 作为轻量对象幻觉检测信号。
@@ -38,3 +39,4 @@ tags:
 3. 只在 hallucination onset 前的局部窗口干预。
 4. 在原图、空图和对象删除图之间做 head-output activation patching。
 5. 同时画 CHAIRi–Recall、CHAIRs–length 和 hallucination–repetition 曲线。
+6. 把固定周期 head 分型与 noun-onset/event-triggered 更新做等算力比较。
