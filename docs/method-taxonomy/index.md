@@ -34,6 +34,7 @@ flowchart TD
 
 | 论文 | 主要位置 | 诊断 / 干预 |
 |---|---|---|
+| [HEAL](../papers/heal-synergy-heads.md) | head output + visual/text value vectors | 四状态反事实贡献分解；动态 synergy-head 模态平衡校准 |
 | [PatchGate](../papers/patchgate.md) | late-layer patch states + next-token logits | prompt-free 对象 inventory；ESI 召回遗漏、EDE 抑制弱证据提及 |
 | [SADT](../papers/same-attention-different-truths.md) | visual token attention + LM head | LLCC 语义一致性；HARM/VEED 分型缓解 |
 | [VISOR](../papers/visor.md) | real/null-image logits + layer states | signed visual margin/SNR；Calib/Abstain/Adapt |

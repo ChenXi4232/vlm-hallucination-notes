@@ -60,6 +60,7 @@ nav:
           - M3ID: papers/m3id.md
           - Self-Introspective Decoding: papers/self-introspective-decoding.md
       - Attention Head / Causal Path:
+          - HEAL Synergy Heads: papers/heal-synergy-heads.md
           - VIB-Probe: papers/vib-probe.md
           - ICT: papers/ict.md
           - Dual-Pathway Circuits: papers/dual-pathway-circuits.md

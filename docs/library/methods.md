@@ -6,7 +6,7 @@ tags:
 
 # 方法论文
 
-本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 38 篇，全部带有可追溯的官方方法图（或论文未提供方法图时的明确说明）与实验登记。
+本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 39 篇，全部带有可追溯的官方方法图（或论文未提供方法图时的明确说明）与实验登记。
 
 ## Logit / decoding
 
@@ -24,6 +24,7 @@ tags:
 
 ## Head / path intervention
 
+- [HEAL](../papers/heal-synergy-heads.md) — 以图文四状态反事实分解非冗余 head 的模态贡献，并动态校准 synergy-head visual/text values。
 - [VIB-Probe](../papers/vib-probe.md) — 以变分信息瓶颈检测幻觉，并用梯度敏感度定位干预头。
 - [ICT](../papers/ict.md) — 图像级与对象级可信头定位及 activation-shift intervention。
 - [Dual-Pathway Circuits](../papers/dual-pathway-circuits.md) — 跨五种 VLM 的 activation patching、双路径识别与组件缩放因果验证。
@@ -63,7 +64,7 @@ tags:
 | 研究层级 | 最小 baseline 组 | 主要用途 |
 |---|---|---|
 | Logit | Vanilla + M3ID/SID + MARINE + RSP + PatchGate | 比较内部反事实、外部视觉 guidance、风险门控与 recall-aware 双向编辑 |
-| Head | Vanilla + random-head + PAS/NOTICE + PIH/Dual-Pathway + ACG/CausalLens | 验证检测信号、腐蚀方案、头集合、路径与局部历史干预 |
+| Head | Vanilla + random-head + PAS/NOTICE + PIH/Dual-Pathway + ACG/CausalLens + HEAL | 验证检测信号、腐蚀方案、头集合、路径、模态贡献分解与局部历史干预 |
 | Representation | global vector + PvP + HIRE + DMAS + MESA + multi-subspace | 拆解学习式、检索式、解耦式与逐样本方向 |
 | Dynamic | static intervention + risk-gated intervention | 检查收益是否来自避免全程过强干预 |
 | Training | standard DPO/GRPO + oDPO + VES-RFT | 分离训练数据、视觉奖励、verifier 与推理成本 |

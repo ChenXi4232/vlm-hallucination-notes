@@ -7,6 +7,7 @@ tags:
 
 # arXiv / OpenReview
 
+- [HEAL](../papers/heal-synergy-heads.md) — arXiv 2026 v1，以四种反事实状态分解 synergy heads 并动态校准 value 信息比例；截至 2026-09-12 未发现公开评审页面。
 - [PatchGate](../papers/patchgate.md) — arXiv 2026 v1，prompt-free intrinsic object inventory 与双向 logits 编辑；作者公开页面标注 Under Review。
 - [Dual-Pathway Circuits](../papers/dual-pathway-circuits.md) — arXiv 2026 v1，跨架构 grounding/hallucination 双路径。
 - [MESA](../papers/mesa-mitigating-entangled-steering.md) — arXiv 2026 v1，解耦式 activation steering。
