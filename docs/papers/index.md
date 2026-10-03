@@ -8,10 +8,10 @@ description: 由 Deep Paper Note front matter 自动生成
 此页由 `scripts/build_indexes.py` 根据 Deep Paper Note front matter 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。
 
 <div class="stat-grid">
-<div class="stat-card"><strong>39</strong><span>Deep Paper Notes</span></div>
+<div class="stat-card"><strong>41</strong><span>Deep Paper Notes</span></div>
 <div class="stat-card"><strong>6</strong><span>研究方向</span></div>
 <div class="stat-card"><strong>10</strong><span>来源类型</span></div>
-<div class="stat-card"><strong>39</strong><span>已精读</span></div>
+<div class="stat-card"><strong>41</strong><span>已精读</span></div>
 </div>
 
 <div class="paper-index-toolbar" data-paper-index-toolbar>
@@ -22,13 +22,15 @@ description: 由 Deep Paper Note front matter 自动生成
     <option value="year-desc">论文年份：新到旧</option>
     <option value="title-asc">标题：A–Z</option>
   </select>
-  <span class="paper-sort-status" aria-live="polite">共 39 篇</span>
+  <span class="paper-sort-status" aria-live="polite">共 41 篇</span>
 </div>
 
 <div id="paper-index-table" markdown="1">
 
 | 论文 | 收录时间 | 年份 / 来源 | 研究方向 | 资源类型 | 状态 |
 |---|---:|---:|---|---|---|
+| [First Logit Boosting: Visual Grounding Method to Mitigate Object Hallucination in Large Vision-Language Models](first-logit-boosting.md) | 2026-10-03 | 2026 · CVPR | Token / Logit | 方法论文 | 已精读 |
+| [Prefill-Time Intervention for Mitigating Hallucination in Large Vision-Language Models](prefill-time-intervention.md) | 2026-10-03 | 2026 · CVPR | Representation / Activation | 方法论文 | 已精读 |
 | [MLLMs Hallucinate when Information Distribution Drifts in Synergy Heads](heal-synergy-heads.md) | 2026-09-12 | 2026 · arXiv | Attention Head / Path | 机制与方法论文 | 已精读 |
 | [PatchGate: Narrowing the Verbalization Gap with Intrinsic Object Inventories in Frozen Vision-Language Models](patchgate.md) | 2026-09-05 | 2026 · arXiv | Token / Logit | 方法论文 | 已精读 |
 | [DiVE: Decoupling Intra-layer Visual Evidence for Mitigating Hallucinations in Large Vision-Language Models](dive.md) | 2026-08-24 | 2026 · ACL | Token / Logit | 方法论文 | 已精读 |
@@ -102,6 +104,7 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Representation / Activation
 
+- [Prefill-Time Intervention for Mitigating Hallucination in Large Vision-Language Models](prefill-time-intervention.md)
 - [Locate-then-Sparsify: Attribution Guided Sparse Strategy for Visual Hallucination Mitigation](locate-then-sparsify.md)
 - [Look Twice Before You Answer: Memory-Space Visual Retracing for Hallucination Mitigation in Multimodal Large Language Models](memvr.md)
 - [VES-RFT: Rewarding Visual Evidence Sensitivity to Mitigate Hallucinations in Large Vision–Language Models](ves-rft.md)
@@ -113,6 +116,7 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Token / Logit
 
+- [First Logit Boosting: Visual Grounding Method to Mitigate Object Hallucination in Large Vision-Language Models](first-logit-boosting.md)
 - [PatchGate: Narrowing the Verbalization Gap with Intrinsic Object Inventories in Frozen Vision-Language Models](patchgate.md)
 - [DiVE: Decoupling Intra-layer Visual Evidence for Mitigating Hallucinations in Large Vision-Language Models](dive.md)
 - [Balancing Efficiency and Efficacy: Training-Free Attention-Guided Switching Between Explicit and Latent Thoughts for MLLMs](attention-guided-switching.md)
@@ -134,7 +138,7 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### 资源类型
 
-- **方法论文**：30
+- **方法论文**：32
 - **机制与方法论文**：2
 - **机制论文**：2
 - **检测与方法论文**：1
@@ -146,7 +150,7 @@ description: 由 Deep Paper Note front matter 自动生成
 ### 论文来源
 
 - **arXiv**：13
-- **CVPR**：10
+- **CVPR**：12
 - **ACL**：5
 - **NeurIPS**：2
 - **ICML**：2

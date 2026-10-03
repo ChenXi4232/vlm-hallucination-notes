@@ -30,3 +30,7 @@ tags:
 ## 建议输出
 
 每次 representation intervention 至少保存：layer、token position、direction norm、projection coefficient、pre/post logits、KL divergence、recall 与文本退化指标。
+
+## 初始 KV cache
+
+[PTI](../papers/prefill-time-intervention.md) 将干预移至prefill，只修改初始图文缓存；与逐步steering的对比应同时控制方向、位置、强度和输出长度。CHAIR下降不代表F1无损。

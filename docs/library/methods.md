@@ -6,7 +6,7 @@ tags:
 
 # 方法论文
 
-本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 39 篇，全部带有可追溯的官方方法图（或论文未提供方法图时的明确说明）与实验登记。
+本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 41 篇，全部带有可追溯的官方方法图或明确来源边界的等价抽象/缺图说明与实验登记。
 
 ## Logit / decoding
 
@@ -68,3 +68,8 @@ tags:
 | Representation | global vector + PvP + HIRE + DMAS + MESA + multi-subspace | 拆解学习式、检索式、解耦式与逐样本方向 |
 | Dynamic | static intervention + risk-gated intervention | 检查收益是否来自避免全程过强干预 |
 | Training | standard DPO/GRPO + oDPO + VES-RFT | 分离训练数据、视觉奖励、verifier 与推理成本 |
+
+## 2026-10-03：初始证据与缓存
+
+- [First Logit Boosting](../papers/first-logit-boosting.md)：首步词表logits复用；需对照β-only和The-only。
+- [Prefill-Time Intervention](../papers/prefill-time-intervention.md)：离线对象方向与prefill KV编辑；需审计F1与输出长度。

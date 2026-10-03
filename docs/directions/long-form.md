@@ -23,3 +23,7 @@ tags:
 - 以 hallucination onset 为零点观察前后窗口。
 - 区分 candidate absence 与 candidate selection failure。
 - 报告最大长度触发率、重复片段率和平均对象覆盖。
+
+## 早期状态与长期生成
+
+[FLB](../papers/first-logit-boosting.md) 复用首步logits，[PTI](../papers/prefill-time-intervention.md) 编辑初始KV；两者按本站定义共享“早期证据再利用”问题，但不是作者互引或已证明相同机制。应分别审计语言偏置与少说对象。

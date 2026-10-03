@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>39</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>41</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>39 / 39</strong><span>官方图/缺图说明 + 实验登记</span></div>
+  <div class="stat-card"><strong>41 / 41</strong><span>官方图/缺图说明 + 实验登记</span></div>
 </div>
 
 ## 研究入口
@@ -67,6 +67,9 @@ flowchart LR
     视觉依赖不等于事实正确，attention weight 也不等于因果贡献。本知识库要求每篇论文同时记录：核心假设、可执行实现、benchmark/metric、baseline 价值、反事实启发与审稿风险。
 
 ## 最近接入
+
+- [FLB](papers/first-logit-boosting.md)：首步logits复用；低开销但需区分冠词效应和视觉grounding。
+- [PTI](papers/prefill-time-intervention.md)：prefill-only KV编辑；显著CHAIR改善伴随F1和长度代价。
 
 - [HEAL](papers/heal-synergy-heads.md)：用四种视觉/文本反事实状态分解非冗余 heads 的模态贡献，再动态校准 synergy heads；效果明确但完整推理墙钟成本约为 baseline 的 6.22×。
 - [PatchGate](papers/patchgate.md)：从 prompt-free patch states 建立内部对象清单，以 ESI/EDE 双向 logits 编辑同时优化对象覆盖与幻觉抑制。
