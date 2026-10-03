@@ -42,3 +42,7 @@ $$
     较大的 real-vs-blank logit gap 说明“输入条件改变了输出分布”，但不保证改变来自正确视觉证据；视觉编码器也可能稳定地读错属性或对象。
 
 SADT、VISOR 与 PatchGate 都进一步说明：视觉依赖的**方向、语义质量和最终 verbalization**比绝对强度更重要。前两者检查所读视觉语义和 real/null 增量方向；PatchGate 则暴露“内部可读但未说出”与“证据弱却被说出”的双向缺口。
+
+## 首步证据复用
+
+[FLB](../papers/first-logit-boosting.md) 不增加模型forward，适合作为低开销基线；The-only消融表明语言形式可能解释大部分收益。参见[CVPR问题—证据比较矩阵](../venues/vision.md#cvpr)。

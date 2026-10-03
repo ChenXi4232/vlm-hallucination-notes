@@ -89,3 +89,10 @@ flowchart TD
     3. [PatchGate](papers/patchgate.md)
     4. [VES-RFT](papers/ves-rft.md)
     5. [Risk-aware Selective Prompting](papers/risk-aware-selective-prompting.md)
+
+## 从初始证据到后续输出
+
+- [FLB](papers/first-logit-boosting.md)：首步logits → 后续候选偏置；Table 5要求区分视觉证据与冠词效应。
+- [PTI](papers/prefill-time-intervention.md)：对象/背景对比方向 → 初始KV；Table 5与Supplement Figure 6要求检查F1/长度代价。
+
+这是本站按干预位置组织的比较，不宣称两篇互引或机制相同。完整阅读路径见[CVPR矩阵](venues/vision.md#cvpr)，扫描证据见[2026-10-03核验](reading-notes/research-atlas-20261003.md)。

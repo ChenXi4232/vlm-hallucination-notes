@@ -1,0 +1,1643 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-03",
+  "base_main_commit": "950ee5d2193aac31ef7da1bc559f6119319babc1",
+  "branch": "automation/research-atlas-20261003",
+  "last_successful_cutoff": null,
+  "last_successful_cutoff_note": "Prior durable cutoff not found. This run uses 2026-09-03 through 2026-10-03 plus first CVPR historical backfill. Do not advance cutoff merely on file creation.",
+  "proposed_cutoff": "2026-10-03",
+  "publication_status": "prepared_pending_pr_and_deployment",
+  "publication_resolution": "Resolve the PR for this branch, its merge SHA, and Pages workflow via GitHub before promoting proposed_cutoff on the next run; failed stages never advance it.",
+  "scans": [
+    {
+      "venue": "CVPR",
+      "track": "main",
+      "year": 2026,
+      "official_url": "https://openaccess.thecvf.com/CVPR2026?day=all",
+      "official_release_date": null,
+      "first_observed_public_in_this_ledger": "2026-10-03",
+      "last_checked": "2026-10-03",
+      "title_count": 4042,
+      "title_filter": [
+        "hallucin",
+        "faithful",
+        "language prior"
+      ],
+      "title_filter_complete": true,
+      "full_abstract_scan_complete": false,
+      "hits": [
+        {
+          "title": "Reallocating Attention Across Layers to Reduce Multimodal Hallucination",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lu_Reallocating_Attention_Across_Layers_to_Reduce_Multimodal_Hallucination_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "abstract_reviewed_reading_queue"
+        },
+        {
+          "title": "Exposing and Evaluating Hallucinations for GUI Grounding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Exposing_and_Evaluating_Hallucinations_for_GUI_Grounding_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "SEASON: Mitigating Temporal Hallucination in Video Large Language Models via Self-Diagnostic Contrastive Decoding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_SEASON_Mitigating_Temporal_Hallucination_in_Video_Large_Language_Models_via_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Dehallu3D: Hallucination-Mitigated 3D Generation from a Single Image via Cyclic View Consistency Refinement",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Dehallu3D_Hallucination-Mitigated_3D_Generation_from_a_Single_Image_via_Cyclic_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Cross-Modal Attention Calibration for LVLM Hallucination Mitigation",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Cross-Modal_Attention_Calibration_for_LVLM_Hallucination_Mitigation_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Unstitching the Chimera: Frame-Level Risk and Train-Free Mitigation for Video Hallucination",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Yang_Unstitching_the_Chimera_Frame-Level_Risk_and_Train-Free_Mitigation_for_Video_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "MAD: Modality-Adaptive Decoding for Mitigating Cross-Modal Hallucinations in Multimodal Large Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chung_MAD_Modality-Adaptive_Decoding_for_Mitigating_Cross-Modal_Hallucinations_in_Multimodal_Large_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "HulluEdit: Single-Pass Evidence-Consistent Subspace Editing for Mitigating Hallucinations in Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lin_HulluEdit_Single-Pass_Evidence-Consistent_Subspace_Editing_for_Mitigating_Hallucinations_in_Large_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "abstract_reviewed_reading_queue"
+        },
+        {
+          "title": "PAS: Prelim Attention Score for Detecting Object Hallucinations in Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hoang_PAS_Prelim_Attention_Score_for_Detecting_Object_Hallucinations_in_Large_CVPR_2026_paper.html",
+          "note_slug": "pas-prelim-attention-score",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "Fine-Grained Multi Image Object Hallucination Benchmark",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Min_Fine-Grained_Multi_Image_Object_Hallucination_Benchmark_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "CodeV: Code with Images for Faithful Visual Reasoning via Tool-Aware Policy Optimization",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hou_CodeV_Code_with_Images_for_Faithful_Visual_Reasoning_via_Tool-Aware_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Faithful Contouring: Near-Lossless 3D Voxel Representation Free from Iso-surface",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Faithful_Contouring_Near-Lossless_3D_Voxel_Representation_Free_from_Iso-surface_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Residual Decoding: Mitigating Hallucinations in Large Vision-Language Models via History-Aware Residual Guidance",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chen_Residual_Decoding_Mitigating_Hallucinations_in_Large_Vision-Language_Models_via_History-Aware_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "FINER: MLLMs Hallucinate under Fine-grained Negative Queries",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_FINER_MLLMs_Hallucinate_under_Fine-grained_Negative_Queries_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "COPO: Causal-Oriented Policy Optimization for Hallucinations of MLLMs",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Guo_COPO_Causal-Oriented_Policy_Optimization_for_Hallucinations_of_MLLMs_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Lyapunov Probes for Hallucination Detection in Large Foundation Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Luan_Lyapunov_Probes_for_Hallucination_Detection_in_Large_Foundation_Models_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Same Attention, Different Truths: Put Logit-Lens over Visual Attention to Detect and Mitigate LVLM Object Hallucination",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Same_Attention_Different_Truths_Put_Logit-Lens_over_Visual_Attention_to_CVPR_2026_paper.html",
+          "note_slug": "same-attention-different-truths",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "Thinking in Uncertainty: Mitigating Hallucinations in MLRMs with Latent Entropy-Aware Decoding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xu_Thinking_in_Uncertainty_Mitigating_Hallucinations_in_MLRMs_with_Latent_Entropy-Aware_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Adaptive Auxiliary Prompt Blending for Target-Faithful Diffusion Generation",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lee_Adaptive_Auxiliary_Prompt_Blending_for_Target-Faithful_Diffusion_Generation_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "First Logit Boosting: Visual Grounding Method to Mitigate Object Hallucination in Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ha_First_Logit_Boosting_Visual_Grounding_Method_to_Mitigate_Object_Hallucination_CVPR_2026_paper.html",
+          "note_slug": "first-logit-boosting",
+          "disposition": "selected_note"
+        },
+        {
+          "title": "Stake the Points: Structure-Faithful Instance Unlearning",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hong_Stake_the_Points_Structure-Faithful_Instance_Unlearning_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "HAD: Hallucination-Aware Diffusion Priors for 3D Reconstruction",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Understanding and Mitigating Hallucinations in Multimodal Chain-of-Thought Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ma_Understanding_and_Mitigating_Hallucinations_in_Multimodal_Chain-of-Thought_Models_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Envision, Attend, Then Respond: Counterfactual Hallucination Mitigation in Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liang_Envision_Attend_Then_Respond_Counterfactual_Hallucination_Mitigation_in_Large_Vision-Language_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "ELV-Halluc: Benchmarking Semantic Aggregation Hallucinations in Video Understanding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lu_ELV-Halluc_Benchmarking_Semantic_Aggregation_Hallucinations_in_Video_Understanding_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "TriDF: Evaluating Perception, Detection, and Hallucination for Interpretable DeepFake Detection",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jiang-Lin_TriDF_Evaluating_Perception_Detection_and_Hallucination_for_Interpretable_DeepFake_Detection_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "CausalLens: Sensitivity-Guided Multi-Head Causal Intervention for Hallucination Mitigation in Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ji_CausalLens_Sensitivity-Guided_Multi-Head_Causal_Intervention_for_Hallucination_Mitigation_in_Large_CVPR_2026_paper.html",
+          "note_slug": "causallens",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "Tell Model Where to Look: Mitigating Hallucinations in MLLMs by Vision-Guided Attention",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Tell_Model_Where_to_Look_Mitigating_Hallucinations_in_MLLMs_by_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "The Devil is in Attention Sharing: Improving Complex Non-rigid Image Editing Faithfulness via Attention Synergy",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chen_The_Devil_is_in_Attention_Sharing_Improving_Complex_Non-rigid_Image_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Understanding the Role of Hallucination in Reinforcement Post-Training of Multimodal Reasoning Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Understanding_the_Role_of_Hallucination_in_Reinforcement_Post-Training_of_Multimodal_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "AdaIAT: Adaptively Increasing Attention to Generated Text to Alleviate Hallucinations in LVLM",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_AdaIAT_Adaptively_Increasing_Attention_to_Generated_Text_to_Alleviate_Hallucinations_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "abstract_reviewed_reading_queue"
+        },
+        {
+          "title": "SCIEval: Evaluating and Benchmarking the Faithfulness of Scientific Image Generation and Interpretation with Large Multimodal Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ye_SCIEval_Evaluating_and_Benchmarking_the_Faithfulness_of_Scientific_Image_Generation_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Saliency-R1: Enforcing Interpretable and Faithful Vision-language Reasoning via Saliency-map Alignment Reward",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Gong_Saliency-R1_Enforcing_Interpretable_and_Faithful_Vision-language_Reasoning_via_Saliency-map_Alignment_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "MoD-DPO: Towards Mitigating Cross-modal Hallucinations in Omni LLMs using Modality Decoupled Preference Optimization",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chaubey_MoD-DPO_Towards_Mitigating_Cross-modal_Hallucinations_in_Omni_LLMs_using_Modality_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Fighting Hallucinations with Counterfactuals: Diffusion-Guided Perturbations for LVLM Hallucination Suppression",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Dastmalchi_Fighting_Hallucinations_with_Counterfactuals_Diffusion-Guided_Perturbations_for_LVLM_Hallucination_Suppression_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "HalluGen: Synthesizing Realistic and Controllable Hallucinations for Evaluating Image Restoration",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_HalluGen_Synthesizing_Realistic_and_Controllable_Hallucinations_for_Evaluating_Image_Restoration_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Beyond_the_Global_Scores_Fine-Grained_Token_Grounding_as_a_Robust_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "abstract_reviewed_reading_queue"
+        },
+        {
+          "title": "ZINA: Multimodal Fine-grained Hallucination Detection and Editing",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wada_ZINA_Multimodal_Fine-grained_Hallucination_Detection_and_Editing_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "VES-RFT: Rewarding Visual Evidence Sensitivity to Mitigate Hallucinations in Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hou_VES-RFT_Rewarding_Visual_Evidence_Sensitivity_to_Mitigate_Hallucinations_in_Large_CVPR_2026_paper.html",
+          "note_slug": "ves-rft",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "SVHalluc: Benchmarking Speech-Vision Hallucination in Audio-Visual Large Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_SVHalluc_Benchmarking_Speech-Vision_Hallucination_in_Audio-Visual_Large_Language_Models_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "3D-VCD: Hallucination Mitigation in 3D-LLM Embodied Agents through Visual Contrastive Decoding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ogunleye_3D-VCD_Hallucination_Mitigation_in_3D-LLM_Embodied_Agents_through_Visual_Contrastive_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "KVSmooth: Mitigating Hallucination in Multi-modal Large Language Models through Key-Value Smoothing",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jiang_KVSmooth_Mitigating_Hallucination_in_Multi-modal_Large_Language_Models_through_Key-Value_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Mitigating Multimodal Hallucinations via Gradient-based Self-Reflection",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Mitigating_Multimodal_Hallucinations_via_Gradient-based_Self-Reflection_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Making the Classification Explanation Faithful to the Confidence Score",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Mi_Making_the_Classification_Explanation_Faithful_to_the_Confidence_Score_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Locate-then-Sparsify: Attribution Guided Sparse Strategy for Visual Hallucination Mitigation",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Dang_Locate-then-Sparsify_Attribution_Guided_Sparse_Strategy_for_Visual_Hallucination_Mitigation_CVPR_2026_paper.html",
+          "note_slug": "locate-then-sparsify",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "One Token, Two Fates: A Unified Framework via Vision Token Manipulation Against MLLMs Hallucination",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fa_One_Token_Two_Fates_A_Unified_Framework_via_Vision_Token_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Prefill-Time Intervention for Mitigating Hallucination in Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Prefill-Time_Intervention_for_Mitigating_Hallucination_in_Large_Vision-Language_Models_CVPR_2026_paper.html",
+          "note_slug": "prefill-time-intervention",
+          "disposition": "selected_note"
+        },
+        {
+          "title": "Measuring the (Un)Faithfulness of Concept-Based Explanations",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kumar_Measuring_the_UnFaithfulness_of_Concept-Based_Explanations_CVPR_2026_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        }
+      ]
+    },
+    {
+      "venue": "CVPR",
+      "track": "main",
+      "year": 2025,
+      "official_url": "https://openaccess.thecvf.com/CVPR2025?day=all",
+      "official_release_date": null,
+      "first_observed_public_in_this_ledger": "2026-10-03",
+      "last_checked": "2026-10-03",
+      "title_count": 2871,
+      "title_filter": [
+        "hallucin",
+        "faithful",
+        "language prior"
+      ],
+      "title_filter_complete": true,
+      "full_abstract_scan_complete": false,
+      "hits": [
+        {
+          "title": "PhD: A ChatGPT-Prompted Visual Hallucination Evaluation Dataset",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Liu_PhD_A_ChatGPT-Prompted_Visual_Hallucination_Evaluation_Dataset_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "ClearSight: Visual Signal Enhancement for Object Hallucination Mitigation in Multimodal Large Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Yin_ClearSight_Visual_Signal_Enhancement_for_Object_Hallucination_Mitigation_in_Multimodal_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "VASparse: Towards Efficient Visual Hallucination Mitigation via Visual-Aware Token Sparsification",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Zhuang_VASparse_Towards_Efficient_Visual_Hallucination_Mitigation_via_Visual-Aware_Token_Sparsification_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "ODE: Open-Set Evaluation of Hallucinations in Multimodal Large Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Tu_ODE_Open-Set_Evaluation_of_Hallucinations_in_Multimodal_Large_Language_Models_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "FaithDiff: Unleashing Diffusion Priors for Faithful Image Super-resolution",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Chen_FaithDiff_Unleashing_Diffusion_Priors_for_Faithful_Image_Super-resolution_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "VidHalluc: Evaluating Temporal Hallucinations in Multimodal Large Language Models for Video Understanding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_VidHalluc_Evaluating_Temporal_Hallucinations_in_Multimodal_Large_Language_Models_for_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "VinaBench: Benchmark for Faithful and Consistent Visual Narratives",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Gao_VinaBench_Benchmark_for_Faithful_and_Consistent_Visual_Narratives_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Antidote: A Unified Framework for Mitigating LVLM Hallucinations in Counterfactual Presupposition and Object Perception",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Antidote_A_Unified_Framework_for_Mitigating_LVLM_Hallucinations_in_Counterfactual_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Nullu: Mitigating Object Hallucinations in Large Vision-Language Models via HalluSpace Projection",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Yang_Nullu_Mitigating_Object_Hallucinations_in_Large_Vision-Language_Models_via_HalluSpace_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Mitigating Object Hallucinations in Large Vision-Language Models with Assembly of Global and Local Attention",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/An_Mitigating_Object_Hallucinations_in_Large_Vision-Language_Models_with_Assembly_of_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Mitigating Hallucinations in Large Vision-Language Models via DPO: On-Policy Data Hold the Key",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Yang_Mitigating_Hallucinations_in_Large_Vision-Language_Models_via_DPO_On-Policy_Data_CVPR_2025_paper.html",
+          "note_slug": "opa-dpo",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "RoboGround: Robotic Manipulation with Grounded Vision-Language Priors",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "ICT: Image-Object Cross-Level Trusted Intervention for Mitigating Object Hallucination in Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Chen_ICT_Image-Object_Cross-Level_Trusted_Intervention_for_Mitigating_Object_Hallucination_in_CVPR_2025_paper.html",
+          "note_slug": "ict",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "FactCheXcker: Mitigating Measurement Hallucinations in Chest X-ray Report Generation Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Heiman_FactCheXcker_Mitigating_Measurement_Hallucinations_in_Chest_X-ray_Report_Generation_Models_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "MASH-VLM: Mitigating Action-Scene Hallucination in Video-LLMs through Disentangled Spatial-Temporal Representations",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Bae_MASH-VLM_Mitigating_Action-Scene_Hallucination_in_Video-LLMs_through_Disentangled_Spatial-Temporal_Representations_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "HalLoc: Token-level Localization of Hallucinations for Vision Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Park_HalLoc_Token-level_Localization_of_Hallucinations_for_Vision_Language_Models_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Noise Diffusion for Enhancing Semantic Faithfulness in Text-to-Image Synthesis",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Miao_Noise_Diffusion_for_Enhancing_Semantic_Faithfulness_in_Text-to-Image_Synthesis_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Seeing Far and Clearly: Mitigating Hallucinations in MLLMs with Attention Causal Decoding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Tang_Seeing_Far_and_Clearly_Mitigating_Hallucinations_in_MLLMs_with_Attention_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Octopus: Alleviating Hallucination via Dynamic Contrastive Decoding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Suo_Octopus_Alleviating_Hallucination_via_Dynamic_Contrastive_Decoding_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Stop Learning it all to Mitigate Visual Hallucination, Focus on the Hallucination Target.",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Yoon_Stop_Learning_it_all_to_Mitigate_Visual_Hallucination_Focus_on_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Devils in Middle Layers of Large Vision-Language Models: Interpreting, Detecting and Mitigating Object Hallucinations via Attention Lens",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Jiang_Devils_in_Middle_Layers_of_Large_Vision-Language_Models_Interpreting_Detecting_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "3D-GRAND: A Million-Scale Dataset for 3D-LLMs with Better Grounding and Less Hallucination",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Yang_3D-GRAND_A_Million-Scale_Dataset_for_3D-LLMs_with_Better_Grounding_and_CVPR_2025_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        }
+      ]
+    },
+    {
+      "venue": "CVPR",
+      "track": "main",
+      "year": 2024,
+      "official_url": "https://openaccess.thecvf.com/CVPR2024?day=all",
+      "official_release_date": null,
+      "first_observed_public_in_this_ledger": "2026-10-03",
+      "last_checked": "2026-10-03",
+      "title_count": 2716,
+      "title_filter": [
+        "hallucin",
+        "faithful",
+        "language prior"
+      ],
+      "title_filter_complete": true,
+      "full_abstract_scan_complete": false,
+      "hits": [
+        {
+          "title": "In-N-Out: Faithful 3D GAN Inversion with Volumetric Decomposition for Face Editing",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Xu_In-N-Out_Faithful_3D_GAN_Inversion_with_Volumetric_Decomposition_for_Face_CVPR_2024_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "WorDepth: Variational Language Prior for Monocular Depth Estimation",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Zeng_WorDepth_Variational_Language_Prior_for_Monocular_Depth_Estimation_CVPR_2024_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "THRONE: An Object-based Hallucination Benchmark for the Free-form Generations of Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Kaul_THRONE_An_Object-based_Hallucination_Benchmark_for_the_Free-form_Generations_of_CVPR_2024_paper.html",
+          "note_slug": "throne",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Guan_HallusionBench_An_Advanced_Diagnostic_Suite_for_Entangled_Language_Hallucination_and_CVPR_2024_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Hallucination Augmented Contrastive Learning for Multimodal Large Language Model",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Jiang_Hallucination_Augmented_Contrastive_Learning_for_Multimodal_Large_Language_Model_CVPR_2024_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Mitigating Object Hallucinations in Large Vision-Language Models through Visual Contrastive Decoding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Leng_Mitigating_Object_Hallucinations_in_Large_Vision-Language_Models_through_Visual_Contrastive_CVPR_2024_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "On the Faithfulness of Vision Transformer Explanations",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wu_On_the_Faithfulness_of_Vision_Transformer_Explanations_CVPR_2024_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "OPERA: Alleviating Hallucination in Multi-Modal Large Language Models via Over-Trust Penalty and Retrospection-Allocation",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Huang_OPERA_Alleviating_Hallucination_in_Multi-Modal_Large_Language_Models_via_Over-Trust_CVPR_2024_paper.html",
+          "note_slug": "opera",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "VISTA-LLAMA: Reducing Hallucination in Video Language Models via Equal Distance to Visual Tokens",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Ma_VISTA-LLAMA_Reducing_Hallucination_in_Video_Language_Models_via_Equal_Distance_CVPR_2024_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "Multi-Modal Hallucination Control by Visual Information Grounding",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Favero_Multi-Modal_Hallucination_Control_by_Visual_Information_Grounding_CVPR_2024_paper.html",
+          "note_slug": "m3id",
+          "disposition": "existing_or_this_run_note"
+        },
+        {
+          "title": "Token Transformation Matters: Towards Faithful Post-hoc Explanation for Vision Transformer",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wu_Token_Transformation_Matters_Towards_Faithful_Post-hoc_Explanation_for_Vision_Transformer_CVPR_2024_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        },
+        {
+          "title": "HalluciDoctor: Mitigating Hallucinatory Toxicity in Visual Instruction Data",
+          "official_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Yu_HalluciDoctor_Mitigating_Hallucinatory_Toxicity_in_Visual_Instruction_Data_CVPR_2024_paper.html",
+          "note_slug": null,
+          "disposition": "title_hit_requires_abstract_review"
+        }
+      ]
+    }
+  ],
+  "paper_inventory": [
+    {
+      "slug": "attention-guided-switching",
+      "title": "Balancing Efficiency and Efficacy: Training-Free Attention-Guided Switching Between Explicit and Latent Thoughts for MLLMs",
+      "paper_url": "https://arxiv.org/abs/2608.03450",
+      "arxiv_version": "v1",
+      "venue": "ACM MM",
+      "year": 2026,
+      "tags": [
+        "Training-free",
+        "Latent reasoning",
+        "Attention ratio",
+        "Dynamic routing",
+        "POPE",
+        "Efficiency"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2608.03450"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "attention-guided-switching"
+      ]
+    },
+    {
+      "slug": "attention-space-contrastive-guidance",
+      "title": "Attention-Space Contrastive Guidance for Efficient Hallucination Mitigation in LVLMs",
+      "paper_url": "https://arxiv.org/abs/2601.13707",
+      "arxiv_version": "v2",
+      "venue": "CVPR Findings",
+      "year": 2026,
+      "tags": [
+        "ACG",
+        "Attention guidance",
+        "Contrastive decoding",
+        "Orthogonalization",
+        "Single-pass",
+        "CHAIR",
+        "POPE"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2601.13707"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "attention-space-contrastive-guidance"
+      ]
+    },
+    {
+      "slug": "beyond-global-editing",
+      "title": "Beyond Global Editing: Per-Instance Disentangled Subspaces for Training-Free Hallucination Mitigation in LVLMs",
+      "paper_url": "https://arxiv.org/abs/2608.09344",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "Object hallucination",
+        "Representation editing",
+        "Subspace",
+        "SVD",
+        "K-means",
+        "Training-free",
+        "CHAIR",
+        "OPOPE"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-19",
+      "arxiv_ids": [
+        "2608.09344"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "beyond-global-editing"
+      ]
+    },
+    {
+      "slug": "causallens",
+      "title": "CausalLens: Sensitivity-Guided Multi-Head Causal Intervention for Hallucination Mitigation in Large Vision-Language Models",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ji_CausalLens_Sensitivity-Guided_Multi-Head_Causal_Intervention_for_Hallucination_Mitigation_in_Large_CVPR_2026_paper.html",
+      "arxiv_version": null,
+      "venue": "CVPR",
+      "year": 2026,
+      "tags": [
+        "CausalLens",
+        "Visual sensitivity",
+        "Multi-head intervention",
+        "HCI",
+        "PRC",
+        "POPE",
+        "CHAIR",
+        "Single-pass"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "causallens"
+      ]
+    },
+    {
+      "slug": "cf-vlm",
+      "title": "CF-VLM: Counterfactual Vision-Language Fine-tuning",
+      "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/541b6d155146d142a5e10d787d1d430f-Abstract-Conference.html",
+      "arxiv_version": null,
+      "venue": "NeurIPS",
+      "year": 2025,
+      "tags": [
+        "CF-VLM",
+        "Counterfactual",
+        "Compositional reasoning",
+        "SDXL",
+        "NeurIPS"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "cf-vlm"
+      ]
+    },
+    {
+      "slug": "curing-semantic-drift",
+      "title": "Curing Semantic Drift: A Dynamic Approach to Grounding Generation in Large Vision-Language Models",
+      "paper_url": "https://arxiv.org/abs/2506.21509",
+      "arxiv_version": "v4",
+      "venue": "arXiv",
+      "year": 2025,
+      "tags": [
+        "Semantic drift",
+        "Long-form generation",
+        "Logit calibration",
+        "CLIP",
+        "Training-free",
+        "CHAIR",
+        "POPE"
+      ],
+      "added_at": "2026-08-19",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2506.21509"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "curing-semantic-drift"
+      ]
+    },
+    {
+      "slug": "dive",
+      "title": "DiVE: Decoupling Intra-layer Visual Evidence for Mitigating Hallucinations in Large Vision-Language Models",
+      "paper_url": "https://aclanthology.org/2026.acl-long.1742/",
+      "arxiv_version": null,
+      "venue": "ACL",
+      "year": 2026,
+      "tags": [
+        "DiVE",
+        "Visual evidence",
+        "Contrastive decoding",
+        "Single forward",
+        "ACL"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "dive"
+      ]
+    },
+    {
+      "slug": "dual-pathway-circuits",
+      "title": "Dual-Pathway Circuits of Object Hallucination in Vision-Language Models",
+      "paper_url": "https://arxiv.org/abs/2605.13156",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "Activation patching",
+        "Causal pathway",
+        "POPE",
+        "Object hallucination",
+        "Component scaling"
+      ],
+      "added_at": "2026-08-21",
+      "last_verified": "2026-08-21",
+      "arxiv_ids": [
+        "2605.13156"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "dual-pathway-circuits"
+      ]
+    },
+    {
+      "slug": "dynamic-multimodal-activation-steering",
+      "title": "Dynamic Multimodal Activation Steering for Hallucination Mitigation in Large Vision-Language Models",
+      "paper_url": "https://arxiv.org/abs/2602.21704",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "DMAS",
+        "Activation steering",
+        "Truthfulness vector",
+        "Visual perception vector",
+        "Attention head",
+        "MME",
+        "POPE",
+        "CHAIR"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2602.21704"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "dynamic-multimodal-activation-steering"
+      ]
+    },
+    {
+      "slug": "first-logit-boosting",
+      "title": "First Logit Boosting: Visual Grounding Method to Mitigate Object Hallucination in Large Vision-Language Models",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ha_First_Logit_Boosting_Visual_Grounding_Method_to_Mitigate_Object_Hallucination_CVPR_2026_paper.html",
+      "arxiv_version": "v1",
+      "venue": "CVPR",
+      "year": 2026,
+      "tags": [
+        "CVPR",
+        "Object hallucination",
+        "First logit",
+        "Training-free",
+        "CHAIR",
+        "AMBER",
+        "Recall trade-off"
+      ],
+      "added_at": "2026-10-03",
+      "last_verified": "2026-10-03",
+      "arxiv_ids": [
+        "2604.00455"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "first-logit-boosting"
+      ]
+    },
+    {
+      "slug": "hallucination-begins-where-saliency-drops",
+      "title": "Hallucination Begins Where Saliency Drops",
+      "paper_url": "https://arxiv.org/abs/2601.20279",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "Saliency",
+        "Attention gradient",
+        "SGRS",
+        "LocoRE",
+        "Rejection sampling",
+        "CHAIR",
+        "POPE"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2601.20279"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "hallucination-begins-where-saliency-drops"
+      ]
+    },
+    {
+      "slug": "halva",
+      "title": "Mitigating Object Hallucination in MLLMs via Data-Augmented Phrase-Level Alignment",
+      "paper_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/b73228d026ef49bfa49f95b7e330513e-Abstract-Conference.html",
+      "arxiv_version": null,
+      "venue": "ICLR",
+      "year": 2025,
+      "tags": [
+        "HALVA",
+        "Phrase alignment",
+        "LoRA",
+        "CHAIR",
+        "AMBER",
+        "ICLR"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "halva"
+      ]
+    },
+    {
+      "slug": "heal-synergy-heads",
+      "title": "MLLMs Hallucinate when Information Distribution Drifts in Synergy Heads",
+      "paper_url": "https://arxiv.org/abs/2609.09206",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "HEAL",
+        "Synergy head",
+        "Attention head",
+        "Counterfactual noising",
+        "Visual dependence",
+        "Value calibration",
+        "CHAIR",
+        "POPE",
+        "Training-free"
+      ],
+      "added_at": "2026-09-12",
+      "last_verified": "2026-09-12",
+      "arxiv_ids": [
+        "2609.09206"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "heal-synergy-heads"
+      ]
+    },
+    {
+      "slug": "hire-intermediate-representation-edit",
+      "title": "Hallucination-aware Intermediate Representation Edit in Large Vision-Language Models",
+      "paper_url": "https://arxiv.org/abs/2603.29405",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "HIRE",
+        "Representation editing",
+        "Router",
+        "Autoencoder",
+        "DPO",
+        "CHAIR",
+        "POPE",
+        "AMBER"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2603.29405"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "hire-intermediate-representation-edit"
+      ]
+    },
+    {
+      "slug": "ict",
+      "title": "ICT: Image-Object Cross-Level Trusted Intervention for Mitigating Object Hallucination in Large Vision-Language Models",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Chen_ICT_Image-Object_Cross-Level_Trusted_Intervention_for_Mitigating_Object_Hallucination_in_CVPR_2025_paper.html",
+      "arxiv_version": null,
+      "venue": "CVPR",
+      "year": 2025,
+      "tags": [
+        "ICT",
+        "Attention heads",
+        "Causal intervention",
+        "POPE",
+        "CHAIR"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "ict"
+      ]
+    },
+    {
+      "slug": "intervene-all-paths",
+      "title": "Intervene-All-Paths: Unified Mitigation of LVLM Hallucinations across Alignment Formats",
+      "paper_url": "https://openreview.net/forum?id=HRBhNqkG03",
+      "arxiv_version": "v2",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "tags": [
+        "Object hallucination",
+        "Causal path",
+        "Attention head",
+        "Training-free",
+        "CHAIR",
+        "POPE",
+        "Recall"
+      ],
+      "added_at": "2026-08-19",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "intervene-all-paths"
+      ]
+    },
+    {
+      "slug": "locate-then-sparsify",
+      "title": "Locate-then-Sparsify: Attribution Guided Sparse Strategy for Visual Hallucination Mitigation",
+      "paper_url": "https://arxiv.org/abs/2603.16284",
+      "arxiv_version": null,
+      "venue": "CVPR",
+      "year": 2026,
+      "tags": [
+        "Locate-then-Sparsify",
+        "LTS-FS",
+        "Attribution",
+        "Layer-wise steering",
+        "CVPR"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [
+        "2603.16284"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "locate-then-sparsify"
+      ]
+    },
+    {
+      "slug": "lpoi",
+      "title": "LPOI: Listwise Preference Optimization for Vision Language Models",
+      "paper_url": "https://aclanthology.org/2025.acl-long.1302/",
+      "arxiv_version": null,
+      "venue": "ACL",
+      "year": 2025,
+      "tags": [
+        "LPOI",
+        "Listwise preference",
+        "Object visibility",
+        "Visual prompting",
+        "ACL"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "lpoi"
+      ]
+    },
+    {
+      "slug": "m3id",
+      "title": "Multi-Modal Hallucination Control by Visual Information Grounding",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Favero_Multi-Modal_Hallucination_Control_by_Visual_Information_Grounding_CVPR_2024_paper.html",
+      "arxiv_version": "v1",
+      "venue": "CVPR",
+      "year": 2024,
+      "tags": [
+        "Object hallucination",
+        "Logit-level",
+        "Contrastive decoding",
+        "Language prior",
+        "Training-free",
+        "CHAIR",
+        "POPE"
+      ],
+      "added_at": "2026-08-19",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2403.14003"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "m3id"
+      ]
+    },
+    {
+      "slug": "marine-image-grounded-guidance",
+      "title": "Mitigating Object Hallucination in Large Vision-Language Models via Image-Grounded Guidance",
+      "paper_url": "https://arxiv.org/abs/2402.08680",
+      "arxiv_version": "v2",
+      "venue": "ICML",
+      "year": 2025,
+      "tags": [
+        "MARINE",
+        "Image-grounded guidance",
+        "DETR",
+        "RAM++",
+        "Classifier-free guidance",
+        "CHAIR",
+        "POPE"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2402.08680"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "marine-image-grounded-guidance"
+      ]
+    },
+    {
+      "slug": "memvr",
+      "title": "Look Twice Before You Answer: Memory-Space Visual Retracing for Hallucination Mitigation in Multimodal Large Language Models",
+      "paper_url": "https://proceedings.mlr.press/v267/zou25e.html",
+      "arxiv_version": null,
+      "venue": "ICML",
+      "year": 2025,
+      "tags": [
+        "MemVR",
+        "Visual retracing",
+        "FFN memory",
+        "Dynamic intervention",
+        "ICML"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "memvr"
+      ]
+    },
+    {
+      "slug": "mesa-mitigating-entangled-steering",
+      "title": "Mitigating Entangled Steering in Large Vision-Language Models for Hallucination Reduction",
+      "paper_url": "https://arxiv.org/abs/2604.07914",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "MESA",
+        "Activation steering",
+        "Controlled perturbation",
+        "Distribution preservation",
+        "CHAIR",
+        "POPE",
+        "AMBER"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2604.07914"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "mesa-mitigating-entangled-steering"
+      ]
+    },
+    {
+      "slug": "modular-attribution-intervention",
+      "title": "Understanding and Mitigating Hallucination in Large Vision-Language Models via Modular Attribution and Intervention",
+      "paper_url": "https://openreview.net/forum?id=Bjq4W7P2Us",
+      "arxiv_version": null,
+      "venue": "ICLR",
+      "year": 2025,
+      "tags": [
+        "Object hallucination",
+        "Modular attribution",
+        "Attention head",
+        "Causal intervention",
+        "CHAIR",
+        "Nocaps"
+      ],
+      "added_at": "2026-08-19",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "modular-attribution-intervention"
+      ]
+    },
+    {
+      "slug": "notice",
+      "title": "What Do VLMs NOTICE? A Mechanistic Interpretability Pipeline for Gaussian-Noise-free Text-Image Corruption and Evaluation",
+      "paper_url": "https://aclanthology.org/2025.naacl-long.571/",
+      "arxiv_version": null,
+      "venue": "NAACL",
+      "year": 2025,
+      "tags": [
+        "NOTICE",
+        "SIP",
+        "STR",
+        "Activation patching",
+        "Universal heads",
+        "Gaussian-noise-free"
+      ],
+      "added_at": "2026-08-21",
+      "last_verified": "2026-08-21",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "notice"
+      ]
+    },
+    {
+      "slug": "opa-dpo",
+      "title": "Mitigating Hallucinations in Large Vision-Language Models via DPO: On-Policy Data Hold the Key",
+      "paper_url": "https://arxiv.org/abs/2501.09695",
+      "arxiv_version": null,
+      "venue": "CVPR",
+      "year": 2025,
+      "tags": [
+        "OPA-DPO",
+        "DPO",
+        "On-policy",
+        "Image focus",
+        "CVPR Oral"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [
+        "2501.09695"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "opa-dpo"
+      ]
+    },
+    {
+      "slug": "opera",
+      "title": "OPERA: Alleviating Hallucination in Multi-Modal Large Language Models via Over-Trust Penalty and Retrospection-Allocation",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Huang_OPERA_Alleviating_Hallucination_in_Multi-Modal_Large_Language_Models_via_Over-Trust_CVPR_2024_paper.html",
+      "arxiv_version": "v3",
+      "venue": "CVPR",
+      "year": 2024,
+      "tags": [
+        "Object hallucination",
+        "Attention",
+        "Beam search",
+        "Rollback",
+        "Training-free",
+        "CHAIR",
+        "POPE"
+      ],
+      "added_at": "2026-08-19",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "opera"
+      ]
+    },
+    {
+      "slug": "pas-prelim-attention-score",
+      "title": "PAS: Prelim Attention Score for Detecting Object Hallucinations in Large Vision–Language Models",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hoang_PAS_Prelim_Attention_Score_for_Detecting_Object_Hallucinations_in_Large_CVPR_2026_paper.html",
+      "arxiv_version": null,
+      "venue": "CVPR",
+      "year": 2026,
+      "tags": [
+        "PAS",
+        "Hallucination detection",
+        "Prelim tokens",
+        "Attention",
+        "AUROC",
+        "Reference-free"
+      ],
+      "added_at": "2026-08-21",
+      "last_verified": "2026-08-21",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "pas-prelim-attention-score"
+      ]
+    },
+    {
+      "slug": "patchgate",
+      "title": "PatchGate: Narrowing the Verbalization Gap with Intrinsic Object Inventories in Frozen Vision-Language Models",
+      "paper_url": "https://arxiv.org/abs/2608.21819",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "PatchGate",
+        "VEX",
+        "VIED",
+        "Logit lens",
+        "Object inventory",
+        "Coverage",
+        "CHAIR",
+        "AMBER",
+        "POPE",
+        "Training-free"
+      ],
+      "added_at": "2026-09-05",
+      "last_verified": "2026-09-05",
+      "arxiv_ids": [
+        "2608.21819"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "patchgate"
+      ]
+    },
+    {
+      "slug": "pixels-versus-priors",
+      "title": "Pixels Versus Priors: Controlling Knowledge Priors in Vision-Language Models through Visual Counterfacts",
+      "paper_url": "https://aclanthology.org/2025.emnlp-main.1262/",
+      "arxiv_version": null,
+      "venue": "EMNLP",
+      "year": 2025,
+      "tags": [
+        "Visual CounterFact",
+        "PvP steering",
+        "Knowledge prior",
+        "Counterfactual image",
+        "Early decoding"
+      ],
+      "added_at": "2026-08-21",
+      "last_verified": "2026-08-21",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "pixels-versus-priors"
+      ]
+    },
+    {
+      "slug": "prefill-time-intervention",
+      "title": "Prefill-Time Intervention for Mitigating Hallucination in Large Vision-Language Models",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Prefill-Time_Intervention_for_Mitigating_Hallucination_in_Large_Vision-Language_Models_CVPR_2026_paper.html",
+      "arxiv_version": "v1",
+      "venue": "CVPR",
+      "year": 2026,
+      "tags": [
+        "CVPR",
+        "Object hallucination",
+        "KV cache",
+        "Prefill",
+        "Steering",
+        "CHAIR",
+        "POPE",
+        "Recall trade-off"
+      ],
+      "added_at": "2026-10-03",
+      "last_verified": "2026-10-03",
+      "arxiv_ids": [
+        "2604.25642"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "prefill-time-intervention"
+      ]
+    },
+    {
+      "slug": "prompt-induced-hallucination",
+      "title": "Mechanisms of Prompt-Induced Hallucination in Vision–Language Models",
+      "paper_url": "https://aclanthology.org/2026.acl-long.1941/",
+      "arxiv_version": null,
+      "venue": "ACL",
+      "year": 2026,
+      "tags": [
+        "Prompt-image conflict",
+        "Mean ablation",
+        "Attention head",
+        "CountBench",
+        "Visual CounterFact"
+      ],
+      "added_at": "2026-08-21",
+      "last_verified": "2026-08-21",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "prompt-induced-hallucination"
+      ]
+    },
+    {
+      "slug": "removed-object-hallucination-odpo",
+      "title": "Evaluating and Mitigating Object Hallucination in Large Vision-Language Models: Can They Still See Removed Objects?",
+      "paper_url": "https://aclanthology.org/2025.naacl-long.349/",
+      "arxiv_version": null,
+      "venue": "NAACL",
+      "year": 2025,
+      "tags": [
+        "ROHE",
+        "oDPO",
+        "Object removal",
+        "Preference optimization",
+        "LaMa",
+        "Object hallucination"
+      ],
+      "added_at": "2026-08-21",
+      "last_verified": "2026-08-21",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "removed-object-hallucination-odpo"
+      ]
+    },
+    {
+      "slug": "risk-aware-selective-prompting",
+      "title": "Risk-aware Selective Prompting for Hallucination Mitigation in Large Vision-Language Models",
+      "paper_url": "https://arxiv.org/abs/2605.28123",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "RSP",
+        "Selective prompting",
+        "Risk routing",
+        "Attention entropy",
+        "Confidence",
+        "POPE",
+        "Training-free"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2605.28123"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "risk-aware-selective-prompting"
+      ]
+    },
+    {
+      "slug": "role-break-attention-heads",
+      "title": "Role-Break in Attention Heads: Understanding and Detecting Hallucinations in VLMs",
+      "paper_url": "https://arxiv.org/abs/2607.29412",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "Attention head",
+        "Hallucination detection",
+        "Source allocation",
+        "ILR",
+        "Linear probe",
+        "POPE",
+        "AMBER",
+        "M-HalDetect"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-19",
+      "arxiv_ids": [
+        "2607.29412"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "role-break-attention-heads"
+      ]
+    },
+    {
+      "slug": "same-attention-different-truths",
+      "title": "Same Attention, Different Truths: Put Logit-Lens over Visual Attention to Detect and Mitigate LVLM Object Hallucination",
+      "paper_url": "https://arxiv.org/abs/2608.07302",
+      "arxiv_version": "v1",
+      "venue": "CVPR",
+      "year": 2026,
+      "tags": [
+        "Object hallucination",
+        "Logit Lens",
+        "Visual attention",
+        "Training-free",
+        "CHAIR",
+        "AMBER",
+        "CVPR 2026"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-19",
+      "arxiv_ids": [
+        "2608.07302"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "same-attention-different-truths"
+      ]
+    },
+    {
+      "slug": "self-introspective-decoding",
+      "title": "Self-Introspective Decoding: Alleviating Hallucinations for Large Vision-Language Models",
+      "paper_url": "https://arxiv.org/abs/2408.02032",
+      "arxiv_version": "v3",
+      "venue": "arXiv",
+      "year": 2024,
+      "tags": [
+        "Self-introspective decoding",
+        "Visual token",
+        "Contrastive decoding",
+        "Training-free",
+        "CHAIR",
+        "POPE"
+      ],
+      "added_at": "2026-08-19",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [
+        "2408.02032"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "self-introspective-decoding"
+      ]
+    },
+    {
+      "slug": "throne",
+      "title": "THRONE: An Object-based Hallucination Benchmark for the Free-form Generations of Large Vision-Language Models",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Kaul_THRONE_An_Object-based_Hallucination_Benchmark_for_the_Free-form_Generations_of_CVPR_2024_paper.html",
+      "arxiv_version": null,
+      "venue": "CVPR",
+      "year": 2024,
+      "tags": [
+        "THRONE",
+        "Benchmark",
+        "Free-form generation",
+        "Object hallucination",
+        "CHAIR"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "throne"
+      ]
+    },
+    {
+      "slug": "ves-rft",
+      "title": "VES-RFT: Rewarding Visual Evidence Sensitivity to Mitigate Hallucinations in Large Vision–Language Models",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hou_VES-RFT_Rewarding_Visual_Evidence_Sensitivity_to_Mitigate_Hallucinations_in_Large_CVPR_2026_paper.html",
+      "arxiv_version": null,
+      "venue": "CVPR",
+      "year": 2026,
+      "tags": [
+        "VES",
+        "GRPO",
+        "Reinforcement fine-tuning",
+        "Entropy gap",
+        "POPE",
+        "CHAIR"
+      ],
+      "added_at": "2026-08-21",
+      "last_verified": "2026-08-21",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "ves-rft"
+      ]
+    },
+    {
+      "slug": "vib-probe",
+      "title": "VIB-Probe: Detecting and Mitigating Hallucinations in Vision-Language Models via Variational Information Bottleneck",
+      "paper_url": "https://aclanthology.org/2026.acl-long.1078/",
+      "arxiv_version": null,
+      "venue": "ACL",
+      "year": 2026,
+      "tags": [
+        "VIB-Probe",
+        "Information bottleneck",
+        "Hallucination detection",
+        "Attention heads",
+        "ACL"
+      ],
+      "added_at": "2026-08-24",
+      "last_verified": "2026-08-24",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "vib-probe"
+      ]
+    },
+    {
+      "slug": "vision-aware-head-divergence",
+      "title": "Cracking the Code of Hallucination in LVLMs with Vision-aware Head Divergence",
+      "paper_url": "https://aclanthology.org/2025.acl-long.175/",
+      "arxiv_version": "v3",
+      "venue": "ACL",
+      "year": 2025,
+      "tags": [
+        "Object hallucination",
+        "Vision-aware head",
+        "Head divergence",
+        "Training-free",
+        "CHAIR",
+        "POPE"
+      ],
+      "added_at": "2026-08-19",
+      "last_verified": "2026-08-20",
+      "arxiv_ids": [],
+      "doi_urls": [],
+      "aliases": [
+        "vision-aware-head-divergence"
+      ]
+    },
+    {
+      "slug": "visor",
+      "title": "When Visual Signals Mislead: A Mechanistic Study of Attribute Hallucination in Vision-Language Models",
+      "paper_url": "https://arxiv.org/abs/2608.11024",
+      "arxiv_version": "v1",
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "Attribute hallucination",
+        "Visual signal",
+        "Null image",
+        "Logit decomposition",
+        "SNR",
+        "VAW",
+        "VISOR"
+      ],
+      "added_at": "2026-08-20",
+      "last_verified": "2026-08-19",
+      "arxiv_ids": [
+        "2608.11024"
+      ],
+      "doi_urls": [],
+      "aliases": [
+        "visor"
+      ]
+    }
+  ],
+  "candidate_assessments": [
+    {
+      "title": "Reallocating Attention Across Layers to Reduce Multimodal Hallucination",
+      "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lu_Reallocating_Attention_Across_Layers_to_Reduce_Multimodal_Hallucination_CVPR_2026_paper.html",
+      "source_links": [
+        "/content/CVPR2026/papers/Lu_Reallocating_Attention_Across_Layers_to_Reduce_Multimodal_Hallucination_CVPR_2026_paper.pdf",
+        "/content/CVPR2026/supplemental/Lu_Reallocating_Attention_Across_CVPR_2026_supplemental.pdf",
+        "https://arxiv.org/abs/2510.10285"
+      ],
+      "reading_depth": "official_abstract",
+      "disposition": "reading_queue",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "title": "HulluEdit: Single-Pass Evidence-Consistent Subspace Editing for Mitigating Hallucinations in Large Vision-Language Models",
+      "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lin_HulluEdit_Single-Pass_Evidence-Consistent_Subspace_Editing_for_Mitigating_Hallucinations_in_Large_CVPR_2026_paper.html",
+      "source_links": [
+        "/content/CVPR2026/papers/Lin_HulluEdit_Single-Pass_Evidence-Consistent_Subspace_Editing_for_Mitigating_Hallucinations_in_Large_CVPR_2026_paper.pdf",
+        "https://arxiv.org/abs/2602.22727"
+      ],
+      "reading_depth": "official_abstract",
+      "disposition": "reading_queue",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "title": "First Logit Boosting: Visual Grounding Method to Mitigate Object Hallucination in Large Vision-Language Models",
+      "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ha_First_Logit_Boosting_Visual_Grounding_Method_to_Mitigate_Object_Hallucination_CVPR_2026_paper.html",
+      "source_links": [
+        "/content/CVPR2026/papers/Ha_First_Logit_Boosting_Visual_Grounding_Method_to_Mitigate_Object_Hallucination_CVPR_2026_paper.pdf",
+        "/content/CVPR2026/supplemental/Ha_First_Logit_Boosting_CVPR_2026_supplemental.pdf",
+        "https://arxiv.org/abs/2604.00455"
+      ],
+      "reading_depth": "main_and_supplement_and_core_code",
+      "disposition": "selected_note",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "title": "AdaIAT: Adaptively Increasing Attention to Generated Text to Alleviate Hallucinations in LVLM",
+      "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_AdaIAT_Adaptively_Increasing_Attention_to_Generated_Text_to_Alleviate_Hallucinations_CVPR_2026_paper.html",
+      "source_links": [
+        "/content/CVPR2026/papers/Zhong_AdaIAT_Adaptively_Increasing_Attention_to_Generated_Text_to_Alleviate_Hallucinations_CVPR_2026_paper.pdf",
+        "/content/CVPR2026/supplemental/Zhong_AdaIAT_Adaptively_Increasing_CVPR_2026_supplemental.pdf",
+        "https://arxiv.org/abs/2603.04908"
+      ],
+      "reading_depth": "official_abstract",
+      "disposition": "reading_queue",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "title": "Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations",
+      "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Beyond_the_Global_Scores_Fine-Grained_Token_Grounding_as_a_Robust_CVPR_2026_paper.html",
+      "source_links": [
+        "/content/CVPR2026/papers/Nguyen_Beyond_the_Global_Scores_Fine-Grained_Token_Grounding_as_a_Robust_CVPR_2026_paper.pdf",
+        "/content/CVPR2026/supplemental/Nguyen_Beyond_the_Global_CVPR_2026_supplemental.pdf",
+        "https://arxiv.org/abs/2604.04863"
+      ],
+      "reading_depth": "official_abstract",
+      "disposition": "reading_queue",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "title": "Prefill-Time Intervention for Mitigating Hallucination in Large Vision-Language Models",
+      "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Prefill-Time_Intervention_for_Mitigating_Hallucination_in_Large_Vision-Language_Models_CVPR_2026_paper.html",
+      "source_links": [
+        "/content/CVPR2026/papers/Zhang_Prefill-Time_Intervention_for_Mitigating_Hallucination_in_Large_Vision-Language_Models_CVPR_2026_paper.pdf",
+        "/content/CVPR2026/supplemental/Zhang_Prefill-Time_Intervention_for_CVPR_2026_supplemental.pdf",
+        "https://arxiv.org/abs/2604.25642"
+      ],
+      "reading_depth": "main_and_supplement_and_core_code",
+      "disposition": "selected_note",
+      "checked_at": "2026-10-03"
+    }
+  ]
+}

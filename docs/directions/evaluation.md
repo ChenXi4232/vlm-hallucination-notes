@@ -39,3 +39,8 @@ tags:
 
 !!! danger "常见伪改进"
     更短、更保守或删除细节的回答经常降低 CHAIR，却没有增强视觉 grounding。若 recall 与 detailedness 同时下降，应把结论表述为 trade-off，而不是无条件缓解。
+
+## 新增可核验的 trade-off 案例
+
+- [PTI Table 5](../papers/prefill-time-intervention.md)：CHAIRs 47.4→15.4，而该消融的F1 75.3→72.7，不能与POPE主表F1混用。
+- [FLB Supplement Table 16](../papers/first-logit-boosting.md)：greedy AMBER CHAIR 7.1→4.9、Cover 50.5→48.8；保覆盖结论依赖解码协议。

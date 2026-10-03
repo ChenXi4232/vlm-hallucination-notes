@@ -40,3 +40,12 @@ flowchart TD
 | [VISOR](../papers/visor.md) | real/null-image logits + layer states | signed visual margin/SNR；Calib/Abstain/Adapt |
 | [Beyond Global Editing](../papers/beyond-global-editing.md) | residual hidden states | 多低秩子空间的逐样本 soft projection |
 | [Role-Break](../papers/role-break-attention-heads.md) | per-head source allocation | faithful-role residual + linear detector |
+
+## 既有分类内的补齐
+
+| 论文 | 既有方法族 | 观察/干预 | 证据边界 |
+|---|---|---|---|
+| [FLB](../papers/first-logit-boosting.md) | Contrastive / logit decoding（其中logit editing） | 首步logits逐步回注 | 不运行contrastive分支；语言偏置和视觉作用混合 |
+| [PTI](../papers/prefill-time-intervention.md) | Representation / activation editing | prefill KV | 离线标注方向；F1/长度权衡 |
+
+本轮未改变taxonomy或既有标签。
