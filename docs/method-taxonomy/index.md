@@ -40,6 +40,8 @@ flowchart TD
 | [VISOR](../papers/visor.md) | real/null-image logits + layer states | signed visual margin/SNR；Calib/Abstain/Adapt |
 | [Beyond Global Editing](../papers/beyond-global-editing.md) | residual hidden states | 多低秩子空间的逐样本 soft projection |
 | [Role-Break](../papers/role-break-attention-heads.md) | per-head source allocation | faithful-role residual + linear detector |
+| [AdaIAT](../papers/adaiat.md) | per-head generated-text attention | 离线对象级真/幻觉校准；生成时按层门控增强历史文本attention |
+| [HulluEdit](../papers/hulluedit.md) | top-layer residual hidden state | 当前视觉低秩子空间 + 正交anti-prior；逐token收缩其余分量 |
 
 ## 既有分类内的补齐
 
@@ -47,5 +49,7 @@ flowchart TD
 |---|---|---|---|
 | [FLB](../papers/first-logit-boosting.md) | Contrastive / logit decoding（其中logit editing） | 首步logits逐步回注 | 不运行contrastive分支；语言偏置和视觉作用混合 |
 | [PTI](../papers/prefill-time-intervention.md) | Representation / activation editing | prefill KV | 离线标注方向；F1/长度权衡 |
+| [AdaIAT](../papers/adaiat.md) | Attention head / path intervention | generated-text attention | 无参数更新但需离线对象标签校准；位置、重复与错误prefix可混淆 |
+| [HulluEdit](../papers/hulluedit.md) | Representation / activation editing | online low-rank subspace | 代数正交不等于语义保护；论文硬门控与代码连续门控不一致 |
 
-本轮未改变taxonomy或既有标签。
+本轮未改变taxonomy或既有标签；两篇均可由既有方法族表达。

@@ -6,7 +6,7 @@ tags:
 
 # 方法论文
 
-本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 41 篇，全部带有可追溯的官方方法图或明确来源边界的等价抽象/缺图说明与实验登记。
+本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 43 篇，全部带有可追溯的官方方法图或明确来源边界的等价抽象/缺图说明与实验登记。
 
 ## Logit / decoding
 
@@ -24,6 +24,7 @@ tags:
 
 ## Head / path intervention
 
+- [AdaIAT](../papers/adaiat.md) — 用离线真实/幻觉对象注意统计构造逐层门控和逐头增益，条件性增强已生成文本注意。
 - [HEAL](../papers/heal-synergy-heads.md) — 以图文四状态反事实分解非冗余 head 的模态贡献，并动态校准 synergy-head visual/text values。
 - [VIB-Probe](../papers/vib-probe.md) — 以变分信息瓶颈检测幻觉，并用梯度敏感度定位干预头。
 - [ICT](../papers/ict.md) — 图像级与对象级可信头定位及 activation-shift intervention。
@@ -41,6 +42,7 @@ tags:
 
 ## Representation editing
 
+- [HulluEdit](../papers/hulluedit.md) — 在线构造视觉、反先验与残差正交子空间，在顶层逐 token 执行低秩收缩。
 - [MemVR](../papers/memvr.md) — 在中层不确定时向 FFN memory space 动态重注入视觉表征。
 - [Locate-then-Sparsify](../papers/locate-then-sparsify.md) — 用双粒度幻觉归因将全层 steering 转为逐层稀疏强度。
 - [VES-RFT](../papers/ves-rft.md) — 将有图/无图熵差与对象正确性组合为 GRPO 训练奖励。
@@ -64,8 +66,8 @@ tags:
 | 研究层级 | 最小 baseline 组 | 主要用途 |
 |---|---|---|
 | Logit | Vanilla + M3ID/SID + MARINE + RSP + PatchGate | 比较内部反事实、外部视觉 guidance、风险门控与 recall-aware 双向编辑 |
-| Head | Vanilla + random-head + PAS/NOTICE + PIH/Dual-Pathway + ACG/CausalLens + HEAL | 验证检测信号、腐蚀方案、头集合、路径、模态贡献分解与局部历史干预 |
-| Representation | global vector + PvP + HIRE + DMAS + MESA + multi-subspace | 拆解学习式、检索式、解耦式与逐样本方向 |
+| Head | Vanilla + random-head + PAS/NOTICE + PIH/Dual-Pathway + ACG/CausalLens + AdaIAT/HEAL | 验证检测信号、腐蚀方案、头集合、路径、prefix注意与模态贡献分解 |
+| Representation | global vector + PvP + HIRE + DMAS + MESA + HulluEdit/multi-subspace | 拆解学习式、检索式、解耦式、在线低秩与逐样本方向 |
 | Dynamic | static intervention + risk-gated intervention | 检查收益是否来自避免全程过强干预 |
 | Training | standard DPO/GRPO + oDPO + VES-RFT | 分离训练数据、视觉奖励、verifier 与推理成本 |
 
@@ -73,3 +75,8 @@ tags:
 
 - [First Logit Boosting](../papers/first-logit-boosting.md)：首步词表logits复用；需对照β-only和The-only。
 - [Prefill-Time Intervention](../papers/prefill-time-intervention.md)：离线对象方向与prefill KV编辑；需审计F1与输出长度。
+
+## 2026-10-10：文本历史与在线子空间
+
+- [AdaIAT](../papers/adaiat.md)：已生成文本可作为视觉信息的语言域代理；必须控制对象位置、重复与错误prefix放大。
+- [HulluEdit](../papers/hulluedit.md)：正交投影保护是定义内保证；新模型Recall/AMBER Cover和代码—公式差异必须同时审计。

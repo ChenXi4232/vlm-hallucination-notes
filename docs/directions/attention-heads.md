@@ -16,6 +16,7 @@ tags:
 
 ## 关键阅读
 
+- [AdaIAT](../papers/adaiat.md)：按真实/幻觉对象的历史文本注意统计构造层门控和逐头增益；降低CHAIR且少于图像放大方法的重复，但依赖离线标签校准。
 - [HEAL](../papers/heal-synergy-heads.md)：先以 head-output perturbation 排除冗余头，再用视觉/文本四状态分解 synergy 贡献并逐步校准 values；机制对照完整，但墙钟成本显著。
 - [Dual-Pathway Circuits](../papers/dual-pathway-circuits.md)：跨五种 VLM 用 activation patching 区分 grounding 与 hallucination 组件路径，并用定向缩放验证。
 - [Mechanisms of Prompt-Induced Hallucination](../papers/prompt-induced-hallucination.md)：定位传播错误 prompt 数量/颜色的早层 PIH heads。
@@ -40,3 +41,4 @@ tags:
 4. 在原图、空图和对象删除图之间做 head-output activation patching。
 5. 同时画 CHAIRi–Recall、CHAIRs–length 和 hallucination–repetition 曲线。
 6. 把固定周期 head 分型与 noun-onset/event-triggered 更新做等算力比较。
+7. 对基于已生成文本的门控按对象位置、首次/重复提及和prefix污染分层，避免把语言记忆当成新视觉证据。

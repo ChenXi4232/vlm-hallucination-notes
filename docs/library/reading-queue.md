@@ -10,7 +10,7 @@ tags:
 
 | 来源 | 计划类型 | 目标方向 | 状态 |
 |---|---|---|---|
-| [HaloProbe: Bayesian Detection and Mitigation of Object Hallucinations in Vision-Language Models](https://icml.cc/virtual/2026/poster/62157)（ICML 2026） | 高优先级机制/检测论文 | Attention Head / Evaluation | 恢复为高优先级待读：历史核验曾遇公开评审验证；评审不是硬门槛，下轮可依正文/官方代码继续，明确不推定reviewer concern与author response |
+| [HaloProbe: Bayesian Detection and Mitigation of Object Hallucinations in Vision-Language Models](https://proceedings.mlr.press/v306/zohrabi26a.html)（ICML 2026） | 高优先级机制/检测论文 | Attention Head / Evaluation | P1：PMLR正文、OpenReview入口与官方代码齐；优先核对token位置/对象重复混淆、Simpson's paradox与Bayesian reranking成本 |
 | OmniHallu: A Comprehensive Benchmark for Multimodal Hallucination in Omni-Modal Large Language Models (arXiv:2609.11244 v1；Findings EMNLP 2026) | 高优先级 benchmark | Evaluation / Long-form | 待读：需等待或核对 ACL Anthology 正式 paper page、benchmark 数据与 evaluator 协议 |
 | VidHalLoc: Temporal Localization of Hallucinations in Long-form Video-Language Generation (arXiv:2609.09895 v1) | 候选 benchmark / detection | Evaluation / Long-form | 待读：需核对 temporal annotation、长输出长度混淆和公开数据许可 |
 | Does Playing it Safe Count as Faithfulness? Reassessing LVLM Hallucination Mitigation Methods (arXiv:2609.01888 v1) | 高优先级评测审计 | Evaluation / Recall Trade-off | 暂停收录：摘要称 4 个 benchmarks，正文主协议称 3 个，公开代码仓库又列 CHAIR/AMBER/MMHal/MMStar；待版本澄清 |
@@ -19,7 +19,7 @@ tags:
 | Targeting the Attention Heads Behind Object Hallucination in LLaVA (arXiv:2608.24966 v1) | 候选机制/负结果 | Attention Head / Path | 待读：需完整核对 head mining、随机头对照与干预退化证据 |
 | LLM Unlearning Should Be Form-Independent | 相邻工作 | Form-independent intervention | 相关性待判断 |
 
-## 本轮已迁移
+## 已迁移
 
 | 来源 | Deep Paper Note |
 |---|---|
@@ -28,6 +28,8 @@ tags:
 | Hallucination Begins Where Saliency Drops | [Saliency / SGRS / LocoRE](../papers/hallucination-begins-where-saliency-drops.md) |
 | Mitigating Object Hallucination via Image-Grounded Guidance | [MARINE](../papers/marine-image-grounded-guidance.md) |
 | Dynamic Multimodal Activation Steering | [DMAS](../papers/dynamic-multimodal-activation-steering.md) |
+| HulluEdit | [HulluEdit](../papers/hulluedit.md) |
+| AdaIAT | [AdaIAT](../papers/adaiat.md) |
 
 ## 进入论文库的条件
 
@@ -36,15 +38,28 @@ tags:
 - [ ] 若进入方法库，补齐 benchmark、baseline、关键 ablation 与官方方法图；
 - [ ] 记录资料缺失和不可核验边界。
 
-## 2026-10-03候选（尚未精读）
+## CVPR 2026候选（尚未精读）
 
 评分与取舍见[本轮核验](../reading-notes/research-atlas-20261003.md)。
 
 | 优先级 | 来源 | 下一步证据闸门 |
 |---|---|---|
 | P2 | [Reallocating Attention Across Layers to Reduce Multimodal Hallucination](https://openaccess.thecvf.com/content/CVPR2026/html/Lu_Reallocating_Attention_Across_Layers_to_Reduce_Multimodal_Hallucination_CVPR_2026_paper.html)（CVPR2026主会） | 原文/补充/代码与对照核对；本轮只读官方摘要 |
-| P1 | [HulluEdit: Single-Pass Evidence-Consistent Subspace Editing for Mitigating Hallucinations in Large Vision-Language Models](https://openaccess.thecvf.com/content/CVPR2026/html/Lin_HulluEdit_Single-Pass_Evidence-Consistent_Subspace_Editing_for_Mitigating_Hallucinations_in_Large_CVPR_2026_paper.html)（CVPR2026主会） | 原文/补充/代码与对照核对；本轮只读官方摘要 |
-| P1 | [AdaIAT: Adaptively Increasing Attention to Generated Text to Alleviate Hallucinations in LVLM](https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_AdaIAT_Adaptively_Increasing_Attention_to_Generated_Text_to_Alleviate_Hallucinations_CVPR_2026_paper.html)（CVPR2026主会） | 原文/补充/代码与对照核对；本轮只读官方摘要 |
 | P1 | [Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations](https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Beyond_the_Global_Scores_Fine-Grained_Token_Grounding_as_a_Robust_CVPR_2026_paper.html)（CVPR2026主会） | 原文/补充/代码与对照核对；本轮只读官方摘要 |
 | P1 | [CORAL v2](https://arxiv.org/abs/2609.38979v2) | 核对FDR定理假设、视觉扰动对称性、对象依赖及官方录用证据；作者称NeurIPS2026录用 |
 | P2 | [GHOST-Q](https://arxiv.org/abs/2609.29999) | 预印本；待完整读取跨精度配对统计与生成预算审计 |
+
+## ICML 2026正式卷候选
+
+PMLR 306于2026-09-29公开。本轮完成全卷标题筛选，并对19篇直接VLM/MLLM幻觉命中读取官方摘要；以下按对现有机制路线的新增价值排序。评分与扫描范围见[2026-10-10核验](../reading-notes/research-atlas-20261010.md)。
+
+| 优先级 | 来源 | 下一步证据闸门 |
+|---|---|---|
+| P1 | [HaloProbe](https://proceedings.mlr.press/v306/zohrabi26a.html) | 核对位置/重复混淆控制、分层贝叶斯假设、检测与reranking预算；读取公开评审与代码 |
+| P1 | [Mitigating Hallucinations via Causal Route Gating](https://proceedings.mlr.press/v306/cheng26d.html) | 核对视觉/文本route定义、梯度门控是否因果、一次前向+反向的实际开销与随机route对照 |
+| P1 | [Steer Where It Matters: Token-Level Visual-Sensitivity Steering](https://proceedings.mlr.press/v306/zhang26cg.html) | 核对visual-sensitivity proxy、触发率、跨模型阈值与recall/长度权衡 |
+| P1 | [Inter-Layer Visual Attention Discrepancy](https://proceedings.mlr.press/v306/xie26m.html) | 核对层间差异与对象位置混淆、代码实现、早晚层选择和随机层对照 |
+| P1 | [Adaptive Residual-Update Steering / RUDDER](https://proceedings.mlr.press/v306/zou26e.html) | 核对prefill方向估计、吞吐口径、逐token触发与跨prompt稳定性 |
+| P1 | [Beyond Blind Noising: Disentangled Visual Rectification](https://proceedings.mlr.press/v306/chen26dz.html) | 核对SSL encoder依赖、VCD噪声漂移诊断及同预算对照 |
+| P2 | [MM-Snowball](https://proceedings.mlr.press/v306/jiang26t.html) | 核对多轮标注、错误传播定义、turn长度与历史可见性混淆、数据许可 |
+| P2 | [DOUBT](https://proceedings.mlr.press/v306/chen26dl.html) | 核对vMF分布假设、对象抽取器依赖、held-out迁移与检测阈值校准 |
