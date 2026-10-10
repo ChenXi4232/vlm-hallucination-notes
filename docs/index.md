@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>41</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>43</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>41 / 41</strong><span>官方图/缺图说明 + 实验登记</span></div>
+  <div class="stat-card"><strong>43 / 43</strong><span>官方图/缺图说明 + 实验登记</span></div>
 </div>
 
 ## 研究入口
@@ -68,6 +68,8 @@ flowchart LR
 
 ## 最近接入
 
+- [AdaIAT](papers/adaiat.md)：条件性增强已生成文本注意；CHAIR/F1/D1权衡较好，但依赖COCO对象标签校准。
+- [HulluEdit](papers/hulluedit.md)：在线正交低秩编辑；需把代数不干扰与语义不损失分开，并核对代码门控。
 - [FLB](papers/first-logit-boosting.md)：首步logits复用；低开销但需区分冠词效应和视觉grounding。
 - [PTI](papers/prefill-time-intervention.md)：prefill-only KV编辑；显著CHAIR改善伴随F1和长度代价。
 

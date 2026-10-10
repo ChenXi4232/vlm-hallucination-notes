@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-10",
+  "base_main_commit": "b6d29383576f8682d109342d2990f359d3446e7d",
+  "branch": "automation/research-atlas-20261010",
+  "last_successful_cutoff": "2026-10-03",
+  "last_successful_cutoff_evidence": "PR #15 merged and Pages deployment verified before this run",
+  "proposed_cutoff": "2026-10-10",
+  "publication_status": "prepared_pending_pr_and_deployment",
+  "publication_resolution": "Promote the proposed cutoff only after resolving this branch PR, merge SHA, required checks, Pages workflow and public page. A failed stage does not advance the checkpoint.",
+  "scans": [
+    {
+      "venue": "CVPR",
+      "track": "main",
+      "year": 2026,
+      "official_url": "https://openaccess.thecvf.com/CVPR2026?day=all",
+      "official_release_date": "2026-05-23",
+      "first_observed_public_in_this_ledger": "2026-10-03",
+      "last_checked": "2026-10-10",
+      "coverage": "Prior all-title scan reused; two queued main-conference papers fully read against paper, supplement, arXiv v1 and official code.",
+      "selected": [
+        {"title": "HulluEdit: Single-Pass Evidence-Consistent Subspace Editing for Mitigating Hallucinations in Large Vision-Language Models", "note_slug": "hulluedit", "disposition": "selected_note"},
+        {"title": "AdaIAT: Adaptively Increasing Attention to Generated Text to Alleviate Hallucinations in LVLM", "note_slug": "adaiat", "disposition": "selected_note"}
+      ],
+      "remaining_queue": [
+        {"title": "Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations", "priority": "P1"},
+        {"title": "Reallocating Attention Across Layers to Reduce Multimodal Hallucination", "priority": "P2"}
+      ]
+    },
+    {
+      "venue": "ICML",
+      "track": "main",
+      "year": 2026,
+      "official_url": "https://proceedings.mlr.press/v306/",
+      "official_release_date": "2026-09-29",
+      "first_observed_public_in_this_ledger": "2026-10-10",
+      "last_checked": "2026-10-10",
+      "title_count": 6552,
+      "title_scan_complete": true,
+      "title_hallucin_hits": 49,
+      "direct_vlm_abstracts_reviewed": 19,
+      "full_text_scan_complete": false,
+      "priority_queue": [
+        {"title": "HaloProbe: Bayesian Detection and Mitigation of Object Hallucinations in Vision-Language Models", "official_url": "https://proceedings.mlr.press/v306/zohrabi26a.html", "priority": "P1", "disposition": "abstract_reviewed_reading_queue"},
+        {"title": "Mitigating Hallucinations in Large Vision-Language Models via Causal Route Gating", "official_url": "https://proceedings.mlr.press/v306/cheng26d.html", "priority": "P1", "disposition": "abstract_reviewed_reading_queue"},
+        {"title": "Steer Where It Matters: Token-Level Visual-Sensitivity Steering for LVLMs Hallucination Mitigation", "official_url": "https://proceedings.mlr.press/v306/zhang26cg.html", "priority": "P1", "disposition": "abstract_reviewed_reading_queue"},
+        {"title": "Finding the Correct Visual Evidence Without Forgetting: Mitigating Hallucination in LVLMs via Inter-Layer Visual Attention Discrepancy", "official_url": "https://proceedings.mlr.press/v306/xie26m.html", "priority": "P1", "disposition": "abstract_reviewed_reading_queue"},
+        {"title": "Adaptive Residual-Update Steering for Low-Overhead Hallucination Mitigation in Large Vision-Language Models", "official_url": "https://proceedings.mlr.press/v306/zou26e.html", "priority": "P1", "disposition": "abstract_reviewed_reading_queue"},
+        {"title": "Beyond Blind Noising: Disentangled Visual Rectification for Hallucination Mitigation in MLLMs", "official_url": "https://proceedings.mlr.press/v306/chen26dz.html", "priority": "P1", "disposition": "abstract_reviewed_reading_queue"},
+        {"title": "MM-Snowball: Evaluating and Mitigating Hallucination Snowballing in Multimodal Multi-Turn Dialogue", "official_url": "https://proceedings.mlr.press/v306/jiang26t.html", "priority": "P2", "disposition": "abstract_reviewed_reading_queue"},
+        {"title": "DOUBT: Decoupled Object-level Understanding and Bridging via vMF-based Trustworthiness for Hallucination Detection in MLLMs", "official_url": "https://proceedings.mlr.press/v306/chen26dl.html", "priority": "P2", "disposition": "abstract_reviewed_reading_queue"}
+      ],
+      "other_direct_abstracts": 11,
+      "caveat": "Keyword title scan is complete for the volume but not a semantic full-text scan; 49 raw title hits include out-of-scope uses and may miss relevant papers without hallucination wording."
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2026,
+      "official_url": "https://papers.nips.cc/",
+      "last_checked": "2026-10-10",
+      "official_release_date": null,
+      "status": "Author notification and accepted-paper import observed; formal proceedings index still latest at 2025, so no release-batch checkpoint."
+    },
+    {
+      "venue": "EMNLP",
+      "year": 2026,
+      "official_url": "https://aclanthology.org/venues/emnlp/",
+      "last_checked": "2026-10-10",
+      "official_release_date": null,
+      "status": "Official Anthology venue index lists through 2025; 2026 paper pages remain pending verification."
+    }
+  ],
+  "cvpr_2027": {
+    "official_url": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+    "last_checked": "2026-10-10",
+    "dates_changed_since_2026_10_03": false,
+    "registration_deadline": "2026-11-10 AoE",
+    "full_paper_deadline": "2026-11-16 AoE",
+    "supplementary_deadline": "2026-11-23 AoE",
+    "profile_requirement_verified": true,
+    "author_guidelines_status": "not independently published in the official navigation",
+    "reviewer_guidelines_status": "not independently published in the official navigation",
+    "llm_policy_status": "TBD in official CFP"
+  }
+}

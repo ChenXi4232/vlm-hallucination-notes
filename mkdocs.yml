@@ -61,6 +61,7 @@ nav:
           - M3ID: papers/m3id.md
           - Self-Introspective Decoding: papers/self-introspective-decoding.md
       - Attention Head / Causal Path:
+          - AdaIAT: papers/adaiat.md
           - HEAL Synergy Heads: papers/heal-synergy-heads.md
           - VIB-Probe: papers/vib-probe.md
           - ICT: papers/ict.md
@@ -77,6 +78,7 @@ nav:
           - Intervene-All-Paths: papers/intervene-all-paths.md
           - OPERA: papers/opera.md
       - Representation / Activation Editing:
+          - HulluEdit: papers/hulluedit.md
           - Prefill-Time Intervention: papers/prefill-time-intervention.md
           - MemVR: papers/memvr.md
           - Locate-then-Sparsify: papers/locate-then-sparsify.md
@@ -134,6 +136,7 @@ nav:
       - 深度论文笔记模板: guides/paper-card.md
       - 实验笔记模板: guides/experiment-note.md
       - 本轮来源核验: reading-notes/research-atlas-20261003.md
+      - 2026-10-10 来源核验: reading-notes/research-atlas-20261010.md
       - 内容工作流: about/workflow.md
       - 公开 / 私有边界: about/publishing-boundary.md
       - 网站设计: about/site-design.md

@@ -19,6 +19,7 @@ tags:
 
 ## 关键阅读
 
+- [HulluEdit](../papers/hulluedit.md)：每个生成步用视觉token与文本cache构造正交低秩子空间；需区分“保护定义内投影”与“保护全部视觉语义”。
 - [VES-RFT](../papers/ves-rft.md)：把有图/无图决策熵差变成训练奖励，并用 verifier 约束“正确地依赖图像”。
 - [Pixels Versus Priors](../papers/pixels-versus-priors.md)：以视觉反事实观察 pixel/prior 的逐层竞争，并构造双向 PvP steering vectors。
 - [MESA](../papers/mesa-mitigating-entangled-steering.md)：显式分离 hallucination steering 与内容语义，减少全局方向带来的能力损失。
@@ -30,6 +31,8 @@ tags:
 ## 建议输出
 
 每次 representation intervention 至少保存：layer、token position、direction norm、projection coefficient、pre/post logits、KL divergence、recall 与文本退化指标。
+
+在线子空间还应记录：SVD rank/奇异值、每步子空间夹角、norm/blend、门控触发率、真实/错配图投影差，以及论文公式与发布代码的映射。
 
 ## 初始 KV cache
 

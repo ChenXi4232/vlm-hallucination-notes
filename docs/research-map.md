@@ -56,14 +56,15 @@ flowchart TD
     2. [HEAL](papers/heal-synergy-heads.md)
     3. [Dual-Pathway Circuits](papers/dual-pathway-circuits.md)
     4. [Prompt-Induced Hallucination](papers/prompt-induced-hallucination.md)
-    5. [PAS](papers/pas-prelim-attention-score.md)
-    6. [Attention-Space Contrastive Guidance](papers/attention-space-contrastive-guidance.md)
-    7. [CausalLens](papers/causallens.md)
-    8. [Role-Break](papers/role-break-attention-heads.md)
-    9. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
-    10. [Vision-aware Head Divergence](papers/vision-aware-head-divergence.md)
-    11. [Intervene-All-Paths](papers/intervene-all-paths.md)
-    12. [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)
+    5. [AdaIAT](papers/adaiat.md)
+    6. [PAS](papers/pas-prelim-attention-score.md)
+    7. [Attention-Space Contrastive Guidance](papers/attention-space-contrastive-guidance.md)
+    8. [CausalLens](papers/causallens.md)
+    9. [Role-Break](papers/role-break-attention-heads.md)
+    10. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
+    11. [Vision-aware Head Divergence](papers/vision-aware-head-divergence.md)
+    12. [Intervene-All-Paths](papers/intervene-all-paths.md)
+    13. [Hallucination Begins Where Saliency Drops](papers/hallucination-begins-where-saliency-drops.md)
 
 === "从解码干预入门"
 
@@ -77,10 +78,11 @@ flowchart TD
     1. [Pixels Versus Priors](papers/pixels-versus-priors.md)
     2. [MESA](papers/mesa-mitigating-entangled-steering.md)
     3. [Beyond Global Editing](papers/beyond-global-editing.md)
-    4. [HIRE](papers/hire-intermediate-representation-edit.md)
-    5. [DMAS](papers/dynamic-multimodal-activation-steering.md)
-    6. [VISOR](papers/visor.md)
-    7. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
+    4. [HulluEdit](papers/hulluedit.md)
+    5. [HIRE](papers/hire-intermediate-representation-edit.md)
+    6. [DMAS](papers/dynamic-multimodal-activation-steering.md)
+    7. [VISOR](papers/visor.md)
+    8. [Modular Attribution & Intervention](papers/modular-attribution-intervention.md)
 
 === "从评测与训练入门"
 
@@ -95,4 +97,4 @@ flowchart TD
 - [FLB](papers/first-logit-boosting.md)：首步logits → 后续候选偏置；Table 5要求区分视觉证据与冠词效应。
 - [PTI](papers/prefill-time-intervention.md)：对象/背景对比方向 → 初始KV；Table 5与Supplement Figure 6要求检查F1/长度代价。
 
-这是本站按干预位置组织的比较，不宣称两篇互引或机制相同。完整阅读路径见[CVPR矩阵](venues/vision.md#cvpr)，扫描证据见[2026-10-03核验](reading-notes/research-atlas-20261003.md)。
+这是本站按干预位置组织的比较，不宣称两篇互引或机制相同。AdaIAT补充了“生成历史attention作为视觉证据载体”，HulluEdit补充了“逐token在线低秩子空间”路线；二者的监督、位置混淆与语义保护边界分别见Note。完整阅读路径见[CVPR矩阵](venues/vision.md#cvpr)，扫描证据见[2026-10-10核验](reading-notes/research-atlas-20261010.md)。
