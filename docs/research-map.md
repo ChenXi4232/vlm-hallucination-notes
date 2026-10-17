@@ -52,6 +52,8 @@ flowchart TD
 
 === "从 Head 机制入门"
 
+    - 补充比较：[Reallocating Attention](papers/reallocating-attention.md)，先区分mass分型、输出缩放和投影后归因，再判断任务收益。
+
     1. [NOTICE](papers/notice.md)
     2. [HEAL](papers/heal-synergy-heads.md)
     3. [Dual-Pathway Circuits](papers/dual-pathway-circuits.md)
@@ -98,3 +100,5 @@ flowchart TD
 - [PTI](papers/prefill-time-intervention.md)：对象/背景对比方向 → 初始KV；Table 5与Supplement Figure 6要求检查F1/长度代价。
 
 这是本站按干预位置组织的比较，不宣称两篇互引或机制相同。AdaIAT补充了“生成历史attention作为视觉证据载体”，HulluEdit补充了“逐token在线低秩子空间”路线；二者的监督、位置混淆与语义保护边界分别见Note。完整阅读路径见[CVPR矩阵](venues/vision.md#cvpr)，扫描证据见[2026-10-10核验](reading-notes/research-atlas-20261010.md)。
+
+2026-10-17补齐：[Reallocating Attention](papers/reallocating-attention.md)为长推理head-output比较，不能把任务Acc/F1等同caption对象Recall。[本轮核验](reading-notes/research-atlas-20261017.md)列出NeurIPS官方论文页新候选；未经全文核验，不将摘要主张纳入机制链条。

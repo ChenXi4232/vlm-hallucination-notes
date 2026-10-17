@@ -7,6 +7,7 @@ tags:
 
 # CVPR / ICCV / ECCV
 
+- [Reallocating Attention](../papers/reallocating-attention.md) — CVPR 2026主会，长推理模型中的head输出增益；理论与归因位置需额外审计。
 - [AdaIAT](../papers/adaiat.md) — CVPR 2026，以离线对象级注意统计门控并增强已生成文本注意。
 - [HulluEdit](../papers/hulluedit.md) — CVPR 2026，以在线正交子空间分解编辑顶层hidden state。
 - [Attention-Space Contrastive Guidance](../papers/attention-space-contrastive-guidance.md) — CVPR 2026 Findings，以注意力空间对比分支实现低开销解码 guidance。
@@ -25,6 +26,7 @@ tags:
 
 | 问题 → 阅读顺序 | 方法族 | 已有证据 | 必查局限 | 可复现基线 / 关系依据 |
 |---|---|---|---|---|
+| 层深分工是否可靠 → [AdaIAT](../papers/adaiat.md) → [Reallocating Attention](../papers/reallocating-attention.md) | 历史attention / head output增益 | Reallocating Table 1任务收益、Table 2非加性消融、Supplement Table 2时延 | 视觉mass不是功能真值；投影后reshape不是原始head；无caption Recall证据 | 本站按相同控制问题组织，不宣称互引或算子相同 |
 | 长输出对象错误 → [M3ID](../papers/m3id.md) → [FLB](../papers/first-logit-boosting.md) | 对比解码 / 首步logit回注 | FLB Tables 1–3同报幻觉、recall与长度 | The-only、β-only、greedy掉覆盖 | FLB直接比较M3ID；Table 1–2 |
 | 干预应发生在哪 → [OPERA](../papers/opera.md) → [PTI](../papers/prefill-time-intervention.md) | 解码搜索 / prefill KV | PTI Table 1跨三种解码；Supplement Table 9延迟 | PTI Table 5 F1下降，输出缩短 | PTI在beam设置直接比较OPERA；不是相同机制 |
 | 对象证据怎样进入表示 → [ICT](../papers/ict.md) → [PTI](../papers/prefill-time-intervention.md) | steering / KV | PTI按模态、位置、K/V做消融 | 同时改变多变量不能只归因于时机 | PTI Related Work引用ICT；实现均需位置对齐 |
@@ -33,4 +35,4 @@ tags:
 | 正交子空间能否避免误伤 → [Beyond Global Editing](../papers/beyond-global-editing.md) → [HulluEdit](../papers/hulluedit.md) | 逐样本低秩投影 / 在线逐token收缩 | HulluEdit Table 4组件消融、Supplement Table 9 Recall | 代数保护不等于语义保护；论文—代码gate差异 | 本站按低秩编辑问题组织；不宣称机制等价 |
 | 偏好优化数据从哪里来 → [OPA-DPO](../papers/opa-dpo.md) | Training / Alignment | Note登记on-policy偏好数据和比较 | 数据来源、模型policy匹配和recall | 与无需参数训练方法不直接比成本 |
 
-PTI与FLB共享“早期证据如何影响后续输出”的问题，但本轮未发现直接互引，也没有证据证明二者机制等价。AdaIAT与HulluEdit分别增加prefix注意和在线子空间两条路线；阅读时先查主表、失败条件与代码边界。最新扫描覆盖、后续候选及官方状态见[2026-10-10核验](../reading-notes/research-atlas-20261010.md)。
+PTI与FLB共享“早期证据如何影响后续输出”的问题，但本轮未发现直接互引，也没有证据证明二者机制等价。AdaIAT与HulluEdit分别增加prefix注意和在线子空间两条路线；阅读时先查主表、失败条件与代码边界。最新扫描覆盖、后续候选及官方状态见[2026-10-17核验](../reading-notes/research-atlas-20261017.md)。

@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>43</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>44</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>43 / 43</strong><span>官方图/缺图说明 + 实验登记</span></div>
+  <div class="stat-card"><strong>44 / 44</strong><span>官方图/缺图说明 + 实验登记</span></div>
 </div>
 
 ## 研究入口
@@ -68,6 +68,8 @@ flowchart LR
 
 ## 最近接入
 
+- [Reallocating Attention](papers/reallocating-attention.md)：CVPR 2026长推理head-output缩放；任务收益与功能命名、线性理论、投影后归因必须分开解读。
+- [2026-10-17来源核验](reading-notes/research-atlas-20261017.md)：补齐CVPR候选，并登记NeurIPS新官方论文页批次；摘要候选尚非精读结论。
 - [AdaIAT](papers/adaiat.md)：条件性增强已生成文本注意；CHAIR/F1/D1权衡较好，但依赖COCO对象标签校准。
 - [HulluEdit](papers/hulluedit.md)：在线正交低秩编辑；需把代数不干扰与语义不损失分开，并核对代码门控。
 - [FLB](papers/first-logit-boosting.md)：首步logits复用；低开销但需区分冠词效应和视觉grounding。

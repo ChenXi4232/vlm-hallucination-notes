@@ -1,0 +1,677 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-17",
+  "base_main_commit": "ce3bfffd0cf807ce0f7332f323a1acd141dbfdd7",
+  "branch": "automation/research-atlas-20261017",
+  "last_successful_cutoff": "2026-10-10",
+  "last_successful_cutoff_evidence": {
+    "pr": 16,
+    "merge_sha": "ce3bfffd0cf807ce0f7332f323a1acd141dbfdd7",
+    "pages_run": 38013663820,
+    "conclusion": "success"
+  },
+  "proposed_cutoff": "2026-10-17",
+  "publication_status": "prepared_pending_pr_merge_deployment_public_http",
+  "publication_resolution": "Resolve matching PR, merge SHA, workflow conclusion and public HTTP/title before advancing successful cutoff. Retry failures without duplicate Notes.",
+  "scans": [
+    {
+      "venue": "CVPR",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://openaccess.thecvf.com/CVPR2026?day=all",
+      "official_release_date": "2026-05-23",
+      "release_date_evidence": "Carried from 2026-10-10 ledger; original announcement not independently re-fetched this run",
+      "first_observed_public_in_this_ledger": "2026-10-03",
+      "last_checked": "2026-10-17",
+      "coverage": "Queued Reallocating Attention full CVF main/supplement read and key pages visually checked; two additional official abstracts, LEAD and MIOH. Historical all-title keyword scan is not an exhaustive semantic scan.",
+      "selected": [
+        {
+          "title": "Reallocating Attention Across Layers to Reduce Multimodal Hallucination",
+          "slug": "reallocating-attention",
+          "arxiv": "2510.10285",
+          "arxiv_version": "v3",
+          "disposition": "new_deep_note"
+        }
+      ],
+      "remaining_queue": [
+        {
+          "title": "Beyond the Global Scores",
+          "priority": "P1",
+          "disposition": "full_source_gate_incomplete"
+        },
+        {
+          "title": "Thinking in Uncertainty: Mitigating Hallucinations in MLRMs with Latent Entropy-Aware Decoding",
+          "priority": "P1",
+          "disposition": "new_official_abstract_candidate"
+        },
+        {
+          "title": "Fine-Grained Multi Image Object Hallucination Benchmark",
+          "priority": "P2",
+          "disposition": "new_official_abstract_candidate"
+        }
+      ]
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2026,
+      "track": "official_event_pages_not_formal_proceedings",
+      "official_url": "https://neurips.cc/Downloads/2026",
+      "formal_proceedings_url": "https://papers.nips.cc/",
+      "official_release_date": null,
+      "first_observed_public_in_this_ledger": "2026-10-17",
+      "snapshot_acquired_utc_date": "2026-10-16",
+      "last_checked": "2026-10-17",
+      "fresh_verification": "Official Downloads index retrievable and key titles confirmed; direct event access restricted in current retrieval path; counts below are from preserved public snapshot, not claimed live counts.",
+      "coverage": {
+        "event_links": 9245,
+        "event_count_is_not_paper_count": true,
+        "hallucin_title_hits": 56,
+        "abstracts_parsed": 55,
+        "direct_title_filtered_abstracts_reviewed": 20,
+        "full_text_scan_complete": false,
+        "semantic_scan_complete": false
+      },
+      "rows": [
+        {
+          "title": "Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155358",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=6CdA8QbHL5"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Alleviating Hallucination with Training-Free Uncertainty-Guided Steering",
+          "official_url": "https://neurips.cc/virtual/2026/poster/148795",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=v2TDfSvdkb"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "An In-Depth Analysis of Hallucination Detection Methods for Vision-Language Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/139199",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=f0yvSUpbJA"
+          ],
+          "abstract_parsed": true,
+          "disposition": "new_priority_reading_candidate"
+        },
+        {
+          "title": "A Theory of Time-Sensitive Language Generation: Sparse Hallucination Beats Mode Collapse",
+          "official_url": "https://neurips.cc/virtual/2026/poster/154885",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=AAGGtvkuee"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Attention Heads are Complementary Visual Units: Mitigating Hallucinations in LVLMs via Adaptive Visual Cues Focusing",
+          "official_url": "https://neurips.cc/virtual/2026/poster/149428",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=q8PFA0lviK"
+          ],
+          "abstract_parsed": true,
+          "disposition": "new_priority_reading_candidate"
+        },
+        {
+          "title": "BALTO: Balanced Token-Level Policy Optimization for Hallucination Mitigation",
+          "official_url": "https://neurips.cc/virtual/2026/poster/150212",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=juI26tTO3o"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Beyond Uniform Detection: Adaptive Hallucination Detection for RAG Across Response Regimes",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155755",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=3Bp2vd7ixA"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "CHORD: Cross-Model Hallucination Detection via Relational Graph Discrimination",
+          "official_url": "https://neurips.cc/virtual/2026/poster/153626",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=Jz5BMGep1M"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Clearer Sight, Fewer Lies: Oriented Pickup Preference Optimization for Multimodal Hallucination Mitigation",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155535",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=4sDjEe8IfE"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Correction Space Steering for Hallucination Mitigation in Large Vision-Language Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/150994",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=diwoFVUWNi"
+          ],
+          "abstract_parsed": true,
+          "disposition": "new_priority_reading_candidate"
+        },
+        {
+          "title": "Cross-Layer Evolution Graph Learning for Fine-grained VLM Hallucination Detection",
+          "official_url": "https://neurips.cc/virtual/2026/poster/150184",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=k5PB3UmZfp"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Do Robust LVLMs Hallucinate More? Uncovering Robustness-Induced Hallucination in Large Vision-Language Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/153848",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=IINybdEu78"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Dual-Pathway Circuits of Object Hallucination in Vision-Language Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/154151",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=FrVqkZPNVv"
+          ],
+          "abstract_parsed": true,
+          "disposition": "duplicate_existing_v1_note_version_update_pending"
+        },
+        {
+          "title": "Entropy Distribution as a Fingerprint for Hallucinations in Generative Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/148328",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=yeXKhJ9iy3"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "EVA: Evidence-seeking Visual Agent for Hallucination-Resistant Multimodal Reasoning",
+          "official_url": "https://neurips.cc/virtual/2026/poster/148728",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=vUqsQ4aoDb"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Focus Matters: Attention-Value Dynamics for Hallucination Mitigation in Vision-Language Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155092",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=8VaNJuKNNk"
+          ],
+          "abstract_parsed": true,
+          "disposition": "new_priority_reading_candidate"
+        },
+        {
+          "title": "From Squeezing to Grounding: Visual Guided DPO for Multimodal Hallucination Mitigation",
+          "official_url": "https://neurips.cc/virtual/2026/poster/154431",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=DdP4SoPK7L"
+          ],
+          "abstract_parsed": true,
+          "disposition": "new_priority_reading_candidate"
+        },
+        {
+          "title": "Generating in the Limit with Infinitely Many Hallucinations",
+          "official_url": "https://neurips.cc/virtual/2026/poster/151636",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=Z78RzgzukZ"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Grounded or Fabricated? Unsupervised Detection of LLM Hallucinations via Contextualized Influence on Response Embeddings",
+          "official_url": "https://neurips.cc/virtual/2026/poster/148826",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=ur1ym0WRCP"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Hallucination as Commitment Failure: Larger LLMs Misfire Despite Knowing the Answer",
+          "official_url": "https://neurips.cc/virtual/2026/poster/154310",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=EcJCjzBU18"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Hallucination-Guided Unlearning: Using Hallucination Traces to Reveal Overfitted Memories",
+          "official_url": "https://neurips.cc/virtual/2026/poster/152918",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=PR255SIdSp"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155605",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=4KT2peVuUl"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "HalluciText: Mitigating Text Hallucinations in Diffusion-Based Image Restoration",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155031",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=8yEBjcRvqB"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "HalluWorld: A Controlled Benchmark for Hallucination via Reference World Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/139204",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=ejdHPDvwXJ"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "HALMES: Knowing When to Intervene in LVLM Hallucination Mitigation",
+          "official_url": "https://neurips.cc/virtual/2026/poster/153080",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=O8ShETkdl7"
+          ],
+          "abstract_parsed": true,
+          "disposition": "new_priority_reading_candidate"
+        },
+        {
+          "title": "How Fine-Tuning Objectives Shape Layer-Wise Information in LLM Hallucination Detection",
+          "official_url": "https://neurips.cc/virtual/2026/poster/152063",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=Vlr7fHQiNH"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "HPE: Hallucinated Positive Entanglement for Backdoor Attacks in Federated Self-Supervised Learning",
+          "official_url": "https://neurips.cc/virtual/2026/poster/154699",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=Bg2k6Fsw2a"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Hypergraph Modeling of Transformer Attention for Hallucination Detection",
+          "official_url": "https://neurips.cc/virtual/2026/poster/154475",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=DKOfhIFbgb"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Invisible Ink, Visible Lies: How Production Watermarking Causes LLMs to Hallucinate",
+          "official_url": "https://neurips.cc/virtual/2026/poster/152321",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=TwmIdwMjZ8"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "KG-Guard: Graph-Based Hallucination Detection for Knowledge Base Question Answering",
+          "official_url": "https://neurips.cc/virtual/2026/poster/152526",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=STsaMODjS9"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Large Language Model Failures from Hallucination to Homogenization Are Different Facets of Miscalibration",
+          "official_url": "https://neurips.cc/virtual/2026/poster/140030",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=iXZzj7en1J"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Local Intrinsic Dimension Unveils Hallucinations in Diffusion Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/149038",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=tJpnYYu4pi"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Many Benign Errors are Better than A Few Severe Ones: Evaluating Hallucination Severity",
+          "official_url": "https://neurips.cc/virtual/2026/poster/139847",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=0wbnAGgl8S"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "MCPHallu: Benchmarking Reasoning, Execution, and Memory Hallucinations in MCP Agents",
+          "official_url": "https://neurips.cc/virtual/2026/poster/139758",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=6XKGOgVQft"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Mitigating Factual Hallucination in Large Reasoning Models via Mixed-Mode Advantage Regularization",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155434",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=5h7gF4q3A2"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Mitigating Object Hallucination in Large Vision-Language Models via False Discovery Controlled Visual Data Splitting",
+          "official_url": "https://neurips.cc/virtual/2026/poster/150874",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=ek5KY0D3CL"
+          ],
+          "abstract_parsed": true,
+          "disposition": "existing_CORAL_candidate_official_source_added"
+        },
+        {
+          "title": "MotionHalluc: Diagnosing Kinematic Hallucinations in Fine-Grained Motion Reasoning",
+          "official_url": "https://neurips.cc/virtual/2026/poster/139755",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=6aIVKV32ea"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Object Hallucination Mitigation in Large Vision-Language Models via Self-Vision Dual Masking and Uncertainty-Triggered Assembly",
+          "official_url": "https://neurips.cc/virtual/2026/poster/150191",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=k3bNFdhhNj"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Overthinking as a Symptom of Knowledge Conflict: Understanding and Detecting LLM's Hallucinations in Retrieval-Augmented Question Answering",
+          "official_url": "https://neurips.cc/virtual/2026/poster/150716",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=fzpG3voiei"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "PAVE: Prefill-Conditioned Activation Editing for Hallucination Mitigation in LVLMs",
+          "official_url": "https://neurips.cc/virtual/2026/poster/150489",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=hiYMBdcGSJ"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "PLLS-CP: Unsupervised Hallucination Detection with Layer Selection and Cross-Domain Conformal Guarantees",
+          "official_url": "https://neurips.cc/virtual/2026/poster/151476",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=aKIJQBf4JP"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Rethinking in Spikes: Mitigating Hallucinations in MDLMs with Step-Aware Decoding",
+          "official_url": "https://neurips.cc/virtual/2026/poster/153158",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=NS7JAOxOVv"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Sample Transform Cost-Based Training-Free Hallucination Detector for Large Language Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/154259",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=F6wp9J9jVl"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Scalable Token-Level Hallucination Detection in Large Language Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/148846",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=uiQy5sVoUd"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Seeing Through the Chain: Understanding and Mitigating Hallucinations in Multimodal Large Reasoning Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/151395",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=az4LP3Ccr8"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "SOPO: Socratic Guided Policy Optimization for Span-Level Hallucination Detection",
+          "official_url": "https://neurips.cc/virtual/2026/poster/149400",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=qL39tYekRp"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "T2V-AttnDisrupt: Inducing Hallucinations in LVLMs via Misrouting Visual Evidence Retrieval",
+          "official_url": "https://neurips.cc/virtual/2026/poster/152009",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=WBOlvhIX2j"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "The Commit-Abstain Circuit: Why Language Models Hallucinate Instead of Abstaining",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155556",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=4gAoZ2eJTM"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "The Labeling Problem in Hallucination Detection Benchmarks: An Empirical Evaluation",
+          "official_url": "https://neurips.cc/virtual/2026/poster/138957",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=tzJJksX8Y9"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Tracing the Cascade: A Topology-Aware Evaluation Framework for Scientific Agent Hallucinations",
+          "official_url": "https://neurips.cc/virtual/2026/poster/139645",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=DZxHV6tNsz"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Trustworthy Retrosynthesis: Eliminating Hallucinations with a Diverse Ensemble of Reaction Scorers",
+          "official_url": "https://neurips.cc/virtual/2026/poster/152729",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=QnViF2joi3"
+          ],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Uncertainty Quantification: From Detecting LLM Hallucinations to Strengthening Reasoning and AI Agents",
+          "official_url": "https://neurips.cc/virtual/2026/tutorial/137737",
+          "event_kind": "tutorial",
+          "openreview_urls": [],
+          "abstract_parsed": false,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "VidHalluDoctor: Learning Video Differences to Mitigate Hallucinations in Vision-Language Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/153093",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=O19BzWLPGz"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "VIGOR: Visual Gain Ordering for Hallucination Mitigation in Multimodal Discrete Diffusion Language Models",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155830",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=2ZlTG9IUvR"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "When Prompts Override Vision: Instruction-Induced Hallucinations in LVLMs",
+          "official_url": "https://neurips.cc/virtual/2026/poster/155439",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=5bYMpSBSze"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        },
+        {
+          "title": "Where Are MLLMs Looking When They Hallucinate? Mitigating Visual Hallucination via Gaze Steering",
+          "official_url": "https://neurips.cc/virtual/2026/poster/148425",
+          "event_kind": "poster",
+          "openreview_urls": [
+            "https://openreview.net/forum?id=xvcpLKMM64"
+          ],
+          "abstract_parsed": true,
+          "disposition": "raw_title_hit_not_promoted"
+        }
+      ]
+    },
+    {
+      "venue": "ICML",
+      "year": 2026,
+      "official_url": "https://proceedings.mlr.press/v306/",
+      "official_release_date": "2026-09-29",
+      "last_checked": "2026-10-17",
+      "coverage": "Continue prior 6552-title /19-direct-abstract cursor; no new batch scan this run"
+    },
+    {
+      "venue": "EMNLP",
+      "year": 2026,
+      "official_url": "https://aclanthology.org/venues/emnlp/",
+      "official_release_date": null,
+      "last_checked": "2026-10-17",
+      "status": "Official venue listing through 2025; 2026 paper page status pending, not proof of non-publication"
+    }
+  ],
+  "cvpr_2027": {
+    "official_url": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+    "last_checked": "2026-10-17",
+    "registration_deadline": "2026-11-10 AoE",
+    "full_paper_deadline": "2026-11-16 AoE",
+    "supplementary_deadline": "2026-11-23 AoE",
+    "dates_changed_since_previous": false,
+    "author_guidelines": "Direct 2027 endpoint 404",
+    "reviewer_guidelines": "Not verified accessible; do not reuse 2026 as current",
+    "llm_policy": "Scope/guidelines still being finalized in CFP",
+    "contemporaneous_work_cutoff": "2026-09-15",
+    "policy_change_date": null
+  },
+  "version_updates": [
+    {
+      "slug": "dual-pathway-circuits",
+      "existing_note_version": "v1",
+      "observed_latest_arxiv_version": "v2",
+      "version_date": "2026-10-07",
+      "status": "warning_only_full_diff_pending",
+      "added_at_preserved": "2026-08-21"
+    }
+  ],
+  "taxonomy_change": false,
+  "ui_component_change": false
+}

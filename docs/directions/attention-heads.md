@@ -16,6 +16,7 @@ tags:
 
 ## 关键阅读
 
+- [Reallocating Attention](../papers/reallocating-attention.md)：CVPR 2026长推理head-output增强；主表、联合消融、理论假设与投影位置审计分开登记。
 - [AdaIAT](../papers/adaiat.md)：按真实/幻觉对象的历史文本注意统计构造层门控和逐头增益；降低CHAIR且少于图像放大方法的重复，但依赖离线标签校准。
 - [HEAL](../papers/heal-synergy-heads.md)：先以 head-output perturbation 排除冗余头，再用视觉/文本四状态分解 synergy 贡献并逐步校准 values；机制对照完整，但墙钟成本显著。
 - [Dual-Pathway Circuits](../papers/dual-pathway-circuits.md)：跨五种 VLM 用 activation patching 区分 grounding 与 hallucination 组件路径，并用定向缩放验证。

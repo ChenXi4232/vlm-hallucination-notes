@@ -30,6 +30,7 @@ tags:
 | Dynamic Multimodal Activation Steering | [DMAS](../papers/dynamic-multimodal-activation-steering.md) |
 | HulluEdit | [HulluEdit](../papers/hulluedit.md) |
 | AdaIAT | [AdaIAT](../papers/adaiat.md) |
+| Reallocating Attention Across Layers to Reduce Multimodal Hallucination | [Reallocating Attention](../papers/reallocating-attention.md) |
 
 ## 进入论文库的条件
 
@@ -44,10 +45,30 @@ tags:
 
 | 优先级 | 来源 | 下一步证据闸门 |
 |---|---|---|
-| P2 | [Reallocating Attention Across Layers to Reduce Multimodal Hallucination](https://openaccess.thecvf.com/content/CVPR2026/html/Lu_Reallocating_Attention_Across_Layers_to_Reduce_Multimodal_Hallucination_CVPR_2026_paper.html)（CVPR2026主会） | 原文/补充/代码与对照核对；本轮只读官方摘要 |
 | P1 | [Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations](https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Beyond_the_Global_Scores_Fine-Grained_Token_Grounding_as_a_Robust_CVPR_2026_paper.html)（CVPR2026主会） | 原文/补充/代码与对照核对；本轮只读官方摘要 |
 | P1 | [CORAL v2](https://arxiv.org/abs/2609.38979v2) | 核对FDR定理假设、视觉扰动对称性、对象依赖及官方录用证据；作者称NeurIPS2026录用 |
 | P2 | [GHOST-Q](https://arxiv.org/abs/2609.29999) | 预印本；待完整读取跨精度配对统计与生成预算审计 |
+
+### 2026-10-17新增CVPR候选
+
+- P1：[Thinking in Uncertainty / LEAD](https://openaccess.thecvf.com/content/CVPR2026/html/Xu_Thinking_in_Uncertainty_Mitigating_Hallucinations_in_MLRMs_with_Latent_Entropy-Aware_CVPR_2026_paper.html)。官方摘要已核对；需拆分熵门控连续embedding与visual anchor，审计KV与生成预算。
+- P2：[MIOH](https://openaccess.thecvf.com/content/CVPR2026/html/Min_Fine-Grained_Multi_Image_Object_Hallucination_Benchmark_CVPR_2026_paper.html)。官方摘要已核对；需核对多图构造、四任务与三种推理模式、评测器和许可。
+
+## NeurIPS 2026官方论文页候选（未精读）
+
+官方Downloads已列题名/event页，不等于正式proceedings已经出版。以下仅为候选摘要筛选，尚未通过正文/补充/代码/decision一致性闸门；评分与覆盖见[2026-10-17核验](../reading-notes/research-atlas-20261017.md)。
+
+| 优先级 | 官方来源 | 下一步证据闸门 |
+|---|---|---|
+| P1 | [Detection In-Depth Analysis](https://neurips.cc/virtual/2026/poster/139199) | token位置基线、跨架构检测、视觉/语言错误分型与image-level split |
+| P1 | [VerDA](https://neurips.cc/virtual/2026/poster/149428) | head-wise cues、去冗余和距离衰减独立消融；recall与实际成本 |
+| P1 | [Focus Matters](https://neurips.cc/virtual/2026/poster/155092) | encoder phase选择、value贡献、mean-value替换和因果对照 |
+| P1 | [HALMES](https://neurips.cc/virtual/2026/poster/153080) | 前驱特征与当前错误是否泄漏；触发率、误伤和同预算对照 |
+| P2 | [Correction Space Steering](https://neurips.cc/virtual/2026/poster/150994) | 空间学习与坐标预测成本、秩假设和类型外推 |
+| P2 | [VGDPO](https://neurips.cc/virtual/2026/poster/154431) | squeezing定义、视觉重权、监督与chosen/rejected概率轨迹 |
+| 原P1更新 | [CORAL](https://neurips.cc/virtual/2026/poster/150874) | 官方入口补齐；OpenReview验证未越过；FDR定理、依赖与对称性待核 |
+
+既有[Dual-Pathway Note](../papers/dual-pathway-circuits.md)收到v2与代码提醒，非重复收录；v1正文保留，等待新版全文差异核对。
 
 ## ICML 2026正式卷候选
 
