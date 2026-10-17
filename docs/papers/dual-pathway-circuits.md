@@ -24,6 +24,9 @@ tags: [Activation patching, Causal pathway, POPE, Object hallucination, Componen
 
 # Dual-Pathway Circuits of Object Hallucination in Vision-Language Models
 
+!!! warning "2026-10-17版本提醒：正文仍冻结于v1"
+    官方arXiv已于2026-10-07更新v2并给出代码入口，NeurIPS 2026官方Downloads也出现同题论文页。本页以下数字、图和结论仍依据v1，尚未完成v2全文、代码和decision的逐项复核；不要把旧版精读当作v2已复核。保留原始`added_at`、`arxiv_version`与版本核验日期，待完成后再更新正文。见[本轮核验](../reading-notes/research-atlas-20261017.md)。
+
 <div class="paper-meta"><span>arXiv 2026</span><span>Mechanistic interpretability</span><span>Component / pathway</span><span>已精读</span></div>
 
 [arXiv](https://arxiv.org/abs/2605.13156){ .kb-button .primary }

@@ -6,7 +6,7 @@ tags:
 
 # 方法论文
 
-本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 43 篇，全部带有可追溯的官方方法图或明确来源边界的等价抽象/缺图说明与实验登记。
+本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 44 篇，全部带有可追溯的官方方法图或明确来源边界的等价抽象/缺图说明与实验登记。
 
 ## Logit / decoding
 
@@ -24,6 +24,7 @@ tags:
 
 ## Head / path intervention
 
+- [Reallocating Attention](../papers/reallocating-attention.md) — 按层深和视觉份额分型后增强head输出；不是attention概率守恒搬移。无官方实现commit，功能归因和理论条件仍有缺口。
 - [AdaIAT](../papers/adaiat.md) — 用离线真实/幻觉对象注意统计构造逐层门控和逐头增益，条件性增强已生成文本注意。
 - [HEAL](../papers/heal-synergy-heads.md) — 以图文四状态反事实分解非冗余 head 的模态贡献，并动态校准 synergy-head visual/text values。
 - [VIB-Probe](../papers/vib-probe.md) — 以变分信息瓶颈检测幻觉，并用梯度敏感度定位干预头。

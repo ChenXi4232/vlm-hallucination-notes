@@ -8,6 +8,10 @@ tags:
 
 # ICLR / ICML / NeurIPS
 
+## NeurIPS 2026官方论文页批次
+
+截至2026-10-17，官方[Downloads索引](https://neurips.cc/Downloads/2026)可检索到一批2026论文和event入口；[正式proceedings索引](https://papers.nips.cc/)尚未列2026。两者分轨登记，真实公开日期未知。检测评测混淆、head-wise visual cues、视觉FDR等工作进入[分级候选](../reading-notes/research-atlas-20261017.md)，仍非Deep Notes；不得用摘要替代正文、decision或定理审计。
+
 - [Modular Attribution & Intervention](../papers/modular-attribution-intervention.md) — ICLR 2025。
 - [Intervene-All-Paths](../papers/intervene-all-paths.md) — NeurIPS 2025。
 - [MARINE](../papers/marine-image-grounded-guidance.md) — ICML 2025。
