@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-19",
+  "base_main_commit": "126b44b5c3bc699f26c1c3d1c7ba609a2b74bfb2",
+  "branch": "automation/research-atlas-20261119",
+  "last_successful_cutoff": "2026-10-17",
+  "last_successful_cutoff_evidence": {
+    "pr": 17,
+    "merge_sha": "126b44b5c3bc699f26c1c3d1c7ba609a2b74bfb2",
+    "pages_run": 38992730583,
+    "conclusion": "success"
+  },
+  "proposed_cutoff": "2026-11-19",
+  "publication_status": "prepared_pending_pr_merge_deployment_public_http",
+  "publication_resolution": "Resolve matching PR, merge SHA, workflow conclusion and public HTTP/title before advancing successful cutoff. Retry failures without duplicate Notes.",
+  "scans": [
+    {
+      "venue": "CVPR",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://openaccess.thecvf.com/CVPR2026?day=all",
+      "official_release_date": null,
+      "release_date_evidence": "2026-05-23 was recorded in earlier audits; the original release announcement was not reverified this run.",
+      "first_observed_public_in_this_ledger": "2026-10-03",
+      "last_checked": "2026-11-19",
+      "coverage": "4,042 unique main paper links, 39 hallucin title hits; no fresh complete semantic scan. Full text/supplement/code review for LEAD and Beyond the Global Scores.",
+      "selected": [
+        {
+          "title": "Thinking in Uncertainty",
+          "slug": "lead-entropy-aware-decoding",
+          "arxiv": "2603.13366",
+          "arxiv_version": "v1",
+          "disposition": "new_deep_note"
+        }
+      ],
+      "remaining_queue": [
+        {
+          "arxiv": "2604.04863",
+          "arxiv_version": "v1",
+          "title": "Beyond the Global Scores",
+          "disposition": "hold_model_and_decode_metadata_conflicts",
+          "author_code_commit": "30257083e326e763938e96de6d9cbc717937a5eb"
+        },
+        {
+          "title": "Fine-Grained Multi Image Object Hallucination Benchmark",
+          "disposition": "unchanged_P2"
+        }
+      ]
+    },
+    {
+      "venue": "EMNLP",
+      "year": 2026,
+      "track": "main_and_findings_separately",
+      "official_urls": [
+        "https://aclanthology.org/volumes/2026.emnlp-main/",
+        "https://aclanthology.org/volumes/2026.findings-emnlp/"
+      ],
+      "official_release_date": "2026-10-24",
+      "publisher_bibliographic_month": "2026-10",
+      "first_observed_public_in_this_ledger": "2026-11-19",
+      "last_checked": "2026-11-19",
+      "coverage": "Both official volumes, one record per paper ID excluding .0; titles and embedded abstracts. Other tracks and full semantic coverage are pending.",
+      "stages": {
+        "title_regex": "hallucin|grounding|grounded|faithful|misground|visual evidence|visual reliance|visual prior|perceptual (error|failure|bias)|visual (error|failure|bias)",
+        "title_abstract_visual_regex": "vision.language|multimodal|multi.modal|LVLM|MLLM|VLM|visual|vision|image|multi.view",
+        "title_abstract_direct_regex": "hallucin"
+      },
+      "volumes": [
+        {
+          "volume": "emnlp-main",
+          "scan_count": 2704,
+          "abstract_count": 2704,
+          "title_hits": 164,
+          "hallucination_title_hits": 39,
+          "multimodal_hits": 87,
+          "direct_hits": [
+            {
+              "anthology_id": "2026.emnlp-main.6",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.88",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.247",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.251",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.298",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.376",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.641",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.691",
+              "disposition": "P2"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.882",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1152",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1161",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1181",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1318",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1389",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1442",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1556",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1597",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1627",
+              "disposition": "out_of_scope_chart_generation"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.1662",
+              "disposition": "P1"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.2005",
+              "disposition": "P1"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.2008",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.2009",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.2272",
+              "disposition": "P1"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.2352",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.2393",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.emnlp-main.2645",
+              "disposition": "new_deep_note",
+              "slug": "viser",
+              "arxiv": "2608.30480",
+              "arxiv_version": "v1"
+            }
+          ]
+        },
+        {
+          "volume": "findings-emnlp",
+          "scan_count": 2478,
+          "abstract_count": 2478,
+          "title_hits": 154,
+          "hallucination_title_hits": 37,
+          "multimodal_hits": 67,
+          "direct_hits": [
+            {
+              "anthology_id": "2026.findings-emnlp.72",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.115",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.140",
+              "disposition": "P1"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.161",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.262",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.267",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.473",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.511",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.536",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.644",
+              "disposition": "existing_queue_official_metadata_update",
+              "arxiv": "2609.11244"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.674",
+              "disposition": "P2"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.742",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.871",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.1156",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.1505",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.1561",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.1573",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.1669",
+              "disposition": "out_of_scope_shopping_agent"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.1687",
+              "disposition": "lexical_hit_not_prioritized"
+            },
+            {
+              "anthology_id": "2026.findings-emnlp.1756",
+              "disposition": "lexical_hit_not_prioritized"
+            }
+          ]
+        }
+      ],
+      "publisher_ingest_evidence": "https://github.com/acl-org/acl-anthology/commit/635539a0ab6bdce67dae20affa31725587cf3c0c",
+      "publication_evidence": "https://github.com/acl-org/acl-anthology/actions/runs/40070330778",
+      "publication_evidence_scope": "Publisher production website publish workflow succeeded for exact ingestion commit at 2026-10-24T06:52:15Z; CDN propagation time unknown."
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2026,
+      "track": "official_event_pages",
+      "official_url": "https://neurips.cc/Downloads/2026",
+      "formal_proceedings_url": "https://papers.nips.cc/",
+      "formal_proceedings_latest_edition_observed": 2025,
+      "official_release_date": null,
+      "first_observed_public_in_this_ledger": "2026-10-17",
+      "last_checked": "2026-11-19",
+      "coverage": "9,276 unique event links, including workshops, tutorials, talks; 56 hallucin title matches, 21 visually targeted within these. Event counts do not represent proceedings paper totals.",
+      "candidate_updates": [
+        {
+          "poster_id": "150489",
+          "short_title": "PAVE",
+          "disposition": "restored_draft_P2"
+        },
+        {
+          "poster_id": "155092",
+          "arxiv": "2604.03556",
+          "arxiv_version": "v2",
+          "short_title": "Focus Matters",
+          "disposition": "version_update_existing_P1"
+        },
+        {
+          "poster_id": "153080",
+          "arxiv": "2611.09957",
+          "arxiv_version": "v1",
+          "short_title": "HALMES",
+          "disposition": "preprint_link_added_existing_P1"
+        },
+        {
+          "poster_id": "154151",
+          "arxiv": "2605.13156",
+          "arxiv_version": "v2",
+          "slug": "dual-pathway-circuits",
+          "disposition": "existing_note_full_version_review"
+        },
+        {
+          "poster_id": "139199",
+          "title": "Robustness of Internal Signals for Hallucination Detection in Vision-Language Models",
+          "disposition": "existing_P1_title_updated_by_stable_event_id"
+        }
+      ]
+    },
+    {
+      "venue": "arXiv",
+      "last_checked": "2026-11-19",
+      "coverage": "Targeted recent candidate search.",
+      "candidate_updates": [
+        {
+          "arxiv": "2610.21483",
+          "short_title": "FlashAttention with Statistics",
+          "disposition": "restored_draft_P2_adjacent"
+        },
+        {
+          "arxiv": "2611.23179",
+          "arxiv_version": "v1",
+          "short_title": "Say Less, Hallucinate Less?",
+          "disposition": "new_P1"
+        }
+      ]
+    },
+    {
+      "venue": "ACM MM",
+      "year": 2026,
+      "official_url": "https://dl.acm.org/doi/proceedings/10.1145/3767308",
+      "official_release_date": "2026-11-09",
+      "first_observed_public_in_this_ledger": "2026-11-19",
+      "last_checked": "2026-11-19",
+      "release_date_evidence": "ACM-deposited Crossref published-online; printed 2026-11-10, conference 2026-11-10 to 2026-11-14.",
+      "publisher_metadata_url": "https://api.crossref.org/works/10.1145/3767308",
+      "direct_publisher_fetch_status": 403,
+      "coverage": {
+        "query_container_title": "Proceedings of the 34th ACM International Conference on Multimedia",
+        "query_filter": "prefix:10.1145,type:proceedings-article,from-pub-date:2026-11-09,until-pub-date:2026-11-09",
+        "exact_parent_doi_prefix": "10.1145/3767308.",
+        "full_semantic_scan_complete": false,
+        "query_offsets": [
+          0,
+          1000,
+          2000
+        ],
+        "raw_query_count": 2041,
+        "distinct_exact_volume_doi_count": 1857,
+        "hallucin_title_hits": 20,
+        "abstracts_available_in_response": 0
+      },
+      "candidate_updates": [
+        {
+          "short_title": "Beyond Language Priors",
+          "doi": "10.1145/3767308.3836058",
+          "arxiv": "2609.00231",
+          "disposition": "new_P1"
+        },
+        {
+          "short_title": "Beyond the Logits / LAVIG",
+          "doi": "10.1145/3767308.3835945",
+          "disposition": "new_P2"
+        }
+      ]
+    }
+  ],
+  "source_gaps": [
+    "Exact EMNLP CDN propagation time and NeurIPS event pages release date.",
+    "Per-paper date audit for JMLR, TPAMI, IJCV and Artificial Intelligence.",
+    "Unresolved reproduction metadata for Beyond the Global Scores."
+  ]
+}

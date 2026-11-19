@@ -49,6 +49,8 @@ flowchart TD
     5. [M3ID](papers/m3id.md)
     6. [Self-Introspective Decoding](papers/self-introspective-decoding.md)
     7. [MARINE](papers/marine-image-grounded-guidance.md)
+    8. [VisER](papers/viser.md)，对照视觉证据与前缀支持，检查已生成对象词的位置混淆。
+    9. [LEAD](papers/lead-entropy-aware-decoding.md)，对照熵门控、静态视觉锚点和相同生成预算。
 
 === "从 Head 机制入门"
 
@@ -102,3 +104,5 @@ flowchart TD
 这是本站按干预位置组织的比较，不宣称两篇互引或机制相同。AdaIAT补充了“生成历史attention作为视觉证据载体”，HulluEdit补充了“逐token在线低秩子空间”路线；二者的监督、位置混淆与语义保护边界分别见Note。完整阅读路径见[CVPR矩阵](venues/vision.md#cvpr)，扫描证据见[2026-10-10核验](reading-notes/research-atlas-20261010.md)。
 
 2026-10-17补齐：[Reallocating Attention](papers/reallocating-attention.md)为长推理head-output比较，不能把任务Acc/F1等同caption对象Recall。[本轮核验](reading-notes/research-atlas-20261017.md)列出NeurIPS官方论文页新候选；未经全文核验，不将摘要主张纳入机制链条。
+
+2026-11-19 新增阅读路径由现有 token/logit 与视觉证据诊断分类承载。[来源核验](reading-notes/research-atlas-20261119.md)保留 CVPR/EMNLP 证据范围及待澄清项。

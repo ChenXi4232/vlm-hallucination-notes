@@ -6,9 +6,12 @@ tags:
 
 # 方法论文
 
-本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 44 篇，全部带有可追溯的官方方法图或明确来源边界的等价抽象/缺图说明与实验登记。
+本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 46 篇，全部带有可追溯的官方方法图或明确来源边界的等价抽象/缺图说明与实验登记。
 
 ## Logit / decoding
+
+- [LEAD](../papers/lead-entropy-aware-decoding.md) — 按熵切换输入嵌入和离散解码；静态图像特殊词先验、潜在态与停止条件需独立对照。
+- [VisER](../papers/viser.md) — post-hoc 对象存在性检测；融合 logit-lens 图像证据和文本前缀相似度，需按正类口径和上下文重算协议比较。
 
 - [PatchGate](../papers/patchgate.md) — 从 prompt-free patch readout 构造对象清单，以 ESI/EDE 双向 logits 编辑联合约束遗漏与幻觉。
 - [DiVE](../papers/dive.md) — 在单次前向内解耦层内视觉证据，构造语言先验参考做对比解码。

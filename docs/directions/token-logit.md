@@ -20,6 +20,9 @@ $$
 
 ## 关键阅读
 
+- [VisER](../papers/viser.md)：对象状态与视觉 token readout、生成前缀嵌入分别打分；适合事后检测对照，需另固定前缀验证视觉依赖。
+- [LEAD](../papers/lead-entropy-aware-decoding.md)：逐步熵决定潜在或离散解码；比较静态图像锚点、等预算及停止规则单因素。
+
 - [PatchGate](../papers/patchgate.md)：从 late-layer patch states 读取 prompt-free 对象清单，以包含—排除双向 logits 编辑同时约束遗漏与幻觉。
 - [Risk-aware Selective Prompting](../papers/risk-aware-selective-prompting.md)：用层级隐藏状态估计输入风险，只对高风险样本追加视觉描述提示。
 - [Same Attention, Different Truths](../papers/same-attention-different-truths.md)：对高注意视觉区域做 Logit-Lens 一致性检查，并按 mask 反事实分型。

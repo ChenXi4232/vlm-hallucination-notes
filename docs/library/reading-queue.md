@@ -11,10 +11,9 @@ tags:
 | 来源 | 计划类型 | 目标方向 | 状态 |
 |---|---|---|---|
 | [HaloProbe: Bayesian Detection and Mitigation of Object Hallucinations in Vision-Language Models](https://proceedings.mlr.press/v306/zohrabi26a.html)（ICML 2026） | 高优先级机制/检测论文 | Attention Head / Evaluation | P1：PMLR正文、OpenReview入口与官方代码齐；优先核对token位置/对象重复混淆、Simpson's paradox与Bayesian reranking成本 |
-| OmniHallu: A Comprehensive Benchmark for Multimodal Hallucination in Omni-Modal Large Language Models (arXiv:2609.11244 v1；Findings EMNLP 2026) | 高优先级 benchmark | Evaluation / Long-form | 待读：需等待或核对 ACL Anthology 正式 paper page、benchmark 数据与 evaluator 协议 |
+| [OmniHallu: Unified Hallucination Detection for Cross-Modal Comprehension and Generation in Multimodal Large Language Models](https://aclanthology.org/2026.findings-emnlp.644/)（arXiv:2609.11244；EMNLP 2026 Findings） | 高优先级 benchmark | Evaluation / Long-form | 正式 Anthology 论文页已核对；跨模态 claim 标注、许可和 evaluator 协议待精读 |
 | VidHalLoc: Temporal Localization of Hallucinations in Long-form Video-Language Generation (arXiv:2609.09895 v1) | 候选 benchmark / detection | Evaluation / Long-form | 待读：需核对 temporal annotation、长输出长度混淆和公开数据许可 |
 | Does Playing it Safe Count as Faithfulness? Reassessing LVLM Hallucination Mitigation Methods (arXiv:2609.01888 v1) | 高优先级评测审计 | Evaluation / Recall Trade-off | 暂停收录：摘要称 4 个 benchmarks，正文主协议称 3 个，公开代码仓库又列 CHAIR/AMBER/MMHal/MMStar；待版本澄清 |
-| VisER: Visual Evidence and Reliance for Object Hallucination Detection in LVLMs (arXiv:2608.30480 v1) | 候选检测论文 | Token / Logit | 待读：需核对双轴证据是否独立于对象词表与标注 |
 | ReWEIGH the Evidence: Calibrating Token-Level Ordinal Visual Evidence to Mitigate Hallucinations in Large Vision-Language Models (arXiv:2608.19075 v1) | 候选方法论文 | Token / Logit | 待读：与 SADT/PatchGate 的增量和代码状态待核对 |
 | Targeting the Attention Heads Behind Object Hallucination in LLaVA (arXiv:2608.24966 v1) | 候选机制/负结果 | Attention Head / Path | 待读：需完整核对 head mining、随机头对照与干预退化证据 |
 | LLM Unlearning Should Be Form-Independent | 相邻工作 | Form-independent intervention | 相关性待判断 |
@@ -31,6 +30,8 @@ tags:
 | HulluEdit | [HulluEdit](../papers/hulluedit.md) |
 | AdaIAT | [AdaIAT](../papers/adaiat.md) |
 | Reallocating Attention Across Layers to Reduce Multimodal Hallucination | [Reallocating Attention](../papers/reallocating-attention.md) |
+| Thinking in Uncertainty / LEAD | [LEAD](../papers/lead-entropy-aware-decoding.md) |
+| VisER: Visual Evidence and Reliance for Object Hallucination Detection in LVLMs | [VisER](../papers/viser.md) |
 
 ## 进入论文库的条件
 
@@ -45,13 +46,12 @@ tags:
 
 | 优先级 | 来源 | 下一步证据闸门 |
 |---|---|---|
-| P1 | [Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations](https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Beyond_the_Global_Scores_Fine-Grained_Token_Grounding_as_a_Robust_CVPR_2026_paper.html)（CVPR2026主会） | 原文/补充/代码与对照核对；本轮只读官方摘要 |
+| P1 | [Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations](https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Beyond_the_Global_Scores_Fine-Grained_Token_Grounding_as_a_Robust_CVPR_2026_paper.html)（CVPR2026主会） | 暂停晋升：正文、补充和代码有模型及解码口径差异。见[复现审计](../reading-notes/research-atlas-20261119.md#beyond-the-global-scores) |
 | P1 | [CORAL v2](https://arxiv.org/abs/2609.38979v2) | 核对FDR定理假设、视觉扰动对称性、对象依赖及官方录用证据；作者称NeurIPS2026录用 |
 | P2 | [GHOST-Q](https://arxiv.org/abs/2609.29999) | 预印本；待完整读取跨精度配对统计与生成预算审计 |
 
 ### 2026-10-17新增CVPR候选
 
-- P1：[Thinking in Uncertainty / LEAD](https://openaccess.thecvf.com/content/CVPR2026/html/Xu_Thinking_in_Uncertainty_Mitigating_Hallucinations_in_MLRMs_with_Latent_Entropy-Aware_CVPR_2026_paper.html)。官方摘要已核对；需拆分熵门控连续embedding与visual anchor，审计KV与生成预算。
 - P2：[MIOH](https://openaccess.thecvf.com/content/CVPR2026/html/Min_Fine-Grained_Multi_Image_Object_Hallucination_Benchmark_CVPR_2026_paper.html)。官方摘要已核对；需核对多图构造、四任务与三种推理模式、评测器和许可。
 
 ## NeurIPS 2026官方论文页候选（未精读）
@@ -60,15 +60,16 @@ tags:
 
 | 优先级 | 官方来源 | 下一步证据闸门 |
 |---|---|---|
-| P1 | [Detection In-Depth Analysis](https://neurips.cc/virtual/2026/poster/139199) | token位置基线、跨架构检测、视觉/语言错误分型与image-level split |
+| P1 | [Robustness of Internal Signals](https://neurips.cc/virtual/2026/poster/139199)（原 In-Depth Analysis） | token位置基线、跨架构检测、视觉/语言错误分型与image-level split |
 | P1 | [VerDA](https://neurips.cc/virtual/2026/poster/149428) | head-wise cues、去冗余和距离衰减独立消融；recall与实际成本 |
-| P1 | [Focus Matters](https://neurips.cc/virtual/2026/poster/155092) | encoder phase选择、value贡献、mean-value替换和因果对照 |
-| P1 | [HALMES](https://neurips.cc/virtual/2026/poster/153080) | 前驱特征与当前错误是否泄漏；触发率、误伤和同预算对照 |
+| P1 | [Focus Matters](https://neurips.cc/virtual/2026/poster/155092) | [arXiv v2](https://arxiv.org/abs/2604.03556v2)已知；核对 encoder phase、attention-value、同图均值替换与随机对照 |
+| P1 | [HALMES](https://neurips.cc/virtual/2026/poster/153080) | [arXiv v1](https://arxiv.org/abs/2611.09957v1)已有公开入口；核对前驱信息、触发率、真对象误伤和同预算对照 |
 | P2 | [Correction Space Steering](https://neurips.cc/virtual/2026/poster/150994) | 空间学习与坐标预测成本、秩假设和类型外推 |
 | P2 | [VGDPO](https://neurips.cc/virtual/2026/poster/154431) | squeezing定义、视觉重权、监督与chosen/rejected概率轨迹 |
+| P2 | [PAVE](https://neurips.cc/virtual/2026/poster/150489) | 逐图 prefill 基底与离线激活子空间；比对固定基底、校准划分和等预算 Recall |
 | 原P1更新 | [CORAL](https://neurips.cc/virtual/2026/poster/150874) | 官方入口补齐；OpenReview验证未越过；FDR定理、依赖与对称性待核 |
 
-既有[Dual-Pathway Note](../papers/dual-pathway-circuits.md)收到v2与代码提醒，非重复收录；v1正文保留，等待新版全文差异核对。
+既有 [Dual-Pathway Note](../papers/dual-pathway-circuits.md) 已完成 v1/v2 差异和作者代码静态核验，保留原收录日。
 
 ## ICML 2026正式卷候选
 
@@ -84,3 +85,30 @@ PMLR 306于2026-09-29公开。本轮完成全卷标题筛选，并对19篇直接
 | P1 | [Beyond Blind Noising: Disentangled Visual Rectification](https://proceedings.mlr.press/v306/chen26dz.html) | 核对SSL encoder依赖、VCD噪声漂移诊断及同预算对照 |
 | P2 | [MM-Snowball](https://proceedings.mlr.press/v306/jiang26t.html) | 核对多轮标注、错误传播定义、turn长度与历史可见性混淆、数据许可 |
 | P2 | [DOUBT](https://proceedings.mlr.press/v306/chen26dl.html) | 核对vMF分布假设、对象抽取器依赖、held-out迁移与检测阈值校准 |
+
+## EMNLP 2026 正式卷候选
+
+本轮扫描范围、分级和证据缺口见 [11 月 19 日来源核验](../reading-notes/research-atlas-20261119.md)。
+
+| 优先级 | 正式来源 | 下一步证据闸门 |
+|---|---|---|
+| P1 | [Where Hallucinations Live](https://aclanthology.org/2026.emnlp-main.2005/) · 主会 | 跨架构 VQ circuit、开放生成分型、同位置组件对照 |
+| P1 | [BRACS](https://aclanthology.org/2026.emnlp-main.1662/) · 主会 | grounding barrier、触发率与同强度干预及 Recall 对照 |
+| P1 | [Global-to-Local Visual Attention Correction](https://aclanthology.org/2026.emnlp-main.2272/) · 主会 | 尾部幻觉、位置和长度混淆、局部选择与 Recall |
+| P2 | [Target-Binding](https://aclanthology.org/2026.emnlp-main.691/) · 主会 | 多图错绑的视觉源标注、图像顺序与距离控制 |
+| P1 | [SAFE](https://aclanthology.org/2026.findings-emnlp.140/) · Findings | 同前缀 real/vision-ablated 对照、视觉干预和分布外效应 |
+| P2 | [OViP](https://aclanthology.org/2026.findings-emnlp.674/) · Findings | diffusion 负图的单对象操控、训练预算和覆盖保留 |
+
+## ACM MM 2026 正式卷候选
+
+| 优先级 | 来源 | 下一步证据闸门 |
+|---|---|---|
+| P1 | [Beyond Language Priors](https://doi.org/10.1145/3767308.3836058) | 区分视觉误读、对象缺失和语言先验；对照实际视觉依赖和生成覆盖 |
+| P2 | [Beyond the Logits / LAVIG](https://doi.org/10.1145/3767308.3835945) | 层级选择、覆盖与同预算开销，正文和补充待核验 |
+
+## 补充预印本候选
+
+| 优先级 | 来源 | 下一步证据闸门 |
+|---|---|---|
+| P1 | [Say Less, Hallucinate Less?](https://arxiv.org/abs/2611.23179) | 对照早 EOS、生成长度和对象覆盖；预印本评估代码尚待公开 |
+| P2 | [FlashAttention with Statistics](https://arxiv.org/abs/2610.21483) | 相邻 LLM 系统工作；核对 VLM 多模态注意统计、短上下文开销与 kernel 适配 |

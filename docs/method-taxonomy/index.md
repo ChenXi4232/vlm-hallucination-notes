@@ -34,6 +34,8 @@ flowchart TD
 
 | 论文 | 主要位置 | 诊断 / 干预 |
 |---|---|---|
+| [VisER](../papers/viser.md) | object token states、visual logits 与前缀词嵌入 | 视觉证据诊断与 post-hoc 对象检测 |
+| [LEAD](../papers/lead-entropy-aware-decoding.md) | next-token 熵与输入 embedding | 门控潜在/离散解码；静态视觉特殊词锚点 |
 | [Reallocating Attention](../papers/reallocating-attention.md) | head output，输出投影前 | 层深×视觉mass分型并增强；不直接改attention概率 |
 | [HEAL](../papers/heal-synergy-heads.md) | head output + visual/text value vectors | 四状态反事实贡献分解；动态 synergy-head 模态平衡校准 |
 | [PatchGate](../papers/patchgate.md) | late-layer patch states + next-token logits | prompt-free 对象 inventory；ESI 召回遗漏、EDE 抑制弱证据提及 |

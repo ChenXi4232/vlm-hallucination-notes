@@ -8,10 +8,10 @@ description: 由 Deep Paper Note front matter 自动生成
 此页由 `scripts/build_indexes.py` 根据 Deep Paper Note front matter 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。
 
 <div class="stat-grid">
-<div class="stat-card"><strong>44</strong><span>Deep Paper Notes</span></div>
+<div class="stat-card"><strong>46</strong><span>Deep Paper Notes</span></div>
 <div class="stat-card"><strong>6</strong><span>研究方向</span></div>
 <div class="stat-card"><strong>10</strong><span>来源类型</span></div>
-<div class="stat-card"><strong>44</strong><span>已精读</span></div>
+<div class="stat-card"><strong>46</strong><span>已精读</span></div>
 </div>
 
 <div class="paper-index-toolbar" data-paper-index-toolbar>
@@ -22,13 +22,15 @@ description: 由 Deep Paper Note front matter 自动生成
     <option value="year-desc">论文年份：新到旧</option>
     <option value="title-asc">标题：A–Z</option>
   </select>
-  <span class="paper-sort-status" aria-live="polite">共 44 篇</span>
+  <span class="paper-sort-status" aria-live="polite">共 46 篇</span>
 </div>
 
 <div id="paper-index-table" markdown="1">
 
 | 论文 | 收录时间 | 年份 / 来源 | 研究方向 | 资源类型 | 状态 |
 |---|---:|---:|---|---|---|
+| [Thinking in Uncertainty: Mitigating Hallucinations in MLRMs with Latent Entropy-Aware Decoding](lead-entropy-aware-decoding.md) | 2026-11-19 | 2026 · CVPR | Token / Logit | 机制与方法论文 | 已精读 |
+| [VisER: Visual Evidence and Reliance for Object Hallucination Detection in LVLMs](viser.md) | 2026-11-19 | 2026 · EMNLP | Token / Logit | 检测论文 | 已精读 |
 | [Reallocating Attention Across Layers to Reduce Multimodal Hallucination](reallocating-attention.md) | 2026-10-17 | 2026 · CVPR | Attention Head / Path | 机制与方法论文 | 已精读 |
 | [AdaIAT: Adaptively Increasing Attention to Generated Text to Alleviate Hallucinations in LVLM](adaiat.md) | 2026-10-10 | 2026 · CVPR | Attention Head / Path | 机制与方法论文 | 已精读 |
 | [HulluEdit: Single-Pass Evidence-Consistent Subspace Editing for Mitigating Hallucinations in Large Vision-Language Models](hulluedit.md) | 2026-10-10 | 2026 · CVPR | Representation / Activation | 机制与方法论文 | 已精读 |
@@ -46,7 +48,7 @@ description: 由 Deep Paper Note front matter 自动生成
 | [Mitigating Hallucinations in Large Vision-Language Models via DPO: On-Policy Data Hold the Key](opa-dpo.md) | 2026-08-24 | 2025 · CVPR | Training / Alignment | 方法论文 | 已精读 |
 | [Mitigating Object Hallucination in MLLMs via Data-Augmented Phrase-Level Alignment](halva.md) | 2026-08-24 | 2025 · ICLR | Training / Alignment | 方法论文 | 已精读 |
 | [THRONE: An Object-based Hallucination Benchmark for the Free-form Generations of Large Vision-Language Models](throne.md) | 2026-08-24 | 2024 · CVPR | Evaluation / Benchmark | Benchmark 论文 | 已精读 |
-| [Dual-Pathway Circuits of Object Hallucination in Vision-Language Models](dual-pathway-circuits.md) | 2026-08-21 | 2026 · arXiv | Attention Head / Path | 机制论文 | 已精读 |
+| [Dual-Pathway Circuits of Object Hallucination in Vision-Language Models](dual-pathway-circuits.md) | 2026-08-21 | 2026 · NeurIPS | Attention Head / Path | 机制论文 | 已精读 |
 | [Mechanisms of Prompt-Induced Hallucination in Vision–Language Models](prompt-induced-hallucination.md) | 2026-08-21 | 2026 · ACL | Attention Head / Path | 机制论文 | 已精读 |
 | [PAS: Prelim Attention Score for Detecting Object Hallucinations in Large Vision–Language Models](pas-prelim-attention-score.md) | 2026-08-21 | 2026 · CVPR | Attention Head / Path | 检测论文 | 已精读 |
 | [VES-RFT: Rewarding Visual Evidence Sensitivity to Mitigate Hallucinations in Large Vision–Language Models](ves-rft.md) | 2026-08-21 | 2026 · CVPR | Representation / Activation | 方法论文 | 已精读 |
@@ -122,6 +124,8 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Token / Logit
 
+- [Thinking in Uncertainty: Mitigating Hallucinations in MLRMs with Latent Entropy-Aware Decoding](lead-entropy-aware-decoding.md)
+- [VisER: Visual Evidence and Reliance for Object Hallucination Detection in LVLMs](viser.md)
 - [First Logit Boosting: Visual Grounding Method to Mitigate Object Hallucination in Large Vision-Language Models](first-logit-boosting.md)
 - [PatchGate: Narrowing the Verbalization Gap with Intrinsic Object Inventories in Frozen Vision-Language Models](patchgate.md)
 - [DiVE: Decoupling Intra-layer Visual Evidence for Mitigating Hallucinations in Large Vision-Language Models](dive.md)
@@ -145,23 +149,23 @@ description: 由 Deep Paper Note front matter 自动生成
 ### 资源类型
 
 - **方法论文**：32
-- **机制与方法论文**：5
+- **机制与方法论文**：6
+- **检测论文**：2
 - **机制论文**：2
 - **检测与方法论文**：1
 - **Benchmark 论文**：1
-- **检测论文**：1
 - **Benchmark 与方法论文**：1
 - **机制与评测论文**：1
 
 ### 论文来源
 
-- **CVPR**：15
-- **arXiv**：13
+- **CVPR**：16
+- **arXiv**：12
 - **ACL**：5
-- **NeurIPS**：2
+- **NeurIPS**：3
+- **EMNLP**：2
 - **ICML**：2
 - **ICLR**：2
 - **NAACL**：2
-- **EMNLP**：1
 - **CVPR Findings**：1
 - **ACM MM**：1
