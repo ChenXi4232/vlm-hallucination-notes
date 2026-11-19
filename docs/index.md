@@ -20,10 +20,10 @@ hide:
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card"><strong>44</strong><span>Deep Paper Notes</span></div>
+  <div class="stat-card"><strong>46</strong><span>Deep Paper Notes</span></div>
   <div class="stat-card"><strong>5</strong><span>核心研究方向</span></div>
   <div class="stat-card"><strong>4</strong><span>干预层级</span></div>
-  <div class="stat-card"><strong>44 / 44</strong><span>官方图/缺图说明 + 实验登记</span></div>
+  <div class="stat-card"><strong>46 / 46</strong><span>官方图/缺图说明 + 实验登记</span></div>
 </div>
 
 ## 研究入口
@@ -67,6 +67,10 @@ flowchart LR
     视觉依赖不等于事实正确，attention weight 也不等于因果贡献。本知识库要求每篇论文同时记录：核心假设、可执行实现、benchmark/metric、baseline 价值、反事实启发与审稿风险。
 
 ## 最近接入
+
+- [LEAD](papers/lead-entropy-aware-decoding.md)：CVPR 2026 熵门控混合嵌入解码；视觉锚点、代码实现与生成预算需分别比较。
+- [VisER](papers/viser.md)：EMNLP 2026 事后对象级检测；图像可读性、语境支持和正类口径应分别检查。
+- [2026-11-19 来源核验](reading-notes/research-atlas-20261119.md)：EMNLP 正式卷扫描，补交 Beyond the Global Scores 复现审计，更新 Dual-Pathway v2。
 
 - [Reallocating Attention](papers/reallocating-attention.md)：CVPR 2026长推理head-output缩放；任务收益与功能命名、线性理论、投影后归因必须分开解读。
 - [2026-10-17来源核验](reading-notes/research-atlas-20261017.md)：补齐CVPR候选，并登记NeurIPS新官方论文页批次；摘要候选尚非精读结论。

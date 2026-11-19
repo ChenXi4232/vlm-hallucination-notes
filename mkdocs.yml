@@ -50,6 +50,8 @@ nav:
   - Paper Notes:
       - 总索引: papers/index.md
       - Token / Logit 反事实与解码:
+          - LEAD: papers/lead-entropy-aware-decoding.md
+          - VisER: papers/viser.md
           - First Logit Boosting: papers/first-logit-boosting.md
           - PatchGate: papers/patchgate.md
           - DiVE: papers/dive.md
@@ -139,6 +141,7 @@ nav:
       - 本轮来源核验: reading-notes/research-atlas-20261003.md
       - 2026-10-10 来源核验: reading-notes/research-atlas-20261010.md
       - 2026-10-17 来源核验: reading-notes/research-atlas-20261017.md
+      - 2026-11-19 来源核验: reading-notes/research-atlas-20261119.md
       - 内容工作流: about/workflow.md
       - 公开 / 私有边界: about/publishing-boundary.md
       - 网站设计: about/site-design.md

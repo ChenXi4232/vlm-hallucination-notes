@@ -31,6 +31,8 @@ tags:
 
 ## 关键阅读
 
+- [VisER](../papers/viser.md)：grounded 为正类时的 AUPR 与幻觉为正时的 AUPR 对应不同任务；同时记录类别基率、对象位置和每图依赖。
+
 - [PatchGate](../papers/patchgate.md)：把 Cover 与 CHAIR 设为互补主轴，并展示 full 方法可同时改善两者、却使 sentence-level Hal 退化，提醒指标聚合粒度会改变结论。
 - [HEAL](../papers/heal-synergy-heads.md)：同时报告 CHAIRs/CHAIRi、Recall、Length 与系统吞吐；尤其提示显存增量很小并不等价于低推理成本，墙钟时间约为原模型 6.22×。
 - [PAS](../papers/pas-prelim-attention-score.md)：对象 token 级检测应报告 AUROC/AUPRC、阈值校准和解码迁移，且需区分“部署 reference-free”与“评测有 annotation”。
