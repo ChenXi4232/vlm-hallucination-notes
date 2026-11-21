@@ -10,7 +10,7 @@ title: 研究方向总览
 | [Attention Head / Path](attention-heads.md) | 哪些 head/path 偏离 faithful role 或写入错误证据？ | Role-Break、MAI、VHD/VHR、AllPath |
 | [Representation / Activation](representation.md) | 错误语义在哪一层进入 residual stream，能否逐样本编辑？ | Beyond Global Editing、VISOR |
 | [Long-form / Drift](long-form.md) | 视觉依赖是否随生成长度持续衰减？ | Curing Semantic Drift、OPERA |
-| [Evaluation / Recall](evaluation.md) | 幻觉下降是否只是保守化或内容删除？ | CHAIR、POPE、coverage/recall 审计 |
+| [Evaluation / Recall](evaluation.md) | 幻觉下降是否只是保守化或内容删除？ | CHAIR、POPE、coverage/recall 审计、[MIOH 多图分层](../papers/mioh.md) |
 
 ## 方向选择原则
 

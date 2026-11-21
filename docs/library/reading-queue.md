@@ -50,9 +50,11 @@ tags:
 | P1 | [CORAL v2](https://arxiv.org/abs/2609.38979v2) | 核对FDR定理假设、视觉扰动对称性、对象依赖及官方录用证据；作者称NeurIPS2026录用 |
 | P2 | [GHOST-Q](https://arxiv.org/abs/2609.29999) | 预印本；待完整读取跨精度配对统计与生成预算审计 |
 
-### 2026-10-17新增CVPR候选
+### CVPR 主会历史补齐
 
-- P2：[MIOH](https://openaccess.thecvf.com/content/CVPR2026/html/Min_Fine-Grained_Multi_Image_Object_Hallucination_Benchmark_CVPR_2026_paper.html)。官方摘要已核对；需核对多图构造、四任务与三种推理模式、评测器和许可。
+- [MIOH](../papers/mioh.md) 已完成正文、补充与版本核验。完整题库、代码和许可仍待核。
+- P1：[OSI-Bench](https://openaccess.thecvf.com/content/CVPR2026/html/Wu_From_Indoor_to_Open_World_Revealing_the_Spatial_Reasoning_Gap_CVPR_2026_paper.html)。有[作者项目](https://mingrui-wu.github.io/osi-bench/)，待查盲测、合成异常场景、度量真值与领域偏移。
+- P2：[VisRes Bench](https://openaccess.thecvf.com/content/CVPR2026/html/Tortei_VisRes_Bench_On_Evaluating_the_Visual_Reasoning_Capabilities_of_VLMs_CVPR_2026_paper.html)。核对图谜及自然图像的推理设置、文本线索残留和数据许可。
 
 ## NeurIPS 2026官方论文页候选（未精读）
 
@@ -112,3 +114,4 @@ PMLR 306于2026-09-29公开。本轮完成全卷标题筛选，并对19篇直接
 |---|---|---|
 | P1 | [Say Less, Hallucinate Less?](https://arxiv.org/abs/2611.23179) | 对照早 EOS、生成长度和对象覆盖；预印本评估代码尚待公开 |
 | P2 | [FlashAttention with Statistics](https://arxiv.org/abs/2610.21483) | 相邻 LLM 系统工作；核对 VLM 多模态注意统计、短上下文开销与 kernel 适配 |
+| P1 | [Contrast Where It Matters](https://arxiv.org/abs/2611.25524v1) | 预印本。审计动态视觉证据选区、全局对照、分布偏移和 Recall，与已有对比解码工作逐项区分 |

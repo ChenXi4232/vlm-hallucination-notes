@@ -18,6 +18,7 @@ tags:
 | ROHE | 原图/对象移除图成对 Yes/No QA | 相关场景中的 object absence | positive/negative 分项、LaMa 伪影、paired $acc^+$ |
 | CountBench-PIH | 正确计数图 + $N+k$ 冲突 prompt | prompt-induced counting hallucination | baseline 计数、offset、无数字回答率 |
 | AMBER | 生成 + 判别 | object/attribute/relation | 分类别结果与 coverage |
+| [MIOH](../papers/mioh.md) | 多图多选问答 | 对象存在、计数、属性与位置 | 空选项率、图号错绑、同图逐张基线和配对区间 |
 | MMHal-Bench | 开放回答 | 多类型幻觉 | judge 模型与提示敏感性 |
 | SHR / HalluBench | sentence/word | 细粒度幻觉 | 标注一致性与 evaluator 误差 |
 

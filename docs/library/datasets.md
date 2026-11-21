@@ -20,9 +20,10 @@ tags:
 | Visual CounterFact | 颜色/大小的 pixel–prior 反事实冲突与 steering | GPT-4o 筛选、SAM2 编辑伪影、仅两类属性 |
 | CountBench-PIH | 对 baseline 计数正确样本施加 $N+k$ prompt 冲突 | 491 图规模小、任务定义依赖提示语义 |
 | ROHE | MSCOCO 2017 对象移除后的成对存在性评测 | LaMa 伪影、人工筛选偏差、仅 object existence |
+| COCO-ReM / PACO / SVG | [MIOH](../papers/mioh.md) 的存在/计数、属性、空间关系标注源 | 关注重复图、遗漏关系和源数据差异。完整派生题库与许可待查 |
 | SVO-Probes / MIT States / Facial Expressions | NOTICE 的 Semantic Image Pair 机制评测 | 自然配对背景差异与二选一任务简化 |
 
-当前目录覆盖 27 篇 Notes 中反复出现的核心数据入口；新增论文若使用新数据集，应先补到这里，再在 benchmark 页补评测协议。
+源数据许可与派生题库分发许可应分别核对。
 
 ## 建议新增的数据视图
 

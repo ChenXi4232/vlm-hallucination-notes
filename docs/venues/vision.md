@@ -7,6 +7,7 @@ tags:
 
 # CVPR / ICCV / ECCV
 
+- [MIOH](../papers/mioh.md) — CVPR 2026 主会，组织多图对象、计数、属性和关系评测，核对同图逐张作答与联合输入。
 - [LEAD](../papers/lead-entropy-aware-decoding.md) — CVPR 2026 主会，用 token 熵门控潜在嵌入解码；重点核对等生成预算和代码中的锚点实现。
 - [Reallocating Attention](../papers/reallocating-attention.md) — CVPR 2026主会，长推理模型中的head输出增益；理论与归因位置需额外审计。
 - [AdaIAT](../papers/adaiat.md) — CVPR 2026，以离线对象级注意统计门控并增强已生成文本注意。
@@ -27,6 +28,7 @@ tags:
 
 | 问题 → 阅读顺序 | 方法族 | 已有证据 | 必查局限 | 可复现基线 / 关系依据 |
 |---|---|---|---|---|
+| 同样的对象信息能否跨图正确归属 → [MIOH](../papers/mioh.md) → [THRONE](../papers/throne.md) | 跨图选择题 / 开放描述 | MIOH Table 2 分层，Figure 5 同图逐张对照 | 逐图改变调用数和提示，MCQ 不能替代自由生成覆盖 | MIOH §2 引用 THRONE，作为不同评测单位比较。可先复用逐图 OR |
 | 高熵阶段如何改变下一步输入 → [LEAD](../papers/lead-entropy-aware-decoding.md) | token 熵门控与 embedding 混合 | Table 1 锚点强度、Table 2 任务结果 | 图像特殊词是静态词向量；公开实现与论文锚点、门限及停止条件存在差异 | 与 Reallocating 共享长推理幻觉问题，干预位置不同 |
 | 层深分工是否可靠 → [AdaIAT](../papers/adaiat.md) → [Reallocating Attention](../papers/reallocating-attention.md) | 历史attention / head output增益 | Reallocating Table 1任务收益、Table 2非加性消融、Supplement Table 2时延 | 视觉mass不是功能真值；投影后reshape不是原始head；无caption Recall证据 | 本站按相同控制问题组织，不宣称互引或算子相同 |
 | 长输出对象错误 → [M3ID](../papers/m3id.md) → [FLB](../papers/first-logit-boosting.md) | 对比解码 / 首步logit回注 | FLB Tables 1–3同报幻觉、recall与长度 | The-only、β-only、greedy掉覆盖 | FLB直接比较M3ID；Table 1–2 |
@@ -37,4 +39,4 @@ tags:
 | 正交子空间能否避免误伤 → [Beyond Global Editing](../papers/beyond-global-editing.md) → [HulluEdit](../papers/hulluedit.md) | 逐样本低秩投影 / 在线逐token收缩 | HulluEdit Table 4组件消融、Supplement Table 9 Recall | 代数保护不等于语义保护；论文—代码gate差异 | 本站按低秩编辑问题组织；不宣称机制等价 |
 | 偏好优化数据从哪里来 → [OPA-DPO](../papers/opa-dpo.md) | Training / Alignment | Note登记on-policy偏好数据和比较 | 数据来源、模型policy匹配和recall | 与无需参数训练方法不直接比成本 |
 
-PTI与FLB共享“早期证据如何影响后续输出”的问题，但本轮未发现直接互引，也没有证据证明二者机制等价。AdaIAT与HulluEdit分别增加prefix注意和在线子空间两条路线；阅读时先查主表、失败条件与代码边界。最新来源状态、复现审计及 CVPR 2027 指南变更见[2026-11-19 核验](../reading-notes/research-atlas-20261119.md)。
+PTI与FLB共享“早期证据如何影响后续输出”的问题，但本轮未发现直接互引，也没有证据证明二者机制等价。AdaIAT与HulluEdit分别增加prefix注意和在线子空间两条路线；阅读时先查主表、失败条件与代码边界。最新论文集、来源与 CVPR 2027 指南核对见 [2026-11-21 核验](../reading-notes/research-atlas-20261121.md)。
