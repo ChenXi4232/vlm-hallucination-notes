@@ -46,6 +46,10 @@ flowchart TD
 | [AdaIAT](../papers/adaiat.md) | per-head generated-text attention | 离线对象级真/幻觉校准；生成时按层门控增强历史文本attention |
 | [HulluEdit](../papers/hulluedit.md) | top-layer residual hidden state | 当前视觉低秩子空间 + 正交anti-prior；逐token收缩其余分量 |
 
+## 多图评测
+
+- [MIOH](../papers/mioh.md) 属既有 Evaluation / Benchmark 方向。对象存在、计数、属性与位置是测量维度，跨图来源绑定是评测条件。
+
 ## 既有分类内的补齐
 
 | 论文 | 既有方法族 | 观察/干预 | 证据边界 |

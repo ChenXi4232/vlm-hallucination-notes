@@ -22,3 +22,4 @@ description: 可公开、已整理的论文阅读记录
 - [2026-10-10：CVPR精读与ICML正式卷扫描](research-atlas-20261010.md)
 - [2026-10-17：CVPR head-output审计与NeurIPS官方论文页扫描](research-atlas-20261017.md)
 - [2026-11-19：CVPR 精读、EMNLP 批次与复现审计](research-atlas-20261119.md)
+- [2026-11-21：MIOH 多图评测与 CVPR 补齐](research-atlas-20261121.md)

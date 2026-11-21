@@ -8,10 +8,10 @@ description: 由 Deep Paper Note front matter 自动生成
 此页由 `scripts/build_indexes.py` 根据 Deep Paper Note front matter 自动生成。分类是多维元数据，不要求一篇论文只能属于一个文件夹。
 
 <div class="stat-grid">
-<div class="stat-card"><strong>46</strong><span>Deep Paper Notes</span></div>
+<div class="stat-card"><strong>47</strong><span>Deep Paper Notes</span></div>
 <div class="stat-card"><strong>6</strong><span>研究方向</span></div>
 <div class="stat-card"><strong>10</strong><span>来源类型</span></div>
-<div class="stat-card"><strong>46</strong><span>已精读</span></div>
+<div class="stat-card"><strong>47</strong><span>已精读</span></div>
 </div>
 
 <div class="paper-index-toolbar" data-paper-index-toolbar>
@@ -22,13 +22,14 @@ description: 由 Deep Paper Note front matter 自动生成
     <option value="year-desc">论文年份：新到旧</option>
     <option value="title-asc">标题：A–Z</option>
   </select>
-  <span class="paper-sort-status" aria-live="polite">共 46 篇</span>
+  <span class="paper-sort-status" aria-live="polite">共 47 篇</span>
 </div>
 
 <div id="paper-index-table" markdown="1">
 
 | 论文 | 收录时间 | 年份 / 来源 | 研究方向 | 资源类型 | 状态 |
 |---|---:|---:|---|---|---|
+| [Fine-Grained Multi-Image Object Hallucination Benchmark](mioh.md) | 2026-11-21 | 2026 · CVPR | Evaluation / Benchmark | Benchmark 论文 | 已精读 |
 | [Thinking in Uncertainty: Mitigating Hallucinations in MLRMs with Latent Entropy-Aware Decoding](lead-entropy-aware-decoding.md) | 2026-11-19 | 2026 · CVPR | Token / Logit | 机制与方法论文 | 已精读 |
 | [VisER: Visual Evidence and Reliance for Object Hallucination Detection in LVLMs](viser.md) | 2026-11-19 | 2026 · EMNLP | Token / Logit | 检测论文 | 已精读 |
 | [Reallocating Attention Across Layers to Reduce Multimodal Hallucination](reallocating-attention.md) | 2026-10-17 | 2026 · CVPR | Attention Head / Path | 机制与方法论文 | 已精读 |
@@ -102,6 +103,7 @@ description: 由 Deep Paper Note front matter 自动生成
 
 ### Evaluation / Benchmark
 
+- [Fine-Grained Multi-Image Object Hallucination Benchmark](mioh.md)
 - [THRONE: An Object-based Hallucination Benchmark for the Free-form Generations of Large Vision-Language Models](throne.md)
 - [Evaluating and Mitigating Object Hallucination in Large Vision-Language Models: Can They Still See Removed Objects?](removed-object-hallucination-odpo.md)
 
@@ -150,16 +152,16 @@ description: 由 Deep Paper Note front matter 自动生成
 
 - **方法论文**：32
 - **机制与方法论文**：6
+- **Benchmark 论文**：2
 - **检测论文**：2
 - **机制论文**：2
 - **检测与方法论文**：1
-- **Benchmark 论文**：1
 - **Benchmark 与方法论文**：1
 - **机制与评测论文**：1
 
 ### 论文来源
 
-- **CVPR**：16
+- **CVPR**：17
 - **arXiv**：12
 - **ACL**：5
 - **NeurIPS**：3

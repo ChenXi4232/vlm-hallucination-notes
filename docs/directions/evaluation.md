@@ -31,6 +31,7 @@ tags:
 
 ## 关键阅读
 
+- [MIOH](../papers/mioh.md)：同图逐张作答再汇总的行为对照。单列对象错认、关系错判、计数错误与图号错绑，并核算联合与逐图 token 和调用预算。
 - [VisER](../papers/viser.md)：grounded 为正类时的 AUPR 与幻觉为正时的 AUPR 对应不同任务；同时记录类别基率、对象位置和每图依赖。
 
 - [PatchGate](../papers/patchgate.md)：把 Cover 与 CHAIR 设为互补主轴，并展示 full 方法可同时改善两者、却使 sentence-level Hal 退化，提醒指标聚合粒度会改变结论。

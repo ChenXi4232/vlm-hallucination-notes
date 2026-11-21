@@ -6,7 +6,7 @@ tags:
 
 # 方法论文
 
-本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 46 篇，全部带有可追溯的官方方法图或明确来源边界的等价抽象/缺图说明与实验登记。
+本页是已通过 Deep Paper Note 校验的论文目录；方法细节、主结果、消融与局限只在对应论文页维护。当前共 47 篇，全部带有可追溯的官方方法图或明确来源边界的等价抽象/缺图说明与实验登记。
 
 ## Logit / decoding
 
@@ -56,8 +56,9 @@ tags:
 - [HIRE](../papers/hire-intermediate-representation-edit.md) — learned Editor、token Router 与可调表示编辑。
 - [DMAS](../papers/dynamic-multimodal-activation-steering.md) — 语义动态 truthfulness vector 与逐图 visual vector。
 
-## Benchmark-guided training
+## Benchmark 与 Benchmark-guided training
 
+- [MIOH](../papers/mioh.md) — 多图对象分层评测，Figure 5 给同图联合与逐图汇总对照。
 - [THRONE](../papers/throne.md) — 面向自由生成、类别平衡的对象级 hallucination benchmark。
 - [HALVA](../papers/halva.md) — 对象短语级正负对齐与分布保持训练。
 - [OPA-DPO](../papers/opa-dpo.md) — 当前策略采样、最小纠错与 image-focused DPO。

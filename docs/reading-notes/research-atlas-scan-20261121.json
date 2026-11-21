@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-21",
+  "base_main_commit": "0051d01d20aef9e94aa0789861944145162fe3ba",
+  "branch": "automation/research-atlas-20261121",
+  "last_successful_cutoff": "2026-11-19",
+  "last_successful_cutoff_evidence": {
+    "pr": 18,
+    "merge_sha": "0051d01d20aef9e94aa0789861944145162fe3ba",
+    "pages_run": 44458838066,
+    "conclusion": "success",
+    "public_url": "https://chenxi4232.github.io/vlm-hallucination-notes/papers/lead-entropy-aware-decoding/",
+    "http_status": 200
+  },
+  "proposed_cutoff": "2026-11-21",
+  "publication_status": "pending_pr_merge_deployment_public_http",
+  "publication_resolution": "Resolve PR on this branch, merge commit, matching successful Pages run and public MIOH title before promoting the proposed cutoff. Existing unresolved venue cursors are independent and retained.",
+  "scan_mode": "CVPR historical backfill plus targeted delta; no newly verified full proceedings release",
+  "cvpr_main_title_filter": "hallucin|visual faithfulness|visual counterfact|visual (grounding|evidence) in |spatial reasoning gap|visres bench",
+  "release_coverage_note": "First observation is a ledger date, not the actual publication date. Empty cursor means status check only. Previous unmodified queues remain in the prior ledger.",
+  "scans": [
+    {
+      "venue": "CVPR",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://openaccess.thecvf.com/CVPR2026?day=all",
+      "official_release_date": "2026-05-23",
+      "first_observed_public_in_ledger": "2026-10-03",
+      "last_checked": "2026-11-21",
+      "status": "published_keyword_backfill",
+      "scan_cursor": {
+        "unique_titles": 4042,
+        "keyword_hits": 42,
+        "hallucin_title_hits": 39,
+        "coverage": "all title links for fixed regex only; selected official abstracts; MIOH full text and supplement"
+      },
+      "release_date_evidence": "https://openaccess.thecvf.com/menu"
+    },
+    {
+      "venue": "CVPR",
+      "year": 2025,
+      "track": "main",
+      "official_url": "https://openaccess.thecvf.com/CVPR2025?day=all",
+      "official_release_date": "2025-06-03",
+      "first_observed_public_in_ledger": "2026-10-03",
+      "last_checked": "2026-11-21",
+      "status": "published_keyword_backfill",
+      "scan_cursor": {
+        "unique_titles": 2871,
+        "keyword_hits": 19,
+        "hallucin_title_hits": 18,
+        "coverage": "all title links for fixed regex only; selected official abstracts; MIOH full text and supplement"
+      },
+      "release_date_evidence": "https://openaccess.thecvf.com/menu"
+    },
+    {
+      "venue": "CVPR",
+      "year": 2024,
+      "track": "main",
+      "official_url": "https://openaccess.thecvf.com/CVPR2024?day=all",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": "2026-10-03",
+      "last_checked": "2026-11-21",
+      "status": "published_keyword_backfill",
+      "scan_cursor": {
+        "unique_titles": 2716,
+        "keyword_hits": 10,
+        "hallucin_title_hits": 8,
+        "coverage": "all title links for fixed regex only; selected official abstracts; MIOH full text and supplement"
+      }
+    },
+    {
+      "venue": "CVPR",
+      "year": 2026,
+      "track": "workshop",
+      "official_url": "https://openaccess.thecvf.com/CVPR2026_workshops/menu",
+      "official_release_date": "2026-05-26",
+      "first_observed_public_in_ledger": null,
+      "last_checked": "2026-11-21",
+      "status": "publisher_release_record_verified",
+      "scan_cursor": null,
+      "release_date_evidence": "https://openaccess.thecvf.com/menu"
+    },
+    {
+      "venue": "CVPR",
+      "year": 2026,
+      "track": "findings",
+      "official_url": "https://openaccess.thecvf.com/CVPR2026_findings",
+      "official_release_date": "2026-05-27",
+      "first_observed_public_in_ledger": null,
+      "last_checked": "2026-11-21",
+      "status": "publisher_release_record_verified",
+      "scan_cursor": null,
+      "release_date_evidence": "https://openaccess.thecvf.com/menu"
+    },
+    {
+      "venue": "CVPR",
+      "year": 2027,
+      "track": "main",
+      "official_url": "https://cvpr.thecvf.com/Conferences/2027/Dates",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": null,
+      "last_checked": "2026-11-21",
+      "status": "no_public_proceedings_verified",
+      "scan_cursor": null
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2026,
+      "track": "conference_events",
+      "official_url": "https://neurips.cc/Downloads/2026",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": "2026-10-17",
+      "last_checked": "2026-11-21",
+      "status": "events_public_formal_volume_not_listed",
+      "scan_cursor": {
+        "unique_events": 9276,
+        "coverage": "count only, not event-level diff"
+      }
+    },
+    {
+      "venue": "ICML",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://proceedings.mlr.press/v306/",
+      "official_release_date": "2026-09-29",
+      "first_observed_public_in_ledger": "2026-10-10",
+      "last_checked": "2026-11-21",
+      "status": "published_no_rescan",
+      "scan_cursor": {
+        "historical_titles": 6552,
+        "historical_direct_abstracts": 19
+      }
+    },
+    {
+      "venue": "ACL",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://aclanthology.org/events/acl-2026/",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": "2026-10-17",
+      "last_checked": "2026-11-21",
+      "status": "published_existing_index",
+      "scan_cursor": null
+    },
+    {
+      "venue": "EMNLP",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://aclanthology.org/volumes/2026.emnlp-main/",
+      "official_release_date": "2026-10-24",
+      "first_observed_public_in_ledger": "2026-11-19",
+      "last_checked": "2026-11-21",
+      "status": "unchanged_last_id_and_count",
+      "scan_cursor": {
+        "papers": 2704,
+        "last_id": "2026.emnlp-main.2704"
+      },
+      "release_date_evidence": "Publisher production deployment date from previous ledger, exact public propagation time unknown"
+    },
+    {
+      "venue": "EMNLP",
+      "year": 2026,
+      "track": "findings",
+      "official_url": "https://aclanthology.org/volumes/2026.findings-emnlp/",
+      "official_release_date": "2026-10-24",
+      "first_observed_public_in_ledger": "2026-11-19",
+      "last_checked": "2026-11-21",
+      "status": "unchanged_last_id_and_count",
+      "scan_cursor": {
+        "papers": 2478,
+        "last_id": "2026.findings-emnlp.2478"
+      },
+      "release_date_evidence": "Publisher production deployment date from previous ledger, exact public propagation time unknown"
+    },
+    {
+      "venue": "ACM MM",
+      "year": 2026,
+      "track": "proceedings",
+      "official_url": "https://api.crossref.org/works/10.1145/3767308",
+      "official_release_date": "2026-11-09",
+      "first_observed_public_in_ledger": "2026-11-19",
+      "last_checked": "2026-11-21",
+      "status": "publisher_online_date_rechecked",
+      "scan_cursor": {
+        "historical_dois": 1857,
+        "abstract_coverage": "incomplete"
+      }
+    },
+    {
+      "venue": "ICCV",
+      "year": 2025,
+      "track": "main",
+      "official_url": "https://openaccess.thecvf.com/ICCV2025",
+      "official_release_date": "2025-10-14",
+      "first_observed_public_in_ledger": "2026-10-17",
+      "last_checked": "2026-11-21",
+      "status": "published_existing_index",
+      "scan_cursor": null
+    },
+    {
+      "venue": "ICCV",
+      "year": 2027,
+      "track": "main",
+      "official_url": "https://iccv.thecvf.com/Conferences/2027",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": null,
+      "last_checked": "2026-11-21",
+      "status": "meeting_page_no_proceedings_verified",
+      "scan_cursor": null
+    },
+    {
+      "venue": "AAAI",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://aaai.org/proceeding/aaai-40-2026/",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": "2026-10-17",
+      "last_checked": "2026-11-21",
+      "status": "issue_list_public",
+      "scan_cursor": null
+    },
+    {
+      "venue": "AAAI",
+      "year": 2027,
+      "track": "main",
+      "official_url": "https://aaai.org/conference/aaai/aaai-27/submission-instructions/",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": null,
+      "last_checked": "2026-11-21",
+      "status": "decisions_scheduled_2026-11-30_aoe",
+      "scan_cursor": null
+    },
+    {
+      "venue": "ICLR",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://iclr.cc/virtual/2026/papers.html",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": "2026-11-19",
+      "last_checked": "2026-11-21",
+      "status": "official_paper_index_public",
+      "scan_cursor": null
+    },
+    {
+      "venue": "ICLR",
+      "year": 2027,
+      "track": "main",
+      "official_url": "https://openreview.net/group?id=ICLR.cc/2027/Conference",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": null,
+      "last_checked": "2026-11-21",
+      "status": "review_stage_no_accepted_batch_verified",
+      "scan_cursor": null
+    },
+    {
+      "venue": "IJCAI",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://ijcai.org/proceedings/2026/",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": "2026-11-19",
+      "last_checked": "2026-11-21",
+      "status": "published_existing_index",
+      "scan_cursor": null
+    },
+    {
+      "venue": "ECCV",
+      "year": 2026,
+      "track": "main",
+      "official_url": "https://eccv.ecva.net/Conferences/2026",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": "2026-11-19",
+      "last_checked": "2026-11-21",
+      "status": "published_previous_coverage_retained",
+      "scan_cursor": null
+    },
+    {
+      "venue": "IJCV",
+      "year": 2026,
+      "track": "online_article",
+      "official_url": "https://link.springer.com/article/10.1007/s11263-026-03118-1",
+      "official_release_date": "2026-11-10",
+      "first_observed_public_in_ledger": "2026-11-21",
+      "last_checked": "2026-11-21",
+      "status": "article_date_verified_not_exhaustive",
+      "scan_cursor": null
+    },
+    {
+      "venue": "JMLR",
+      "year": 2026,
+      "track": "online",
+      "official_url": "https://jmlr.org/papers/v27/",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": "2026-11-19",
+      "last_checked": "2026-11-21",
+      "status": "volume_accessible_article_cursor_unchanged",
+      "scan_cursor": null
+    },
+    {
+      "venue": "TPAMI",
+      "year": 2026,
+      "track": "early_access",
+      "official_url": "https://www.computer.org/csdl/journal/tp/early-access",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": null,
+      "last_checked": "2026-11-21",
+      "status": "list_coverage_unverified",
+      "scan_cursor": null
+    },
+    {
+      "venue": "Artificial Intelligence",
+      "year": 2026,
+      "track": "articles_in_press",
+      "official_url": "https://www.sciencedirect.com/journal/artificial-intelligence/articles-in-press",
+      "official_release_date": null,
+      "first_observed_public_in_ledger": null,
+      "last_checked": "2026-11-21",
+      "status": "access_gap",
+      "scan_cursor": null
+    }
+  ],
+  "candidates": [
+    {
+      "title": "Fine-Grained Multi-Image Object Hallucination Benchmark",
+      "key": "arXiv:2608.30653",
+      "venue": "CVPR 2026 main",
+      "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Min_Fine-Grained_Multi_Image_Object_Hallucination_Benchmark_CVPR_2026_paper.html",
+      "version": "CVF proceedings; arXiv v1",
+      "verified_depth": "paper, supplement, arXiv and public resource check",
+      "scores": [
+        5,
+        4,
+        3,
+        4,
+        2,
+        5
+      ],
+      "disposition": "promoted_existing_queue_to_mioh"
+    },
+    {
+      "title": "From Indoor to Open World: Revealing the Spatial Reasoning Gap in MLLMs",
+      "key": "arXiv:2512.19683",
+      "venue": "CVPR 2026 main",
+      "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_From_Indoor_to_Open_World_Revealing_the_Spatial_Reasoning_Gap_CVPR_2026_paper.html",
+      "version": "CVF proceedings",
+      "verified_depth": "abstract and author project",
+      "scores": [
+        4,
+        4,
+        2,
+        2,
+        3,
+        5
+      ],
+      "disposition": "new_P1"
+    },
+    {
+      "title": "VisRes Bench: On Evaluating the Visual Reasoning Capabilities of VLMs",
+      "key": "CVPR2026:Tortei:33185",
+      "venue": "CVPR 2026 main",
+      "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tortei_VisRes_Bench_On_Evaluating_the_Visual_Reasoning_Capabilities_of_VLMs_CVPR_2026_paper.html",
+      "version": "CVF proceedings",
+      "verified_depth": "abstract",
+      "scores": [
+        3,
+        4,
+        1,
+        2,
+        1,
+        4
+      ],
+      "disposition": "new_P2"
+    },
+    {
+      "title": "Contrast Where It Matters: Visual Evidence-Guided Decoding for Mitigating Hallucinations in LVLMs",
+      "key": "arXiv:2611.25524",
+      "venue": "arXiv",
+      "official_url": "https://arxiv.org/abs/2611.25524v1",
+      "version": "v1",
+      "verified_depth": "abstract",
+      "scores": [
+        5,
+        3,
+        1,
+        2,
+        2,
+        4
+      ],
+      "disposition": "new_P1"
+    },
+    {
+      "title": "When Safety Rationales Hallucinate: Diagnosing and Grounding Multimodal Safety Guards",
+      "key": "arXiv:2611.25793",
+      "venue": "arXiv",
+      "official_url": "https://arxiv.org/abs/2611.25793v1",
+      "version": "v1",
+      "verified_depth": "abstract",
+      "scores": [
+        2,
+        3,
+        1,
+        2,
+        1,
+        3
+      ],
+      "disposition": "excluded_scope"
+    },
+    {
+      "title": "Robust Reasoning Segmentation for Open-World MLLMs without Catastrophic Forgetting",
+      "key": "doi:10.1007/s11263-026-03118-1",
+      "venue": "IJCV",
+      "official_url": "https://link.springer.com/article/10.1007/s11263-026-03118-1",
+      "version": "publisher version",
+      "verified_depth": "publisher metadata and abstract",
+      "scores": [
+        2,
+        3,
+        1,
+        2,
+        2,
+        2
+      ],
+      "disposition": "excluded_scope"
+    }
+  ],
+  "counts": {
+    "new_candidates": 5,
+    "new_queue": 3,
+    "new_exclusions": 2,
+    "promoted_prior": 1
+  },
+  "existing_holds": [
+    "Beyond the Global Scores: model/decode inconsistencies",
+    "FINER, Envision and HalLoc: prior candidate state retained"
+  ],
+  "cvpr_2027": {
+    "author_guidelines": "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
+    "reviewer_guidelines": "https://cvpr.thecvf.com/Conferences/2027/ReviewerGuidelines",
+    "timezone": "AoE",
+    "abstract_registration": "2026-11-10",
+    "full_paper": "2026-11-16",
+    "supplement": "2026-11-23",
+    "decisions": "2027-02-25",
+    "main_sessions": [
+      "2027-06-22",
+      "2027-06-24"
+    ],
+    "proceedings_actual_publication": null
+  }
+}

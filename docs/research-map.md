@@ -40,6 +40,8 @@ flowchart TD
 
 ## 推荐阅读顺序
 
+- 对象存在与来源绑定可按 [ROHE](papers/removed-object-hallucination-odpo.md) 的单图删对象 → [MIOH](papers/mioh.md) 的联合/逐图存在对照 → [THRONE](papers/throne.md) 的开放描述评测阅读。三个协议分别检查反事实一致性、跨图整合和自由生成对象覆盖。
+
 === "从 Logit 入门"
 
     1. [Risk-aware Selective Prompting](papers/risk-aware-selective-prompting.md)
